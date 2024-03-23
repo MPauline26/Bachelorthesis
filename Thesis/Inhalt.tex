@@ -50,16 +50,17 @@
 \section{Introduction}
 
 	\subsection{Motivation}
-		Goal of this project is the improvement in the distinction process between $t\overline{t}\gamma$ and $t\overline{t}$ events in the signal region. Depending on the success the results can be further used for other projects, which would improve the simulations and their predictions regarding the standard model (SM) and beyond standard model (BSM). 
+		Goal of this project is the improvement in the distinction process between $t\overline{t}\gamma$ and $t\overline{t}$ events in the signal region. Depending on the success, the results can be further used for other projects, which would improve the simulations and their predictions regarding the standard model (SM) and beyond standard model (BSM). 
 
 	\subsection{Approach}
+	\label{sec:approach}
 		An attempt was perfomed through a multivariate analysis and by developing and training models. At the beginning different variables were analysed and compared and the most promising were used for training. Type of models, denoted MVA in the following, used are boosted decision tree (BDT) and mutilayer perceptron (MLP). The results of the MVAs for three different variable categories were created and in the course of this project analysed and presented.
 
 \section{Background information}
 	\subsection{ATLAS detector and data}
-	The ATLAS detector is part of the Large Hadron Collider, a particle accelerator, which was built by the research organisation CERN in Genf, Siwtzerland. LHC has a circumference of 27km and is up to 175m deep. Besides ATLAS there are other experiments as well, such as CMS, ALICE, LHCb. ATLAS can be described by three sub-detectors. All detectors surround the beam pipe, where the particles are accelerated and collided against eachother.
+	The ATLAS detector is part of the Large Hadron Collider, a particle accelerator, which was built by the research organisation CERN in Genf, Siwtzerland. LHC has a circumference of 27km and is up to 175m deep. Besides ATLAS, there are other experiments as well, such as CMS, ALICE, LHCb. ATLAS can be described by three sub-detectors. All detectors surround the beam pipe, where the particles are accelerated and collided against eachother.
 	
-	In Figure \ref{fig:detectorsystem} a sketch of the detectorsystem can be seen. The inner detecor is a tracking chamber for charged partices. It is surrounded by a superconducting solenoid with a magnetic field of 2T used to divert the particle trajectory to measure the momentum. The calorimeter is made up of alternating layers. One is a dense absorber material, which is used to prompt electromagnetic and hadronic showers (ECAL, HCAL). The other layer is of active material used for energy measurement. The muon spectrometer (MS) is positioned in the outermost layer since muons may pass inner layers as well as the calorimeters. It is surrounded by a magnetic field and the diversion is measured by a multiple layer of high precision tracking chambers. 
+	In Figure \ref{fig:detectorsystem}, a sketch of the detectorsystem can be seen. The inner detecor is a tracking chamber for charged partices. It is surrounded by a superconducting solenoid with a magnetic field of 2T used to divert the particle trajectory to measure the momentum. The calorimeter is made up of alternating layers. One is a dense absorber material, which is used to prompt electromagnetic and hadronic showers (ECAL, HCAL). The other layer is of active material used for energy measurement. The muon spectrometer (MS) is positioned in the outermost layer since muons may pass inner layers as well as the calorimeters. It is surrounded by a magnetic field and the diversion is measured by a multiple layer of high precision tracking chambers. 
 	
 	\begin{figure}[H]
 	\centering
@@ -73,7 +74,7 @@
 \begin{itemize}
   \item lepton has 30/35 GeV
   \item at least 3 jets were detected
-  \item at least one of the jets have a b-tag, since the appearance of b-quark (??) is coppled with t-quark
+  \item at least one of the jets have a b-tag
   \item exactly one photon
 \end{itemize}
 
@@ -95,7 +96,7 @@ This reduced the data amount from 100kHz auf 1kHz. The data used during this pro
 	
 \section{Challenge in categorisation}
 
-As seen in Figure \ref{fig:PhotonPT}, the background makes up nearly 50\% of the signal region. These are made up by particles, which were misconstructed or not detected due to the limited detector's acceptence. Other reasons are photons not being radiated from the $t\overline{t}$ process, but rather from an initial charged patron, an intermediate top quark or any charged final state particles or decay products. Further sources could be hadrons misreconstructed as electrons or hadrons and electrons misidentified as photons. 
+In Figure \ref{fig:PhotonPT}, the transverse momentum of the photon is visible. The background makes up nearly 50\% of the signal region. These are made up by particles, which were misconstructed or not detected due to the limited detector's acceptence. Other reasons are photons not being radiated from the $t\overline{t}$ process, but rather from an initial charged patron, an intermediate top quark or any charged final state particles or decay products. Further sources could be hadrons misreconstructed as electrons or hadrons and electrons misidentified as photons. 
 
 \begin{figure}[H]
 \centering
@@ -117,8 +118,10 @@ As seen in Figure \ref{fig:PhotonPT}, the background makes up nearly 50\% of the
 	
 	First a neural network was developed to seperate the hadronic-fake photons, which are hadrons misidentified as photons and made up the majority of the background signal. The result was then used as an input for the neural network created to split the $t\overline{t}\gamma$ signal and the background further. What still needs to be further investigated is the possibility of improvement in the discrimination between $t\overline{t}\gamma$ and $t\overline{t}$ events in the signal region through MVAs.
 
-\section{Analysis of variables}
+\section{Analysis process}
 
+	\subsection{List of variables}
+	
 The analysed variables are listed below and they are categorized by the type of particles. 
 
 \begin{itemize}
@@ -195,7 +198,7 @@ The analysed variables are listed below and they are categorized by the type of 
  	\end{AutoMultiColItemize}
 \end{itemize}
 
-The ending or prefix of the name reveal, what information is saved. The description of variables, which don't follow this logic, are listed at the end. 
+The pre- or suffix of the name reveal, what information is saved. The description of variables, which don't follow this logic, are listed at the end. 
 
 Prefix and suffix:
 \begin{itemize}
@@ -216,7 +219,11 @@ Other:
   \item MET: Missing transverse momentum
 \end{itemize}
 
-These were analysed by comparing the distribution of events with uniform scaling. A uniform scaling was needed to have a clearer view of relative differences between signal and background. If the variable shows a different behaviour for each type of signal, this could be an indication of discriminatory power. 
+	\subsection{Analysis of variables}
+	
+The variables were analysed by comparing the distribution of events with an uniform scaling. A uniform scaling was needed to have a better view of relative differences between signal and background. If the variable shows a different behaviour for each type of signal, this could be an indication of discriminatory power. 
+
+Figure \ref{fig:Bj0eta} to \ref{fig:LeptonTight0eta} show some examples of variables, where the distributions are almost identical and were therefore not further analysed. A full list of these variables are listed in the Annex, chapter \ref{sec:annex-identical}. 
 
 \begin{figure}[H]
 \centering
@@ -250,7 +257,7 @@ These were analysed by comparing the distribution of events with uniform scaling
 \end{minipage}
 \end{figure}
 
-Figure \ref{fig:Bj0eta} to \ref{fig:LeptonTight0eta} show some examples of variables, where the distributions are almost identical and were therefore not further analysed. A full list of these variables are listed in the Annex, chapter \ref{sec:annex-identical}. 
+In Figure \ref{fig:nBTagGood} to \ref{fig:ht} there are some differences visible in the signal region. These were candidates for the first set of selected variables. 
 
 	\begin{figure}[H]
 	\centering
@@ -339,7 +346,7 @@ Figure \ref{fig:Bj0eta} to \ref{fig:LeptonTight0eta} show some examples of varia
  	\label{fig:ht}
 	\end{figure}
 	
-In Figure \ref{fig:nBTagGood} to \ref{fig:ht} there are some differences visible in the signal region. These were candidates for the first set of selected variables. 
+The variable MVA\_ID, seen in figure \ref{fig:PhotonGood0mvaID}, shows quite a good distinction and is therefore used in the second selection.
 
 	\begin{figure}[H]
 	\centering
@@ -348,7 +355,7 @@ In Figure \ref{fig:nBTagGood} to \ref{fig:ht} there are some differences visible
  	\label{fig:PhotonGood0mvaID}
 	\end{figure}
 	
-The variable MVA\_ID, seen in figure \ref{fig:PhotonGood0mvaID}, shows quite a good distinction and is therefore used in the second selection.
+Figure \ref{fig:PhotonGood0pt} to \ref{fig:PhotonGood0pfRelIso03all} show the photon variables. These show the most promising behaviour for discrimination between $t\overline{t}\gamma$ and $t\overline{t}$ events and were put into the third selection category.
 
 	\begin{figure}[H]
 	\centering
@@ -436,14 +443,12 @@ The variable MVA\_ID, seen in figure \ref{fig:PhotonGood0mvaID}, shows quite a g
 	\caption{PhotonGood0\_pfRelIso03\_all}
  	\label{fig:PhotonGood0pfRelIso03all}
 	\end{figure}
-	
-Figure \ref{fig:PhotonGood0pt} to \ref{fig:PhotonGood0pfRelIso03all} show the photon variables. These show the most promising behaviour for discrimination between $t\overline{t}\gamma$ and $t\overline{t}$ events and were put into the third selection category.
 
 Variables, which were excluded because another related variable was used instead, are listed in the Annex, chapter \ref{sec:annex-excluded}. 
 
 \section{MVA}
 
-Trying to split signal and background through a variable with a cut-off value faces the problem, that this criteria doesn't apply for every event. If it works for one event, it doesn't mean that it works for the next one. Therefore mutliple variables need to be used to distinguish between these two categories, therefore called multivariate analysis. As already mentioned in chapter xxx, the chosen MVA-types are boosted decision trees (BDT) and multilayer perceptron (MLP).
+Trying to split signal and background through a variable with a cut-off value faces the problem, that this criteria doesn't apply for every event. If it works for one event, it doesn't mean that it works for the next one. Therefore mutliple variables need to be used to distinguish between those two categories, so called multivariate analysis (MVA). As already mentioned in chapter \ref{sec:approach}, the chosen MVA-types are boosted decision trees (BDT) and multilayer perceptron (MLP).
 
 	\subsection{BDT - Boosted Decision Trees}
 	The decision tree starts with the root node containing the whole sample For a binary tree, the node is then split into two branches using a variable and a corresponding cut-off value. The cut-off value should be a value, which seperates the signal from the background the best. This process will be repeated for each branch for all relevant variables, including already used variables, until an end criteria is met. The final branch is called a leaf and this will be assigned to one of the two categories. End criterias could be a minimum size of a leaf, perfect separation, insignificant improvement after split or maximal tree depth. Boosted decision trees are built out of additional trees, so called weak classifieres. They include variables with a low discriminatory power and will be used to improve the main decision tree to a more stable model with a lower error rate. 
@@ -456,7 +461,7 @@ Trying to split signal and background through a variable with a cut-off value fa
 	
 	\subsection{MLP - Multilayer Perceptron}
 	
-	The model is built out of multiple perceptrons, which are arranged in layers. The value of one perceptron is the sum of all weighted inputs. This value is then transformed through an activation function and a treshhold. The activation funtion is a linear function for the input- and outputlayer, while for the hiddenlayers it is usually the log-sigmoid transfer function, seen in figure \ref{fig:log-sigmoid function}. All layers have a treshhold, except the inputlayer. 
+	The model is built out of multiple perceptrons, which are arranged in layers shown in Figure \ref{fig:MLP}. The value of one perceptron is the sum of all weighted inputs. This value is then transformed through an activation function and a treshhold. The activation funtion is a linear function for the input- and outputlayer, while for the hiddenlayers it is usually the log-sigmoid transfer function, seen in figure \ref{fig:log-sigmoid function}. All layers have a treshhold, except the inputlayer. 
 	
 	\begin{figure}[H]
 	\centering
@@ -477,63 +482,280 @@ Trying to split signal and background through a variable with a cut-off value fa
 	\label{fig:log-sigmoid function}
 	\end{figure}
 	
-	In the MLP every perceptron of a layer is connected to every perceptron of the previous and next layer. Each connection has an assigned weightvalue, so called weightcoefficient. All coefficients of one layer can be written as a weightmatrix. The first and layer are called input- and outputlayer respectively, while the intermediate layers are the hiddenlayers. A MLP has a minimum of one hiddenlayer, therefore contains at least three layers.
+	In the MLP, every perceptron of a layer is connected to every perceptron of the previous and next layer. Each connection has an assigned weight, so called weight coefficient. All coefficients of one layer can be written as a weight matrix. The first and layer are called input- and outputlayer respectively, while the intermediate layers are the hiddenlayers. A MLP has a minimum of one hiddenlayer, therefore contains at least three layers.
 	
-	If the signal is only transmitted in one direction, therefore the MLP doesn't have loops, it is described as feed forward. The learning process of the model is called backpropagation algorithm. It learns by minimizing the error between network output and expexted output. Initially all weights are assigned random values, then every event will go through the network and the weights are adapted. Either all events will be put through the network first and then the values are adapted or after each event, but for the latter the order of the events might be important. After one epoch the end criteria will be tested. If it fails, the whole learning process will be carried out again. If it is met, the algorithm is finished.
+	If the signal is only transmitted in one direction, therefore the MLP doesn't have loops, it is described as feed forward. The learning process of the model is called backpropagation algorithm. It learns by minimizing the error between network output and expexted output. Initially all weights are assigned random values, then every event will go through the network and the weights are adapted. Either all events will be put through the network first and then the values are adapted or are adjusted after each event, but for the latter the order of the events might be important. After one epoch the end criteria will be tested. If it fails, the whole learning process will be carried out again. If it is met, the algorithm is finished.
 	
 \begin{figure}[H]
 	\begin{center}
 	\includegraphics[width=1\textwidth]{figures/MLP.png}
 	\caption{MLP draft}
+	\label{fig:MLP}
 	\end{center}
 \end{figure}
 
 	\subsection{Training of MVA}
 	
-	The following table shows the default values of each model.
+	The following table shows some of the default values used for the models.
 	
 		\begin{itemize}
   			\item BDT
   					\begin{itemize}
-  					\item x
-  					\item y
-  					\item z
+  					\item Minimum node size
+  					\item Separation type
   					\end{itemize}
   		  	\item MLP
   					\begin{itemize}
-  					\item x
-  					\item y
-  					\item z
+  					\item Number of cycles
+  					\item Learning Rate
+  					\item Decayrate
+  					\item Neurontype
+  					\item Estimatortype
+  					\item Neuroninputtype
+  					\item Trainingmethod
   					\end{itemize}		
 		\end{itemize}
+		
+	A full list of all parameters, configuration options as well as their default values are given in the annex, chapter xx.
 	
 	These parameters were adapted to improve the result:
 		\begin{itemize}
   			\item BDT
   					\begin{itemize}
-  					\item x
-  					\item y
-  					\item z
+  					\item Maximum depth
+  					\item Number of trees
+  					\item Number of Cuts
   					\end{itemize}
   		  	\item MLP
   					\begin{itemize}
-  					\item x
-  					\item y
-  					\item z
+  					\item Number of layers
   					\end{itemize}		
 		\end{itemize}
-	The different selection categories were used to train the models. The distribution and ROC-curves are shown in the following chapters. adaptieren: In figure x - x the distribution of signal can be seen. The blue line is BDT, the red line is MLP. The dashed out line is from the test sample, the solid line is from the training sample. (Analog für ROC-cuve) The left figures show the results with these parameters xxx, on the right side the best parameters. By calculating the AUC (area under the curve) the discriminatory power can be calculated.
+		
+	The default values was used as basis. Additionally, the MVAs were trained with a lower and a higher configuration:
 	
-	The first selection category were put into the model. An improvement of x\% is visible.
+	\begin{table}[H]
+	\begin{tabular}{|l|l|l|l|l|}
+	\hline
+	              & \multicolumn{3}{c|}{BDT}                         & \multicolumn{1}{c|}{MLP} \\ \hline
+	Configuration & maximum depth & number of trees & number of cuts & number of layers         \\ \hline
+	1             & 1             & 400             & 10             & 5                        \\ \hline
+	2             & 3             & 800             & 25             & 7                        \\ \hline
+	3             & 5             & 1000            & 50             & 10                       \\ \hline
+	\end{tabular}
+	\end{table}
+
+The distribution and ROC-curves for the BDT- and MLP-models are shown for each selection and configuration in the following chapter. To avoid overfitting, each MVA is trained on one part of the sample (training sample) and tested on the rest (testing sample). If the results differ significantly, then this would be a sign of overfitting - the model only differentiates correctly on this specific sample. The results of the train- and test-sample can be seen in the distribution plots.
+
+The ROC-curves show the background rejection versus signal efficiency. While discriminating between signal and background, the signal efficiency is the proportion of the correctly categorized signal events ($t\overline{t}\gamma$) and the background rejection is therefore the correctly assigned fraction of background events ($t\overline{t}$). There are two types of errors during the distinction process:
+		\begin{itemize}
+  			\item a signal event is categorized as background, which is called false negative
+  			\item a background event is assigned to the signal category, calles false positive  			
+  		\end{itemize}			
+  		
+Examples for different types of ROC-curves are displayed in figure \ref{fig:ROC_ex}. The green curve indicate a good discriminatory power. The orange curve show that the model assigns the events the wrong way around. If the ROC-curve follows closely the identity line, then the model doesn't have discriminatory power.
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures/ROC_curve.png}
+	\caption{ROC-curve examples}
+	 \label{fig:ROC_ex}	
+	\end{figure}
 	
-	The second selection category were put into the model. An improvement of x\% is visible.
+	\subsection{Results}
 	
-	The third selection category were put into the model. An improvement of x\% is visible.
+	The first selection category were put into the models and are seen in figure \ref{fig:ROC_s1_config1} - \ref{fig:ROC_s1_config3}. A slight improvement in the distinction between $t\overline{t}\gamma$- and $t\overline{t}$-events is visible. 
 	
-	In all categories the MLP show a better performance than the BDT. The distribution shows a weird shape because of reasons. Nevertheless the MLP was chosen.
+		In the second selection category the variable PhotonGood0mvaID was added (figure \ref{fig:ROC_s2_config1} - \ref{fig:ROC_s2_config3}). The result improved significantly.
+		
+		Now adding the photon variables for the third selection show a higher success in the distinguishing process. They can be seen in figure \ref{fig:ROC_s3_config1} - \ref{fig:ROC_s3_config3}. 
+		
+		Between the three configuration combinations there is no significant difference. For all selection categories, the MLP model perfomed better than the BDT model. The third set of variables show the best result.
+				
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{figures/MVA/select1/config1/discriminator_bdt.png}
+	  %\captionof{figure}{BDT distribution for selection 1 variables with configuration 1}
+	  \label{fig:distr_s1_config1_bdt}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{figures/MVA/select1/config1/discriminator_mlp.png}
+	  %\captionof{figure}{MLP distribution for selection 1 variables with configuration 1}
+	  \label{fig:distr_s1_config1_mlp}
+	\end{minipage}
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures/MVA/select1/config1/FOM_selection1_nL5_nT400_mD1_nC10.png}
+	\caption{BDT-, MLP-distribution and ROC curve for variables from selection 1 with configuration 1}
+	 \label{fig:ROC_s1_config1}
+	\end{figure}
 	
-\section{Conclussion}
-It is very difficult to differentiate between $t\overline{t}\gamma$ and $t\overline{t}$ events because they show very similiar behaviour in the signal region. Nevertheless, a slight improvement was possible by training a MVA through relevant variables. Especially photon variables provides a bigger improvement. MLPs show a better performance than BDTs, which suggests the selection of this model.
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{figures/MVA/select1/config2/discriminator_bdt.png}
+	  %\captionof{figure}{BDT distribution for selection 1 variables with configuration 2}
+	  \label{fig:distr_s1_config2_bdt}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{figures/MVA/select1/config2/discriminator_mlp.png}
+	  %\captionof{figure}{MLP distribution for selection 1 variables with configuration 2}
+	  \label{fig:distr_s1_config2_mlp}
+	\end{minipage}
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures/MVA/select1/config2/FOM_selection1_nL7_nT800_mD3_nC20.png}
+	\caption{BDT-, MLP-distribution and ROC curve for variables from selection 1 with configuration 2}
+	 \label{fig:ROC_s1_config2}
+	\end{figure}
+	
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{figures/MVA/select1/config3/discriminator_bdt.png}
+	  %\captionof{figure}{BDT distribution for selection 1 variables with configuration 3}
+	  \label{fig:distr_s1_config3_bdt}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{figures/MVA/select1/config3/discriminator_mlp.png}
+	  %captionof{figure}{MLP distribution for selection 1 variables with configuration 3}
+	  \label{fig:distr_s1_config3_mlp}
+	\end{minipage}
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures/MVA/select1/config3/FOM_selection1_nL10_nT1000_mD5_nC50.png}
+	\caption{BDT-, MLP-distribution and ROC curve for variables from selection 1 with configuration 3}
+	 \label{fig:ROC_s1_config3}	
+	\end{figure}
+
+	
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{figures/MVA/select2/config1/discriminator_bdt.png}
+	  %\captionof{figure}{BDT distribution for selection 2 variables with configuration 1}
+	  \label{fig:distr_s2_config1_bdt}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{figures/MVA/select2/config1/discriminator_mlp.png}
+	  %\captionof{figure}{MLP distribution for selection 2 variables with configuration 1}
+	  \label{fig:distr_s2_config1_mlp}
+	\end{minipage}
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures/MVA/select2/config1/FOM_selection2_nL5_nT400_mD1_nC10.png}
+	\caption{BDT-, MLP-distribution and ROC curve for variables from selection 2 with configuration 1}
+	 \label{fig:ROC_s2_config1}
+	\end{figure}
+	
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{figures/MVA/select2/config2/discriminator_bdt.png}
+	  %\captionof{figure}{BDT distribution for selection 2 variables with configuration 2}
+	  \label{fig:distr_s2_config2_bdt}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{figures/MVA/select2/config2/discriminator_mlp.png}
+	  %\captionof{figure}{MLP distribution for selection 2 variables with configuration 2}
+	  \label{fig:distr_s2_config2_mlp}
+	\end{minipage}
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures/MVA/select2/config2/FOM_selection2_nL7_nT800_mD3_nC20.png}
+	\caption{BDT-, MLP-distribution and ROC curve for variables from selection 2 with configuration 2}
+	 \label{fig:ROC_s2_config2}	
+	\end{figure}
+	
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{figures/MVA/select2/config3/discriminator_bdt.png}
+	  %\captionof{figure}{BDT distribution for selection 2 variables with configuration 3}
+	  \label{fig:distr_s2_config3_bdt}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{figures/MVA/select2/config3/discriminator_mlp.png}
+	  %\captionof{figure}{MLP distribution for selection 2 variables with configuration 3}
+	  \label{fig:distr_s2_config3_mlp}
+	\end{minipage}
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures/MVA/select2/config3/FOM_selection2_nL10_nT1000_mD5_nC50.png}
+	\caption{BDT-, MLP-distribution and ROC curve for variables from selection 2 with configuration 3}
+	 \label{fig:ROC_s2_config3}	
+	\end{figure}
+	
+	
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{figures/MVA/select3/config1/discriminator_bdt.png}
+	  %\captionof{figure}{BDT distribution for selection 3 variables with configuration 1}
+	  \label{fig:distr_s3_config1_bdt}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{figures/MVA/select3/config1/discriminator_mlp.png}
+	  %\captionof{figure}{MLP distribution for selection 3 variables with configuration 1}
+	  \label{fig:distr_s3_config1_mlp}
+	\end{minipage}
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures/MVA/select3/config1/FOM_selection3_nL5_nT400_mD1_nC10.png}
+	\caption{BDT-, MLP-distribution and ROC curve for variables from selection 3 with configuration 1}
+	 \label{fig:ROC_s3_config1}
+	\end{figure}
+	
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{figures/MVA/select3/config2/discriminator_bdt.png}
+	  %\captionof{figure}{BDT distribution for selection 3 variables with configuration 2}
+	  \label{fig:distr_s3_config2_bdt}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{figures/MVA/select3/config2/discriminator_mlp.png}
+	  %\captionof{figure}{MLP distribution for selection 3 variables with configuration 2}
+	  \label{fig:distr_s3_config2_mlp}
+	\end{minipage}
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures/MVA/select3/config2/FOM_selection3_nL7_nT800_mD3_nC20.png}
+	\caption{BDT-, MLP-distribution and ROC curve for variables from selection 3 with configuration 2}
+	 \label{fig:ROC_s3_config2}	
+	\end{figure}
+	
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{figures/MVA/select3/config3/discriminator_bdt.png}
+	  %\captionof{figure}{BDT distribution for selection 3 variables with configuration 3}
+	  \label{fig:distr_s3_config3_bdt}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{figures/MVA/select3/config3/discriminator_mlp.png}
+	  %\captionof{figure}{MLP distribution for selection 3 variables with configuration 3}
+	  \label{fig:distr_s3_config3_mlp}
+	\end{minipage}
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures/MVA/select3/config3/FOM_selection3_nL10_nT1000_mD5_nC50.png}
+	\caption{BDT-, MLP-distribution and ROC curve for variables from selection 3 with configuration 3}
+	 \label{fig:ROC_s3_config3}	
+	\end{figure}
+				
+\section{Conclusion}
+It is very difficult to differentiate between $t\overline{t}\gamma$ and $t\overline{t}$ events because they show very similiar behaviour in the signal region. Nevertheless, a slight improvement was possible by training a MVA with relevant variables. Especially photon variables provide a bigger improvement. MLPs show a better performance than BDTs, which suggests the selection of this type of model.
 
 \section{Bibliography}
 
