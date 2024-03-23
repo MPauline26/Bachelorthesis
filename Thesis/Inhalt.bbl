@@ -1,53 +1,53 @@
 \begin{thebibliography}{1}
-\providecommand{\url}[1]{\texttt{#1}}
-\providecommand{\urlprefix}{URL }
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
-  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
-  \urlstyle{rm}\Url}\fi
-\providecommand{\eprint}[2][]{\url{#2}}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname doi\endcsname\relax
+  \def\doi#1{\burlalt{doi:#1}{http://dx.doi.org/#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2}\fi
+\expandafter\ifx\csname burlalt\endcsname\relax
+  \def\burlalt#1#2{\href{#2}{#1}}\fi
 
 \bibitem{ATLAS}
 M.~Aaboud, G.~Aad, B.~Abbott, D.~C. Abbott, O.~Abdinov, B.~Abeloos, D.~K.
-  Abhayasinghe, S.~H. Abidi, O.~S. AbouZeid, et~al.
-\newblock \emph{Measurements of inclusive and differential fiducial
+  Abhayasinghe, S.~H. Abidi, O.~S. AbouZeid, and et~al.
+\newblock {\em Measurements of inclusive and differential fiducial
   cross-sections of $t\overline{t}\gamma$ production in leptonic final states
   at $\sqrt{s}=13~\text {TeV}$ in ATLAS}.
-\newblock The European Physical Journal C, 79(5) (2019).
-\newblock ISSN 1434-6052.
+\newblock The European Physical Journal C, 79(5), 05 2019.
 \newblock \doi{10.1140/epjc/s10052-019-6849-6}.
-\newblock \urlprefix\url{http://dx.doi.org/10.1140/epjc/s10052-019-6849-6}.
-
-\bibitem{TTG}
-J.~Erdmann.
-\newblock \emph{Measurement of the inclusive ttgamma cross section at sqrt(s) =
-  7 TeV with the ATLAS detector} (2012).
-\newblock \eprint{1206.5696}.
 
 \bibitem{BDT}
 Y.~Coadou.
-\newblock \emph{Boosted Decision Trees and Applications}.
-\newblock EPJ Web of Conferences, 55:02004-- (2013).
+\newblock {\em Boosted Decision Trees and Applications}.
+\newblock EPJ Web of Conferences, 55:02004--, 07 2013.
 \newblock \doi{10.1051/epjconf/20135502004}.
 
-\bibitem{MLP08}
-J.~Nazzal, I.~El-Emary, S.~Najim.
-\newblock \emph{Multilayer Perceptron Neural Network (MLPs) For Analyzing the
-  Properties of Jordan Oil Shale}.
-\newblock World Applied Sciences Journal, 5 (2008).
-
-\bibitem{MLP09}
-P.~Marius, V.~Balas, L.~Perescu-Popescu, N.~Mastorakis.
-\newblock \emph{Multilayer perceptron and neural networks}.
-\newblock WSEAS Transactions on Circuits and Systems, 8 (2009).
+\bibitem{TTG}
+J.~Erdmann.
+\newblock {\em Measurement of the inclusive ttgamma cross section at sqrt(s) =
+  7 TeV with the ATLAS detector}, 2012,
+  \burlalt{1206.5696}{http://arxiv.org/abs/1206.5696}.
 
 \bibitem{TMVA}
 A.~Hoecker, P.~Speckmayer, J.~Stelzer, J.~Therhaag, E.~von Toerne, H.~Voss,
   M.~Backes, T.~Carli, O.~Cohen, A.~Christov, S.~Henrot-Versillé,
   M.~Jachowski, K.~Kraszewski, Y.~Mahalalel, R.~Ospanov, X.~Prudent,
-  D.~Schouten, F.~Tegenfeldt, A.~Robert, A.~Voigt, K.~Voss, M.~Wolter,
+  D.~Schouten, F.~Tegenfeldt, A.~Robert, A.~Voigt, K.~Voss, M.~Wolter, and
   A.~Zemla.
-\newblock \emph{TMVA - Toolkit for Multivariate Data Analysis} (2009).
-\newblock \eprint{physics/0703039v5}.
+\newblock {\em TMVA - Toolkit for Multivariate Data Analysis}, 2009,
+  \burlalt{physics/0703039v5}{http://arxiv.org/abs/physics/0703039v5}.
+
+\bibitem{MLP09}
+P.~Marius, V.~Balas, L.~Perescu-Popescu, and N.~Mastorakis.
+\newblock {\em Multilayer perceptron and neural networks}.
+\newblock WSEAS Transactions on Circuits and Systems, 8, 07 2009.
+
+\bibitem{MLP08}
+J.~Nazzal, I.~El-Emary, and S.~Najim.
+\newblock {\em Multilayer Perceptron Neural Network (MLPs) For Analyzing the
+  Properties of Jordan Oil Shale}.
+\newblock World Applied Sciences Journal, 5, 01 2008.
 
 \end{thebibliography}
