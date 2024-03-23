@@ -1,44 +1,45 @@
-\select@language {english}
-\contentsline {figure}{\numberline {1}{\ignorespaces Detector system of CMS\relax }}{3}{figure.caption.2}
-\contentsline {figure}{\numberline {2}{\ignorespaces Proton Proton collision process\relax }}{4}{figure.caption.3}
-\contentsline {figure}{\numberline {3}{\ignorespaces Distribution of p\textsubscript {T} photon\relax }}{5}{figure.caption.4}
-\contentsline {figure}{\numberline {4}{\ignorespaces Distribution of p\textsubscript {T} photon (log)\relax }}{5}{figure.caption.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces pseudorapidity of first b-jet and result of neural network to identify b-jets suggest no discriminatory power\relax }}{7}{figure.caption.5}
-\contentsline {figure}{\numberline {6}{\ignorespaces pseudorapidity and transverse momentum of lepton suggest no discriminatory power\relax }}{7}{figure.caption.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces number of jets and b-jets show slightly different behaviour between signal and background\relax }}{8}{figure.caption.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces pseudorapidity and $\Delta \phi $ of the first jet show slightly different behaviour between signal and background\relax }}{8}{figure.caption.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces transverse momentum of first jet and distance between lepton and jet show slightly different behaviour between signal and background\relax }}{8}{figure.caption.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces transverse momentum and $\Delta \phi $ of missing transverse momentum show slightly different behaviour between signal and background\relax }}{9}{figure.caption.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces transverse momentum of W-boson and maximum mass of three jets show slightly different behaviour between signal and background\relax }}{9}{figure.caption.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces transverse momentum of all jets show slightly different behaviour between signal and background\relax }}{9}{figure.caption.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces currently used variable to differentiate between signal and background events suggests good distinction\relax }}{10}{figure.caption.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces transverse momentum and $\Delta \phi $ of photon indicate good discriminatory power\relax }}{10}{figure.caption.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces pseudorapidity of photon and $\Delta \phi $ between lepton and photon indicate good discriminatory power\relax }}{11}{figure.caption.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces distance between photon and jet and between photon and lepton indicate good discriminatory power\relax }}{11}{figure.caption.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Outline of Boosted Decision Trees\relax }}{12}{figure.caption.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces log-sigmoid function\relax }}{12}{figure.caption.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces Outline of Multilayer Perceptron\relax }}{13}{figure.caption.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces ROC-curve examples\relax }}{15}{figure.caption.21}
-\contentsline {figure}{\numberline {21}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 1 with configuration 1\relax }}{16}{figure.caption.22}
-\contentsline {figure}{\numberline {22}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 1 with configuration 2\relax }}{17}{figure.caption.23}
-\contentsline {figure}{\numberline {23}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 1 with configuration 3\relax }}{18}{figure.caption.24}
-\contentsline {figure}{\numberline {24}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 2 with configuration 1\relax }}{19}{figure.caption.25}
-\contentsline {figure}{\numberline {25}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 2 with configuration 2\relax }}{20}{figure.caption.26}
-\contentsline {figure}{\numberline {26}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 2 with configuration 3\relax }}{21}{figure.caption.27}
-\contentsline {figure}{\numberline {27}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 3 with configuration 1\relax }}{22}{figure.caption.28}
-\contentsline {figure}{\numberline {28}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 3 with configuration 2\relax }}{23}{figure.caption.29}
-\contentsline {figure}{\numberline {29}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 3 with configuration 3\relax }}{24}{figure.caption.30}
-\contentsline {figure}{\numberline {30}{\ignorespaces pseudorapidity and $\Delta \phi $ of first b-jet suggest no discriminatory power\relax }}{25}{figure.caption.31}
-\contentsline {figure}{\numberline {31}{\ignorespaces transverse momentum of first b-jet and pseudorapidity of second b-jet suggest no discriminatory power\relax }}{25}{figure.caption.32}
-\contentsline {figure}{\numberline {32}{\ignorespaces $\Delta \phi $ and transverse momentum of second b-jet suggest no discriminatory power\relax }}{26}{figure.caption.33}
-\contentsline {figure}{\numberline {33}{\ignorespaces results of neural network to identify first and second b-jet suggest no discriminatory power\relax }}{26}{figure.caption.34}
-\contentsline {figure}{\numberline {34}{\ignorespaces proportion of energy coming from charged particles detected in HCAL and detected in ECAL suggest no discriminatory power\relax }}{26}{figure.caption.35}
-\contentsline {figure}{\numberline {35}{\ignorespaces proportion of energy coming from neutral particles detected in HCAL and detected in ECAL suggest no discriminatory power\relax }}{27}{figure.caption.36}
-\contentsline {figure}{\numberline {36}{\ignorespaces pseudorapidity and $\Delta \phi $ of second jet suggest no discriminatory power\relax }}{27}{figure.caption.37}
-\contentsline {figure}{\numberline {37}{\ignorespaces transverse momentum of second jet and $\Delta \phi $ of lepton suggest no discriminatory power\relax }}{27}{figure.caption.38}
-\contentsline {figure}{\numberline {38}{\ignorespaces pseudorapidity of lepton and relative isolation of lepton to all particles suggest no discriminatory power\relax }}{28}{figure.caption.39}
-\contentsline {figure}{\numberline {39}{\ignorespaces relative isolation of lepton to charged and neutral particles suggest no discriminatory power\relax }}{28}{figure.caption.40}
-\contentsline {figure}{\numberline {40}{\ignorespaces transverse momentum of lepton and number of electrons suggest no discriminatory power\relax }}{28}{figure.caption.41}
-\contentsline {figure}{\numberline {41}{\ignorespaces number of photons with high p\textsubscript {T} and number of jets suggest no discriminatory power\relax }}{29}{figure.caption.42}
-\contentsline {figure}{\numberline {42}{\ignorespaces number of leptons and muons suggest no discriminatory power\relax }}{29}{figure.caption.43}
-\contentsline {figure}{\numberline {43}{\ignorespaces number of photons suggests no discriminatory power\relax }}{29}{figure.caption.44}
+\babel@toc {english}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Detector system of CMS, sketch taken from~\cite {CMSWEB}\relax }}{4}{figure.caption.2}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Proton Proton collision process\relax }}{5}{figure.caption.3}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Distribution of p\textsubscript {T} photon\relax }}{6}{figure.caption.4}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Distribution of p\textsubscript {T} photon (log)\relax }}{6}{figure.caption.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces pseudorapidity of first b-jet and result of neural network to identify b-jets suggest no discriminatory power\relax }}{8}{figure.caption.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces pseudorapidity and transverse momentum of lepton suggest no discriminatory power\relax }}{8}{figure.caption.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces number of jets and b-jets show slightly different behaviour between signal and background\relax }}{9}{figure.caption.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces pseudorapidity and $\Delta \phi $ of the first jet show slightly different behaviour between signal and background\relax }}{9}{figure.caption.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces transverse momentum of first jet and distance between lepton and jet show slightly different behaviour between signal and background\relax }}{9}{figure.caption.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces transverse momentum and $\Delta \phi $ of missing transverse momentum show slightly different behaviour between signal and background\relax }}{10}{figure.caption.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces transverse momentum of W-boson and maximum mass of three jets show slightly different behaviour between signal and background\relax }}{10}{figure.caption.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces transverse momentum of all jets show slightly different behaviour between signal and background\relax }}{10}{figure.caption.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces currently used variable to differentiate between signal and background events suggests good distinction\relax }}{11}{figure.caption.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces transverse momentum and $\Delta \phi $ of photon indicate good discriminatory power\relax }}{11}{figure.caption.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces pseudorapidity of photon and $\Delta \phi $ between lepton and photon indicate good discriminatory power\relax }}{12}{figure.caption.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces distance between photon and jet and between photon and lepton indicate good discriminatory power\relax }}{12}{figure.caption.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Outline of Boosted Decision Trees\relax }}{13}{figure.caption.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces log-sigmoid function\relax }}{13}{figure.caption.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Outline of Multilayer Perceptron\relax }}{14}{figure.caption.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces ROC-curve examples\relax }}{16}{figure.caption.21}%
+\contentsline {figure}{\numberline {21}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 1 with configuration 1\relax }}{17}{figure.caption.22}%
+\contentsline {figure}{\numberline {22}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 1 with configuration 2\relax }}{18}{figure.caption.23}%
+\contentsline {figure}{\numberline {23}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 1 with configuration 3\relax }}{19}{figure.caption.24}%
+\contentsline {figure}{\numberline {24}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 2 with configuration 1\relax }}{20}{figure.caption.25}%
+\contentsline {figure}{\numberline {25}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 2 with configuration 2\relax }}{21}{figure.caption.26}%
+\contentsline {figure}{\numberline {26}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 2 with configuration 3\relax }}{22}{figure.caption.27}%
+\contentsline {figure}{\numberline {27}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 3 with configuration 1\relax }}{23}{figure.caption.28}%
+\contentsline {figure}{\numberline {28}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 3 with configuration 2\relax }}{24}{figure.caption.29}%
+\contentsline {figure}{\numberline {29}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 3 with configuration 3\relax }}{25}{figure.caption.30}%
+\contentsline {figure}{\numberline {30}{\ignorespaces pseudorapidity and $\Delta \phi $ of first b-jet suggest no discriminatory power\relax }}{26}{figure.caption.31}%
+\contentsline {figure}{\numberline {31}{\ignorespaces transverse momentum of first b-jet and pseudorapidity of second b-jet suggest no discriminatory power\relax }}{26}{figure.caption.32}%
+\contentsline {figure}{\numberline {32}{\ignorespaces $\Delta \phi $ and transverse momentum of second b-jet suggest no discriminatory power\relax }}{27}{figure.caption.33}%
+\contentsline {figure}{\numberline {33}{\ignorespaces results of neural network to identify first and second b-jet suggest no discriminatory power\relax }}{27}{figure.caption.34}%
+\contentsline {figure}{\numberline {34}{\ignorespaces proportion of energy coming from charged particles detected in HCAL and detected in ECAL suggest no discriminatory power\relax }}{27}{figure.caption.35}%
+\contentsline {figure}{\numberline {35}{\ignorespaces proportion of energy coming from neutral particles detected in HCAL and detected in ECAL suggest no discriminatory power\relax }}{28}{figure.caption.36}%
+\contentsline {figure}{\numberline {36}{\ignorespaces pseudorapidity and $\Delta \phi $ of second jet suggest no discriminatory power\relax }}{28}{figure.caption.37}%
+\contentsline {figure}{\numberline {37}{\ignorespaces transverse momentum of second jet and $\Delta \phi $ of lepton suggest no discriminatory power\relax }}{28}{figure.caption.38}%
+\contentsline {figure}{\numberline {38}{\ignorespaces pseudorapidity of lepton and relative isolation of lepton to all particles suggest no discriminatory power\relax }}{29}{figure.caption.39}%
+\contentsline {figure}{\numberline {39}{\ignorespaces relative isolation of lepton to charged and neutral particles suggest no discriminatory power\relax }}{29}{figure.caption.40}%
+\contentsline {figure}{\numberline {40}{\ignorespaces transverse momentum of lepton and number of electrons suggest no discriminatory power\relax }}{29}{figure.caption.41}%
+\contentsline {figure}{\numberline {41}{\ignorespaces number of photons with high p\textsubscript {T} and number of jets suggest no discriminatory power\relax }}{30}{figure.caption.42}%
+\contentsline {figure}{\numberline {42}{\ignorespaces number of leptons and muons suggest no discriminatory power\relax }}{30}{figure.caption.43}%
+\contentsline {figure}{\numberline {43}{\ignorespaces number of photons suggests no discriminatory power\relax }}{30}{figure.caption.44}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

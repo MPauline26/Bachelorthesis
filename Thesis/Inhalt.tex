@@ -59,6 +59,30 @@
 
 \begin{document}
 
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures/TU.png}\par\vspace{1cm}
+	\vspace{1cm}
+	{\scshape\LARGE Bachelorarbeit \par}
+	\vspace{1cm}
+	{\scshape\Large \par}
+	\vspace{1.5cm}
+	{\huge\bfseries Discrimination between $t\overline{t}\gamma$ and $t\overline{t}$-background in the signal region \par}
+	\vspace{2cm}
+	{\Large Ausgeführt am Institut für Hochenergiephysik der Österreichischen Akademie der Wissenschaften \par}
+	\vspace{2cm}
+	{\Large unter der Anleitung von \par}
+	{\Large\bfseries Dipl.-Ing. Dr.techn. Robert Schöfbeck \par}	
+	\vspace{2cm}
+	{\Large durch \par}	
+	{\Large\bfseries Meikee PAGSINOHIN \par}	
+	\vfill
+	{\Large Matrikelnummer: 01327477 \par}
+
+	\vfill
+
+\end{titlepage}
+
 \tableofcontents
 \newpage
 
@@ -69,23 +93,40 @@
 
 	\subsection{Approach}
 	\label{sec:approach}
-		An attempt was perfomed through a multivariate analysis by developing and training models. At the beginning, different variables were analysed and compared, and the most promising were then used for training. The type of models, denoted MVA in the following, used for this project are boosted decision trees (BDT) and mutilayer perceptrons (MLP). The results of the MVAs for three different variable categories were created, then analysed and presented in the course of this project.
+		An attempt was performed through a multivariate analysis by developing and training models. At the beginning, different variables were analysed and compared, and the most promising were then used for training. The type of models, denoted MVA in the following, used for this project are boosted decision trees (BDT) and multilayer perceptrons (MLP). The results of the MVAs for three different variable categories were created, then analysed and presented in the course of this project.
 
 \section{Background information}
 	\subsection{CMS detector and data}
-	The CMS detector (compact muon solenoid) is part of the Large Hadron Collider, a particle accelerator, which was built by the research organisation CERN in Geneva, Switzerland. LHC has a circumference of 27km and is up to 175m deep. Besides CMS, there are other experiments as well, such as ATLAS, ALICE and LHCb. CMS has multiple sub-detectors, which all surround the location, where the particles are accelerated and collided against each other.
+	The CMS detector (compact muon solenoid) is part of the Large Hadron Collider, a particle accelerator, which was built by the research organisation CERN in Geneva, Switzerland. LHC has a circumference of 27~km and is up to 175~m deep. Besides CMS, there are other experiments as well, such as ATLAS, ALICE and LHCb. CMS has multiple sub-detectors, which all surround the location, where the particles are accelerated and collided against each other.
 	
-	In Figure \ref{fig:detectorsystem}, a sketch of the detector system can be seen. The inner tracking system is based on silicon detector technology (SI microstrip and pixel) and is used to track charged particles. It is enclosed by electromagnetic and hadron calorimeters (ECAL, HCAL) utilized to prompt showers. They have a barrel and an endcap part and additionally a forward calorimeter was installed to further extend the detector's coverage. The ECAL is built out of lead tungstate crystals and the HCAL is made out of brass and scintillator. Special for the CMS detector is the superconducting solenoid, which surrounds the inner detectors and calorimeters. It has a 6m diameter with a magnetic field of 3.8T used to divert the particle trajectory and to measure their momentum. The muon detectors are positioned in the outermost layer since muons may pass all inner layers \cite{TTG, CMS21, CMS08}.
+	In Figure \ref{fig:detectorsystem}, a sketch of the detector system can be seen. The inner tracking system is based on silicon detector technology (SI microstrip and pixel) and is used to track charged particles. It is enclosed by electromagnetic and hadron calorimeters (ECAL, HCAL) utilized to prompt showers. They have a barrel and an endcap part and additionally a forward calorimeter was installed to further extend the detector's coverage. The ECAL is built out of lead tungstate crystals and the HCAL is made out of brass and scintillator. Special for the CMS detector is the superconducting solenoid, which surrounds the inner detectors and calorimeters. It has a 6~m diameter with a magnetic field of 3.8~T used to divert the particle trajectory and to measure their momentum. The muon detectors are positioned in the outermost layer since muons may pass all inner layers \cite{TTG, CMS21, CMS08}.
 	
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/detector_system.png}
-	\caption{Detector system of CMS}
+	\caption{Detector system of CMS, sketch taken from~\cite{CMSWEB}}
 	\label{fig:detectorsystem}
 	\end{figure}
 	
-	The data is filtered by a two-step trigger system. The hardware-based system (L1) is triggered when muons, electrons, photons and jets with specific characteristics are detected. This reduced the data amount from 40MHz to 100kHz. The software-based system (L2) is triggered by the different energies, type and numbers of particles:
+	The data is filtered by a two-step trigger system. The hardware-based system (L1) is triggered when muons, electrons, photons and jets with specific characteristics are detected. This reduced the data amount from 40~MHz to 100~kHz. The software-based high-level trigger selects events based on a rudimentary event reconstruction and reduces the rate from 100~kHz to 1~kHz. The data used during this project was recorded in 2016 at a centre-of-mass energy of 13~TeV. The signal and background processes were modelled using multiple Monte Carlo event generators~\cite{CMS21}. 
+
+	\subsection{Proton-Proton-collision and $t\overline{t}\gamma$}
+	 \label{sec:PPprocess}
+	The protons are accelerated in bunches, each containing 10$^{11}$ particles, through different beam pipes in opposite directions and then collided at four interaction points. During the pp collision a top quark pair is produced. The top quark then decays to a W-boson and a b-quark. The W-boson disintegrates into a charged lepton and a corresponding neutrino or a pair of up-type quark and down-type antiquark. The remaining quarks decomposes into jets. This process can be seen in Figure \ref{fig:PPprocess}.
 	
+	The $t\overline{t}\gamma$ events were selected for this project - top quark pair events with additional photons. The top quark is the heaviest quark in the known elementary particles and is the only quark so far whose properties can be analysed since their lifetime is very short and it forms no bound state before it decays. By that, the electromagnetic coupling, therefore the number of radiated photons after interaction with other charged particles, can be measured~\cite{TTG}. By analysing the top quark, the results can be used to test the Standard Model and its possible extensions~\cite{ATLAS}.
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{figures/PP_process.png}
+	\caption{Proton Proton collision process}
+ 	\label{fig:PPprocess}
+	\end{figure}
+	
+\section{Challenge in categorisation}
+
+Events with the following conditions were selected: 
+
 \begin{itemize}
   \item lepton has 30/35 GeV
   \item at least 3 jets were detected
@@ -93,30 +134,13 @@
   \item exactly one photon
 \end{itemize}
 
-This reduced the data amount from 100kHz to 1kHz. The data used during this project was recorded in 2016 at a centre-of-mass energy of 13TeV. The signal and background processes were modelled using multiple Monte Carlo event generators~\cite{CMS21}. 
-
-	\subsection{Proton-Proton-collision and $t\overline{t}\gamma$}
-	 \label{sec:PPprocess}
-	The protons are accelerated in bunches, each containing 10$^{11}$ particles, through different beam pipes in opposite directions and then collided with each other. During the pp collision a top quark pair is produced. The top quark then decays to a W-boson and a b-quark. The W-boson disintegrates into a charged lepton and a corresponding neutrino or a pair of up-type quark and down-type antiquark. The remaining quarks decomposes into jets. This process can be seen in Figure \ref{fig:PPprocess}.
-	
-	The $t\overline{t}\gamma$ events were selected for this project - top quark pair events with additional photons. The top quark is the heaviest quark in the known elementary particles and is the only quark so far whose properties can be analysed since their lifetime is very short and it forms no bound state before it decays. By that, the electromagnetic coupling, therefore the number of radiated photons after interaction with other charged particles, can be measured~\cite{TTG}. By analysing the top quark, the results can be used to test the Standard Model and its possible extensions~\cite{ATLAS}.
-	
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.9\textwidth]{figures/PP_process.png}
-	\caption{Proton Proton collision process}
- 	\label{fig:PPprocess}
-	\end{figure}
-	
-\section{Challenge in categorisation}
-
 In Figure \ref{fig:PhotonPT}, the transverse momentum of the photon is visible. The background makes up nearly 50\% of the signal region. The possible sources are~\cite{TTG, ATLAS}:
 \begin{itemize}
   \item hadron or electron misidentified as photon
-  \item misconstructed photon
+  \item incorrectly reconstructed photon
   \item photon radiated from different process
-  \item additional particles not detected due to limited detector's acceptence
-  \item hadron misconstructed as electron
+  \item additional particles not detected due to limited detector's acceptance
+  \item hadron incorrectly reconstructed as electron
 \end{itemize}
 
 A neural network was developed to differentiate between the correctly reconstructed and the misidentified photons. What still needs to be investigated is the possibility of improvement in the discrimination between $t\overline{t}\gamma$ and $t\overline{t}$ events in the signal region through MVAs.
@@ -125,13 +149,13 @@ A neural network was developed to differentiate between the correctly reconstruc
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=1\linewidth]{figures/PhotonGood0_pt_lin.png}
+  \includegraphics[width=0.95\linewidth]{figures/PhotonGood0_pt_lin.png}
   \captionof{figure}{Distribution of p\textsubscript{T} photon}
   \label{fig:PhotonPT}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=1\linewidth]{figures/PhotonGood0_pt_log.png}
+  \includegraphics[width=0.95\linewidth]{figures/PhotonGood0_pt_log.png}
   \captionof{figure}{Distribution of p\textsubscript{T} photon (log)}
   \label{fig:PhotonPTlog}
 \end{minipage}
@@ -141,14 +165,14 @@ A neural network was developed to differentiate between the correctly reconstruc
 
 	\subsection{Input parameters}
 	
-The amount of detected particles and the pseudorapidity ($\eta = -ln(tan(\frac{\vartheta}{2}))$, wheras $\vartheta$ is the polar angle) of leptons, photons, first and second jets and b-jets were analysed.  B-jets are jets with a b-tag and the first and second jet refer to the jet with the highest and second highest $p_T$ respectively. The azithmuthal opening angle around the z-axis ($\Delta\phi$) and transverse momentum (p\textsubscript{T}) of these particles were looked at as well. The distance ($\Delta$R = $\sqrt{(\Delta\eta)^2 +(\Delta\phi)^2}$) between lepton and jet, lepton and photon and photon and jet were also considered. 
+The amount of detected particles and the pseudorapidity ($\eta$ = -\textrm{ln}(\textrm{tan}($\frac{\vartheta}{2}$)), whereas $\vartheta$ is the polar angle) of leptons, photons, first and second jets and b-jets were analysed.  B-jets are jets with a b-tag and the first and second jet refer to the jet with the highest and second highest $p_T$ respectively. The azimuthal opening angle around the z-axis ($\Delta\phi$) and transverse momentum (p\textsubscript{T}) of these particles were looked at as well. The distance ($\Delta$R = $\sqrt{(\Delta\eta)^2 +(\Delta\phi)^2}$) between lepton and jet, lepton and photon and photon and jet were also considered. 
 Additional variables are:
 \begin{itemize}
   \item total transverse momentum of all jets; higher amount means either a large number of jets or jets with high energies were detected
   \item maximum mass of three jets; during the decay process of a top quark to a b-quark and W-boson, which further decays to two quarks (see chapter \ref{sec:PPprocess}), the variable would then have a peak at the top quark mass  
   \item transverse mass of an object depending on input variables; if a lepton and neutrino were used in the following formula, then the transverse mass of a W-boson is calculated:
 	  \begin{align*}
-			m_T(W) = \sqrt{2p_T(\ell)p_T^{miss}[1 - cos(\Delta\phi(\ell, \vec{p}_T^{miss}))]}
+			m_T(W) = \sqrt{2p_T(\ell)p_T^{miss}[1 - \textrm{cos}((\Delta\phi(\ell, \vec{p}_T^{miss}))]}
 		\end{align*}
   
   %\item nPhotonGood0: number of photons
@@ -157,9 +181,9 @@ Additional variables are:
 		\item proportion of energy coming from charged particles detected in ECAL (e.g. electron)
 		\item proportion of energy coming from neutral particles detected in HCAL (e.g. neutral meson, neutron)
 		\item proportion of energy coming from charged particles detected in HCAL (e.g. charged meson, proton)
-  		\item relative isolation of the lepton to all particles in a radius of dR = 0.3 %$\sum_{i} (\frac{p_{T_i}}{p_{T_i}^{LEPTON}})$
-		\item relative isolation of the lepton to charged particles in a radius of dR = 0.3 %$\sum_{i} (\frac{p_{T_i}^{CHARGED}}{p_{T_i}^{LEPTON}})$
-		\item relative isolation of the lepton to neutral particles in a radius of dR = 0.3 %$\sum_{i} (\frac{p_{T_i}^{NEUTRAL}}{p_{T_i}^{LEPTON}})$
+  		\item relative isolation of the lepton to all particles in a radius of $\Delta$R = 0.3 %$\sum_{i} (\frac{p_{T_i}}{p_{T_i}^{LEPTON}})$
+		\item relative isolation of the lepton to charged particles in a radius of $\Delta$R = 0.3 %$\sum_{i} (\frac{p_{T_i}^{CHARGED}}{p_{T_i}^{LEPTON}})$
+		\item relative isolation of the lepton to neutral particles in a radius of $\Delta$R = 0.3 %$\sum_{i} (\frac{p_{T_i}^{NEUTRAL}}{p_{T_i}^{LEPTON}})$
 		\item result of neural network to identify first and second jets coming from b-quark (b-tag)
 		\item $\Delta\phi$ between lepton and photon
 		\item $\Delta\phi$ of missing transverse momentum (MET)
@@ -371,10 +395,10 @@ Figure \ref{fig:PhotonGood0pt} to \ref{fig:photonLepdR} are the photon variables
 
 \section{MVA}
 
-Trying to split signal and background through a variable with a cut-off value faces the problem that this criteria doesn't apply for every event. If it works for one event, it doesn't mean that it works for the next one. Therefore, mutliple variables need to be used to distinguish between those two categories, so called multivariate analysis (MVA). As already mentioned in chapter \ref{sec:approach}, the chosen MVA-types are boosted decision trees (BDT) and multilayer perceptron (MLP).
+Trying to split signal and background through a variable with a cut-off value faces the problem that this criteria doesn't apply for every event. If it works for one event, it doesn't mean that it works for the next one. Therefore, multiple variables need to be used to distinguish between those two categories, so called multivariate analysis (MVA). As already mentioned in chapter \ref{sec:approach}, the chosen MVA-types are boosted decision trees (BDT) and multilayer perceptron (MLP).
 
 	\subsection{BDT - Boosted Decision Trees}
-	The decision tree starts with the root node containing the whole sample. For a binary tree, the node is then split into two branches using a variable and a corresponding cut-off value. The cut-off value should be a value that seperates the signal from the background the best. This process will be repeated for each branch for all relevant variables, including already used variables, until an end criteria is met. The final branch is called a leaf and this will be assigned to one of the two categories. End criterias could be a minimum size of a leaf, perfect separation, insignificant improvement after split or maximal tree depth. Boosted decision trees are built out of additional trees, so called weak classifieres. They include variables with a low discriminatory power and will be used to improve the main decision tree to a more stable model with a lower error rate~\cite{BDT}. 
+	The decision tree starts with the root node containing the whole sample. For a binary tree, the node is then split into two branches using a variable and a corresponding cut-off value. The cut-off value should be a value that separates the signal from the background the best. This process will be repeated for each branch for all relevant variables, including already used variables, until an end criteria is met. The final branch is called a leaf and this will be assigned to one of the two categories. End criteria could be a minimum size of a leaf, perfect separation, insignificant improvement after split or maximal tree depth. Boosted decision trees are built out of additional trees, so called weak classifiers. They include variables with a low discriminatory power and will be used to improve the main decision tree to a more stable model with a lower error rate~\cite{BDT}. 
 
 	\begin{figure}[H]
 	\centering
@@ -384,7 +408,7 @@ Trying to split signal and background through a variable with a cut-off value fa
 	
 	\subsection{MLP - Multilayer Perceptron}
 	
-	The model is built out of multiple perceptrons, which are arranged in layers shown in Figure \ref{fig:MLP}. The value of one perceptron is the sum of all weighted inputs. This value is then transformed through an activation function and a treshhold. The activation funtion is a linear function for the input- and outputlayer, while it is usually the log-sigmoid transfer function for the hiddenlayers, as seen in Figure \ref{fig:log-sigmoid function}. All layers have a treshhold, except the inputlayer. 
+	The model is built out of multiple perceptrons, which are arranged in layers shown in Figure \ref{fig:MLP}. The value of one perceptron is the sum of all weighted inputs. This value is then transformed through an activation function and a threshold. The activation function is a linear function for the input- and outputlayer, while it is usually the log-sigmoid transfer function for the hiddenlayers, as seen in Figure \ref{fig:log-sigmoid function}. All layers have a threshold, except the inputlayer. 
 	
 	\begin{figure}[H]
 	\centering
@@ -407,7 +431,7 @@ Trying to split signal and background through a variable with a cut-off value fa
 	
 	In the MLP, every perceptron of a layer is connected to every perceptron of the previous and next layer. Each connection has an assigned weight, a so called weight coefficient. All coefficients of one layer can be written as a weight matrix. The first and last layer are called input- and outputlayer respectively, while the intermediate layers are the hiddenlayers. A MLP has a minimum of one hiddenlayer, therefore contains at least three layers~\cite{MLP08}.
 	
-	If the signal is only transmitted in one direction, therefore the MLP doesn't have any loops, it is described as feed forward. The learning process of the model is called backpropagation algorithm. It learns by minimizing the error between network output and expexted output. Initially, all weights are assigned random values, then every event will go through the network and the weights are adapted. Either all events will be put through the network first and then the values are adapted, or they are adjusted after each event, but for the latter the order of the events might be important. After one epoch the end criteria will be tested. If it fails, the whole learning process will be carried out again. If it is met, the algorithm is finished~\cite{MLP09}.
+	If the signal is only transmitted in one direction, therefore the MLP doesn't have any loops, it is described as feed forward. The learning process of the model is called backpropagation algorithm. It learns by minimizing the error between network output and expected output. Initially, all weights are assigned random values, then every event will go through the network and the weights are adapted. Either all events will be put through the network first and then the values are adapted, or they are adjusted after each event, but for the latter the order of the events might be important. After one epoch the end criteria will be tested. If it fails, the whole learning process will be carried out again. If it is met, the algorithm is finished~\cite{MLP09}.
 	
 \begin{figure}[H]
 	\begin{center}
@@ -496,7 +520,7 @@ Examples for different types of ROC-curves are displayed in Figure \ref{fig:ROC_
 		
 		Now adding the photon variables for the third selection shows a better success in the distinction process. They can be seen in Figure \ref{fig:ROC_s3_config1} - \ref{fig:ROC_s3_config3}. At a signal efficiency of 70\%, a background rejection of about 48\% for MLP and 38\% for BDT can be achieved.
 		
-		Between the three configuration combinations, there is only a slight difference for the MLP model, but for the BDT model there is an increase in the AUC for configuration 2 visible. Training- and testresults are nearly identical, so there are no signs of overfitting. The MLP model perfomed better than the BDT model for all selection categories. The third set of variables shows the best result.
+		Between the three configuration combinations, there is only a slight difference for the MLP model, but for the BDT model there is an increase in the AUC for configuration 2 visible. Training- and test-results are nearly identical, so there are no signs of overfitting. The MLP model performed better than the BDT model for all selection categories. The third set of variables shows the best result.
 				
 	\begin{figure}[H]
 	\centering
@@ -681,7 +705,7 @@ Examples for different types of ROC-curves are displayed in Figure \ref{fig:ROC_
 	\end{figure}
 				
 \section{Conclusion}
-It is very difficult to differentiate between $t\overline{t}\gamma$ and $t\overline{t}$ events because they show very similiar behaviour in the signal region. Nevertheless, a slight improvement was possible by training a MVA with relevant variables. At a signal efficiency of 70\%, a background rejection of up to 48\% for MLP and up to 38\% for BDT can be achieved. Especially photon variables provide a bigger improvement. MLPs show a better performance than BDTs with a 5-10\% difference observed in background rejection at 70\% signal efficiency, which suggests the selection of this type of model.
+It is very difficult to differentiate between $t\overline{t}\gamma$ and $t\overline{t}$ events because they show very similar behaviour in the signal region. Nevertheless, a slight improvement was possible by training a MVA with relevant variables. At a signal efficiency of 70\%, a background rejection of up to 48\% for MLP and up to 38\% for BDT can be achieved. Especially photon variables provide a bigger improvement. MLPs show a better performance than BDTs with a 5-10\% difference observed in background rejection at 70\% signal efficiency, which suggests the selection of this type of model.
 
 \appendix
 \section{Appendix}

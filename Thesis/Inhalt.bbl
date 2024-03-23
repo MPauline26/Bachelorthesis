@@ -29,6 +29,11 @@ CMS-Collaboration, S.~Chatrchyan, G.~Hmayakyan, V.~Khachatryan, A.~M. Sirunyan,
 \newblock Journal of Instrumentation, 3(08):S08004--S08004, 08 2008.
 \newblock \doi{10.1088/1748-0221/3/08/s08004}.
 
+\bibitem{CMSWEB}
+{\em Detector | CMS Experiment}.
+\newblock \url{https://cms.cern/detector}.
+\newblock Accessed: 2021-10-01.
+
 \bibitem{ATLAS}
 M.~Aaboud, G.~Aad, B.~Abbott, D.~C. Abbott, O.~Abdinov, B.~Abeloos, D.~K.
   Abhayasinghe, S.~H. Abidi, O.~S. AbouZeid, and et~al.
