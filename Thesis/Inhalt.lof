@@ -1,0 +1,67 @@
+\select@language {english}
+\contentsline {figure}{\numberline {1}{\ignorespaces Detector system of ATLAS\relax }}{3}{figure.caption.2}
+\contentsline {figure}{\numberline {2}{\ignorespaces Proton Proton collision process\relax }}{4}{figure.caption.3}
+\contentsline {figure}{\numberline {3}{\ignorespaces Distribution of P\textsubscript {T} Photon\relax }}{5}{figure.caption.4}
+\contentsline {figure}{\numberline {4}{\ignorespaces Distribution of P\textsubscript {T} Photon (log)\relax }}{5}{figure.caption.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Bj0\_eta\relax }}{8}{figure.caption.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces JetGood0\_btagDeepB\relax }}{8}{figure.caption.5}
+\contentsline {figure}{\numberline {7}{\ignorespaces LeptonTight0\_pt\relax }}{8}{figure.caption.6}
+\contentsline {figure}{\numberline {8}{\ignorespaces LeptonTight0\_eta\relax }}{8}{figure.caption.6}
+\contentsline {figure}{\numberline {9}{\ignorespaces nBTagGood\relax }}{8}{figure.caption.7}
+\contentsline {figure}{\numberline {10}{\ignorespaces nJetGood\relax }}{8}{figure.caption.7}
+\contentsline {figure}{\numberline {11}{\ignorespaces JetGood0\_eta\relax }}{9}{figure.caption.8}
+\contentsline {figure}{\numberline {12}{\ignorespaces JetGood0\_phi\relax }}{9}{figure.caption.8}
+\contentsline {figure}{\numberline {13}{\ignorespaces JetGood0\_pt\relax }}{9}{figure.caption.9}
+\contentsline {figure}{\numberline {14}{\ignorespaces leptonJetdR\relax }}{9}{figure.caption.9}
+\contentsline {figure}{\numberline {15}{\ignorespaces MET\_phi\relax }}{9}{figure.caption.10}
+\contentsline {figure}{\numberline {16}{\ignorespaces MET\_pt\relax }}{9}{figure.caption.10}
+\contentsline {figure}{\numberline {17}{\ignorespaces mT\relax }}{10}{figure.caption.11}
+\contentsline {figure}{\numberline {18}{\ignorespaces m3\relax }}{10}{figure.caption.11}
+\contentsline {figure}{\numberline {19}{\ignorespaces ht\relax }}{10}{figure.caption.12}
+\contentsline {figure}{\numberline {20}{\ignorespaces PhotonGood0\_mvaID\relax }}{10}{figure.caption.13}
+\contentsline {figure}{\numberline {21}{\ignorespaces PhotonGood0\_pt\relax }}{11}{figure.caption.14}
+\contentsline {figure}{\numberline {22}{\ignorespaces PhotonGood0\_phi\relax }}{11}{figure.caption.14}
+\contentsline {figure}{\numberline {23}{\ignorespaces PhotonGood0\_eta\relax }}{11}{figure.caption.15}
+\contentsline {figure}{\numberline {24}{\ignorespaces ltight0GammadPhi\relax }}{11}{figure.caption.15}
+\contentsline {figure}{\numberline {25}{\ignorespaces photonJetdR\relax }}{12}{figure.caption.16}
+\contentsline {figure}{\numberline {26}{\ignorespaces photonLepdR\relax }}{12}{figure.caption.16}
+\contentsline {figure}{\numberline {27}{\ignorespaces Outline of Boosted Decision Trees\relax }}{13}{figure.caption.17}
+\contentsline {figure}{\numberline {28}{\ignorespaces log-sigmoid function\relax }}{13}{figure.caption.18}
+\contentsline {figure}{\numberline {29}{\ignorespaces Outline of Multilayer Perceptron\relax }}{14}{figure.caption.19}
+\contentsline {figure}{\numberline {30}{\ignorespaces ROC-curve examples\relax }}{16}{figure.caption.21}
+\contentsline {figure}{\numberline {31}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 1 with configuration 1\relax }}{17}{figure.caption.22}
+\contentsline {figure}{\numberline {32}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 1 with configuration 2\relax }}{18}{figure.caption.23}
+\contentsline {figure}{\numberline {33}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 1 with configuration 3\relax }}{19}{figure.caption.24}
+\contentsline {figure}{\numberline {34}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 2 with configuration 1\relax }}{20}{figure.caption.25}
+\contentsline {figure}{\numberline {35}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 2 with configuration 2\relax }}{21}{figure.caption.26}
+\contentsline {figure}{\numberline {36}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 2 with configuration 3\relax }}{22}{figure.caption.27}
+\contentsline {figure}{\numberline {37}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 3 with configuration 1\relax }}{23}{figure.caption.28}
+\contentsline {figure}{\numberline {38}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 3 with configuration 2\relax }}{24}{figure.caption.29}
+\contentsline {figure}{\numberline {39}{\ignorespaces BDT-, MLP-distribution and ROC curve for variables from selection 3 with configuration 3\relax }}{25}{figure.caption.30}
+\contentsline {figure}{\numberline {40}{\ignorespaces Bj0\_eta\relax }}{26}{figure.caption.31}
+\contentsline {figure}{\numberline {41}{\ignorespaces Bj0\_phi\relax }}{26}{figure.caption.31}
+\contentsline {figure}{\numberline {42}{\ignorespaces Bj0\_pt\relax }}{26}{figure.caption.32}
+\contentsline {figure}{\numberline {43}{\ignorespaces Bj1\_eta\relax }}{26}{figure.caption.32}
+\contentsline {figure}{\numberline {44}{\ignorespaces Bj1\_phi\relax }}{27}{figure.caption.33}
+\contentsline {figure}{\numberline {45}{\ignorespaces Bj1\_pt\relax }}{27}{figure.caption.33}
+\contentsline {figure}{\numberline {46}{\ignorespaces JetGood0\_btagDeepB\relax }}{27}{figure.caption.34}
+\contentsline {figure}{\numberline {47}{\ignorespaces JetGood0\_chEmEF\relax }}{27}{figure.caption.34}
+\contentsline {figure}{\numberline {48}{\ignorespaces JetGood0\_chHEF\relax }}{27}{figure.caption.35}
+\contentsline {figure}{\numberline {49}{\ignorespaces JetGood0\_neEmEF\relax }}{27}{figure.caption.35}
+\contentsline {figure}{\numberline {50}{\ignorespaces JetGood0\_neHEF\relax }}{28}{figure.caption.36}
+\contentsline {figure}{\numberline {51}{\ignorespaces JetGood1\_btagDeepB\relax }}{28}{figure.caption.36}
+\contentsline {figure}{\numberline {52}{\ignorespaces JetGood1\_eta\relax }}{28}{figure.caption.37}
+\contentsline {figure}{\numberline {53}{\ignorespaces JetGood1\_phi\relax }}{28}{figure.caption.37}
+\contentsline {figure}{\numberline {54}{\ignorespaces JetGood1\_pt\relax }}{28}{figure.caption.38}
+\contentsline {figure}{\numberline {55}{\ignorespaces LeptonTight0\_phi\relax }}{28}{figure.caption.38}
+\contentsline {figure}{\numberline {56}{\ignorespaces LeptonTight0\_eta\relax }}{29}{figure.caption.39}
+\contentsline {figure}{\numberline {57}{\ignorespaces LeptonTight0\_pfRelIso03\_all\relax }}{29}{figure.caption.39}
+\contentsline {figure}{\numberline {58}{\ignorespaces LeptonTight0\_pfRelIso03\_chg\relax }}{29}{figure.caption.40}
+\contentsline {figure}{\numberline {59}{\ignorespaces LeptonTight0\_pfRelIso03\_ne\relax }}{29}{figure.caption.40}
+\contentsline {figure}{\numberline {60}{\ignorespaces LeptonTight0\_pt\relax }}{29}{figure.caption.41}
+\contentsline {figure}{\numberline {61}{\ignorespaces nElectronTight\relax }}{29}{figure.caption.41}
+\contentsline {figure}{\numberline {62}{\ignorespaces nHighPTPhotons\relax }}{30}{figure.caption.42}
+\contentsline {figure}{\numberline {63}{\ignorespaces nJet\relax }}{30}{figure.caption.42}
+\contentsline {figure}{\numberline {64}{\ignorespaces nLeptonTight\relax }}{30}{figure.caption.43}
+\contentsline {figure}{\numberline {65}{\ignorespaces nMuonTight\relax }}{30}{figure.caption.43}
+\contentsline {figure}{\numberline {66}{\ignorespaces nPhotonGood\relax }}{30}{figure.caption.44}

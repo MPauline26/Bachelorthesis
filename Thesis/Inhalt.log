@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.10)  22 AUG 2021 20:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.10)  30 AUG 2021 00:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -272,40 +272,64 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks26
 \@floatcapt=\box30
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip51
+\LTright=\skip52
+\LTpre=\skip53
+\LTpost=\skip54
+\LTchunksize=\count107
+\LTcapwidth=\dimen122
+\LT@head=\box31
+\LT@firsthead=\box32
+\LT@foot=\box33
+\LT@lastfoot=\box34
+\LT@cols=\count108
+\LT@rows=\count109
+\c@LT@tables=\count110
+\c@LT@chunks=\count111
+\LT@p@ftn=\toks27
+)
+Class scrartcl Info: longtable captions redefined on input line 14.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2015/02/21 v2.0a fixes to LaTeX (obsolete)
+
+
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
+
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2015/05/04 v2.2 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count107
+\etb@tempcnta=\count112
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/refcount.sty
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2015/03/31 v1.8m multicolumn formatting (FMi)
-\c@tracingmulticols=\count108
-\mult@box=\box31
-\multicol@leftmargin=\dimen122
-\c@unbalance=\count109
-\c@collectmore=\count110
-\doublecol@number=\count111
-\multicoltolerance=\count112
-\multicolpretolerance=\count113
-\full@width=\dimen123
-\page@free=\dimen124
-\premulticols=\dimen125
-\postmulticols=\dimen126
-\multicolsep=\skip51
-\multicolbaselineskip=\skip52
-\partial@page=\box32
-\last@line=\box33
-\maxbalancingoverflow=\dimen127
-\mult@rightbox=\box34
-\mult@grightbox=\box35
-\mult@gfirstbox=\box36
-\mult@firstbox=\box37
-\@tempa=\box38
-\@tempa=\box39
-\@tempa=\box40
-\@tempa=\box41
+\c@tracingmulticols=\count113
+\mult@box=\box35
+\multicol@leftmargin=\dimen123
+\c@unbalance=\count114
+\c@collectmore=\count115
+\doublecol@number=\count116
+\multicoltolerance=\count117
+\multicolpretolerance=\count118
+\full@width=\dimen124
+\page@free=\dimen125
+\premulticols=\dimen126
+\postmulticols=\dimen127
+\multicolsep=\skip55
+\multicolbaselineskip=\skip56
+\partial@page=\box36
+\last@line=\box37
+\maxbalancingoverflow=\dimen128
+\mult@rightbox=\box38
+\mult@grightbox=\box39
+\mult@gfirstbox=\box40
+\mult@firstbox=\box41
 \@tempa=\box42
 \@tempa=\box43
 \@tempa=\box44
@@ -319,87 +343,194 @@ Package: multicol 2015/03/31 v1.8m multicolumn formatting (FMi)
 \@tempa=\box52
 \@tempa=\box53
 \@tempa=\box54
-\c@columnbadness=\count114
-\c@finalcolumnbadness=\count115
-\last@try=\dimen128
-\multicolovershoot=\dimen129
-\multicolundershoot=\dimen130
-\mult@nat@firstbox=\box55
-\colbreak@box=\box56
-\mc@col@check@num=\count116
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\c@columnbadness=\count119
+\c@finalcolumnbadness=\count120
+\last@try=\dimen129
+\multicolovershoot=\dimen130
+\multicolundershoot=\dimen131
+\mult@nat@firstbox=\box59
+\colbreak@box=\box60
+\mc@col@check@num=\count121
 )
-\c@countitems=\count117
-\c@nextitemizecount=\count118
- (./Inhalt.aux)
-\openout1 = `Inhalt.aux'.
+\c@countitems=\count122
+\c@nextitemizecount=\count123
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/ucsencs.def
-File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
-)
-(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count119
-\scratchdimen=\dimen131
-\scratchbox=\box57
-\nofMPsegments=\count120
-\nofMParguments=\count121
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count122
-\MPscratchDim=\dimen132
-\MPnumerator=\count123
-\makeMPintoPDFobject=\count124
-\everyMPtoPDFconversion=\toks28
-) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
-)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-)))
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package hobsub Info: Skipping package `refcount' (already loaded).
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen132
+\Hy@linkcounter=\count124
+\Hy@pagecounter=\count125
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count126
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count127
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen133
+\Fld@menulength=\count128
+\Field@Width=\dimen134
+\Fld@charsize=\dimen135
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count129
+\c@Item=\count130
+\c@Hfootnote=\count131
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count132
+\c@bookmark@seq@number=\count133
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip57
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 55.
+
+(./Inhalt.aux)
+\openout1 = `Inhalt.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/ucsencs.def
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+)
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count134
+\scratchdimen=\dimen136
+\scratchbox=\box61
+\nofMPsegments=\count135
+\nofMParguments=\count136
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count137
+\MPscratchDim=\dimen137
+\MPnumerator=\count138
+\makeMPintoPDFobject=\count139
+\everyMPtoPDFconversion=\toks29
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
@@ -411,588 +542,586 @@ e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
+)
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 50.
+\AtBeginShipoutBox=\box62
+Package hyperref Info: Link coloring ON on input line 60.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count140
+)
+LaTeX Info: Redefining \ref on input line 60.
+LaTeX Info: Redefining \pageref on input line 60.
+LaTeX Info: Redefining \nameref on input line 60.
+
+(./Inhalt.out) (./Inhalt.out)
+\@outlinefile=\write3
+\openout3 = `Inhalt.out'.
+
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 62.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Try loading font information for U+msa on input line 53.
+) (./Inhalt.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 53.
+LaTeX Font Info:    Try loading font information for U+msb on input line 3.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-<figures/detector_system.png, id=1, 963.6pt x 542.025pt>
-File: figures/detector_system.png Graphic file (type png)
+))
+\tf@toc=\write4
+\openout4 = `Inhalt.toc'.
 
-<use figures/detector_system.png>
-Package pdftex.def Info: figures/detector_system.png used on input line 67.
-(pdftex.def)             Requested size: 418.25555pt x 235.26619pt.
  [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 75.
+<figures/detector_system.png, id=137, 963.6pt x 542.025pt>
+File: figures/detector_system.png Graphic file (type png)
+
+<use figures/detector_system.png>
+Package pdftex.def Info: figures/detector_system.png used on input line 82.
+(pdftex.def)             Requested size: 418.25555pt x 235.26619pt.
+ [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 90.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 75.
- [2 <./figures/detector_system.png>] <figures/PP_process.png, id=17, 963.6pt x 
-542.025pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 90.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 98.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@@overline' on input line 98.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gamma' on input line 98.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 98.
+
+[3 <./figures/detector_system.png>]
+<figures/PP_process.png, id=158, 963.6pt x 542.025pt>
 File: figures/PP_process.png Graphic file (type png)
 
 <use figures/PP_process.png>
-Package pdftex.def Info: figures/PP_process.png used on input line 92.
+Package pdftex.def Info: figures/PP_process.png used on input line 105.
 (pdftex.def)             Requested size: 418.25555pt x 235.26619pt.
 
-<figures/PhotonGood0_pt_lin.png, id=18, 517.935pt x 674.52pt>
+<figures/PhotonGood0_pt_lin.png, id=162, 517.935pt x 674.52pt>
 File: figures/PhotonGood0_pt_lin.png Graphic file (type png)
 
 <use figures/PhotonGood0_pt_lin.png>
-Package pdftex.def Info: figures/PhotonGood0_pt_lin.png used on input line 105.
+Package pdftex.def Info: figures/PhotonGood0_pt_lin.png used on input line 125.
 
 (pdftex.def)             Requested size: 209.12778pt x 272.35571pt.
 
-<figures/PhotonGood0_pt_log.png, id=19, 517.935pt x 674.52pt>
+<figures/PhotonGood0_pt_log.png, id=163, 517.935pt x 674.52pt>
 File: figures/PhotonGood0_pt_log.png Graphic file (type png)
 
 <use figures/PhotonGood0_pt_log.png>
-Package pdftex.def Info: figures/PhotonGood0_pt_log.png used on input line 111.
+Package pdftex.def Info: figures/PhotonGood0_pt_log.png used on input line 131.
 
 (pdftex.def)             Requested size: 209.12778pt x 272.35571pt.
- [3 <./figures/PP_process.png>]
+ [4 <./figures/PP_process.png>]
 Overfull \vbox (0.6521pt too high) has occurred while \output is active []
 
 
-[4 <./figures/PhotonGood0_pt_lin.png> <./figures/PhotonGood0_pt_log.png>]
-Overfull \vbox (2.3999pt too high) has occurred while \output is active []
-
-
-[5] <figures/Notused/Bj0_eta.png, id=30, 497.86pt x 473.77pt>
+[5 <./figures/PhotonGood0_pt_lin.png> <./figures/PhotonGood0_pt_log.png>]
+[6] <figures/Notused/Bj0_eta.png, id=186, 497.86pt x 473.77pt>
 File: figures/Notused/Bj0_eta.png Graphic file (type png)
 
 <use figures/Notused/Bj0_eta.png>
-Package pdftex.def Info: figures/Notused/Bj0_eta.png used on input line 232.
+Package pdftex.def Info: figures/Notused/Bj0_eta.png used on input line 252.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/JetGood0_btagDeepB.png, id=31, 497.86pt x 473.77pt>
+<figures/Notused/JetGood0_btagDeepB.png, id=187, 497.86pt x 473.77pt>
 File: figures/Notused/JetGood0_btagDeepB.png Graphic file (type png)
 
 <use figures/Notused/JetGood0_btagDeepB.png>
 Package pdftex.def Info: figures/Notused/JetGood0_btagDeepB.png used on input l
-ine 238.
+ine 258.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
- [6]
-<figures/Notused/LeptonTight0_pt.png, id=37, 497.86pt x 473.77pt>
+ [7]
+<figures/Notused/LeptonTight0_pt.png, id=195, 497.86pt x 473.77pt>
 File: figures/Notused/LeptonTight0_pt.png Graphic file (type png)
 
 <use figures/Notused/LeptonTight0_pt.png>
 Package pdftex.def Info: figures/Notused/LeptonTight0_pt.png used on input line
- 248.
+ 268.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/LeptonTight0_eta.png, id=38, 497.86pt x 473.77pt>
+<figures/Notused/LeptonTight0_eta.png, id=196, 497.86pt x 473.77pt>
 File: figures/Notused/LeptonTight0_eta.png Graphic file (type png)
 
 <use figures/Notused/LeptonTight0_eta.png>
 Package pdftex.def Info: figures/Notused/LeptonTight0_eta.png used on input lin
-e 254.
+e 274.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Select1/nBTagGood.png, id=39, 497.86pt x 473.77pt>
+<figures/Select1/nBTagGood.png, id=199, 497.86pt x 473.77pt>
 File: figures/Select1/nBTagGood.png Graphic file (type png)
 
 <use figures/Select1/nBTagGood.png>
-Package pdftex.def Info: figures/Select1/nBTagGood.png used on input line 266.
+Package pdftex.def Info: figures/Select1/nBTagGood.png used on input line 286.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Select1/nJetGood.png, id=40, 497.86pt x 473.77pt>
+<figures/Select1/nJetGood.png, id=200, 497.86pt x 473.77pt>
 File: figures/Select1/nJetGood.png Graphic file (type png)
 
 <use figures/Select1/nJetGood.png>
-Package pdftex.def Info: figures/Select1/nJetGood.png used on input line 272.
+Package pdftex.def Info: figures/Select1/nJetGood.png used on input line 292.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Select1/JetGood0_eta.png, id=41, 497.86pt x 473.77pt>
+<figures/Select1/JetGood0_eta.png, id=201, 497.86pt x 473.77pt>
 File: figures/Select1/JetGood0_eta.png Graphic file (type png)
 
 <use figures/Select1/JetGood0_eta.png>
-Package pdftex.def Info: figures/Select1/JetGood0_eta.png used on input line 28
+Package pdftex.def Info: figures/Select1/JetGood0_eta.png used on input line 30
 2.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Select1/JetGood0_phi.png, id=42, 497.86pt x 473.77pt>
+<figures/Select1/JetGood0_phi.png, id=202, 497.86pt x 473.77pt>
 File: figures/Select1/JetGood0_phi.png Graphic file (type png)
 
 <use figures/Select1/JetGood0_phi.png>
-Package pdftex.def Info: figures/Select1/JetGood0_phi.png used on input line 28
+Package pdftex.def Info: figures/Select1/JetGood0_phi.png used on input line 30
 8.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
- [7 <./figures/Notused/Bj0_eta.png> <./figures/Notused/JetGood0_btagDeepB.png> 
+ [8 <./figures/Notused/Bj0_eta.png> <./figures/Notused/JetGood0_btagDeepB.png> 
 <./figures/Notused/LeptonTight0_pt.png> <./figures/Notused/LeptonTight0_eta.png
 > <./figures/Select1/nBTagGood.png> <./figures/Select1/nJetGood.png>]
-<figures/Select1/JetGood0_pt.png, id=47, 497.86pt x 473.77pt>
+<figures/Select1/JetGood0_pt.png, id=209, 497.86pt x 473.77pt>
 File: figures/Select1/JetGood0_pt.png Graphic file (type png)
 
 <use figures/Select1/JetGood0_pt.png>
-Package pdftex.def Info: figures/Select1/JetGood0_pt.png used on input line 298
+Package pdftex.def Info: figures/Select1/JetGood0_pt.png used on input line 318
 .
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Select1/leptonJetdR.png, id=48, 497.86pt x 473.77pt>
+<figures/Select1/leptonJetdR.png, id=210, 497.86pt x 473.77pt>
 File: figures/Select1/leptonJetdR.png Graphic file (type png)
 
 <use figures/Select1/leptonJetdR.png>
-Package pdftex.def Info: figures/Select1/leptonJetdR.png used on input line 304
+Package pdftex.def Info: figures/Select1/leptonJetdR.png used on input line 324
 .
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Select1/MET_phi.png, id=49, 497.86pt x 473.77pt>
+<figures/Select1/MET_phi.png, id=211, 497.86pt x 473.77pt>
 File: figures/Select1/MET_phi.png Graphic file (type png)
 
 <use figures/Select1/MET_phi.png>
-Package pdftex.def Info: figures/Select1/MET_phi.png used on input line 314.
+Package pdftex.def Info: figures/Select1/MET_phi.png used on input line 334.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Select1/MET_pt.png, id=50, 497.86pt x 473.77pt>
+<figures/Select1/MET_pt.png, id=212, 497.86pt x 473.77pt>
 File: figures/Select1/MET_pt.png Graphic file (type png)
 
 <use figures/Select1/MET_pt.png>
-Package pdftex.def Info: figures/Select1/MET_pt.png used on input line 320.
+Package pdftex.def Info: figures/Select1/MET_pt.png used on input line 340.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Select1/mT.png, id=51, 497.86pt x 473.77pt>
+<figures/Select1/mT.png, id=213, 497.86pt x 473.77pt>
 File: figures/Select1/mT.png Graphic file (type png)
 
 <use figures/Select1/mT.png>
-Package pdftex.def Info: figures/Select1/mT.png used on input line 330.
+Package pdftex.def Info: figures/Select1/mT.png used on input line 350.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Select1/m3.png, id=52, 497.86pt x 473.77pt>
+<figures/Select1/m3.png, id=214, 497.86pt x 473.77pt>
 File: figures/Select1/m3.png Graphic file (type png)
 
 <use figures/Select1/m3.png>
-Package pdftex.def Info: figures/Select1/m3.png used on input line 336.
+Package pdftex.def Info: figures/Select1/m3.png used on input line 356.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
- [8 <./figures/Select1/JetGood0_eta.png> <./figures/Select1/JetGood0_phi.png> <
+ [9 <./figures/Select1/JetGood0_eta.png> <./figures/Select1/JetGood0_phi.png> <
 ./figures/Select1/JetGood0_pt.png> <./figures/Select1/leptonJetdR.png> <./figur
 es/Select1/MET_phi.png> <./figures/Select1/MET_pt.png>] <figures/Select1/ht.png
-, id=56, 497.86pt x 473.77pt>
+, id=222, 497.86pt x 473.77pt>
 File: figures/Select1/ht.png Graphic file (type png)
 
 <use figures/Select1/ht.png>
-Package pdftex.def Info: figures/Select1/ht.png used on input line 344.
+Package pdftex.def Info: figures/Select1/ht.png used on input line 364.
 (pdftex.def)             Requested size: 158.93915pt x 151.24803pt.
 
-<figures/Select2/PhotonGood0_mvaID.png, id=57, 497.86pt x 473.77pt>
+<figures/Select2/PhotonGood0_mvaID.png, id=224, 497.86pt x 473.77pt>
 File: figures/Select2/PhotonGood0_mvaID.png Graphic file (type png)
 
 <use figures/Select2/PhotonGood0_mvaID.png>
 Package pdftex.def Info: figures/Select2/PhotonGood0_mvaID.png used on input li
-ne 353.
+ne 373.
 (pdftex.def)             Requested size: 158.93915pt x 151.24803pt.
- [9 <./figures/Select1/mT.png> <./figures/Select1/m3.png> <./figures/Select1/ht
-.png> <./figures/Select2/PhotonGood0_mvaID.png>] <figures/Select3/PhotonGood0_p
-t.png, id=61, 497.86pt x 473.77pt>
+ [10 <./figures/Select1/mT.png> <./figures/Select1/m3.png> <./figures/Select1/h
+t.png> <./figures/Select2/PhotonGood0_mvaID.png>]
+<figures/Select3/PhotonGood0_pt.png, id=233, 497.86pt x 473.77pt>
 File: figures/Select3/PhotonGood0_pt.png Graphic file (type png)
 
 <use figures/Select3/PhotonGood0_pt.png>
 Package pdftex.def Info: figures/Select3/PhotonGood0_pt.png used on input line 
-364.
+384.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Select3/PhotonGood0_phi.png, id=62, 497.86pt x 473.77pt>
+<figures/Select3/PhotonGood0_phi.png, id=234, 497.86pt x 473.77pt>
 File: figures/Select3/PhotonGood0_phi.png Graphic file (type png)
 
 <use figures/Select3/PhotonGood0_phi.png>
 Package pdftex.def Info: figures/Select3/PhotonGood0_phi.png used on input line
- 370.
+ 390.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Select3/PhotonGood0_eta.png, id=63, 497.86pt x 473.77pt>
+<figures/Select3/PhotonGood0_eta.png, id=235, 497.86pt x 473.77pt>
 File: figures/Select3/PhotonGood0_eta.png Graphic file (type png)
 
 <use figures/Select3/PhotonGood0_eta.png>
 Package pdftex.def Info: figures/Select3/PhotonGood0_eta.png used on input line
- 380.
+ 400.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Select3/PhotonGood0_hoe.png, id=64, 497.86pt x 473.77pt>
-File: figures/Select3/PhotonGood0_hoe.png Graphic file (type png)
-
-<use figures/Select3/PhotonGood0_hoe.png>
-Package pdftex.def Info: figures/Select3/PhotonGood0_hoe.png used on input line
- 386.
-(pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
-
-<figures/Select3/PhotonGood0_r9.png, id=65, 497.86pt x 473.77pt>
-File: figures/Select3/PhotonGood0_r9.png Graphic file (type png)
-
-<use figures/Select3/PhotonGood0_r9.png>
-Package pdftex.def Info: figures/Select3/PhotonGood0_r9.png used on input line 
-396.
-(pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
-
-<figures/Select3/PhotonGood0_sieie.png, id=66, 497.86pt x 473.77pt>
-File: figures/Select3/PhotonGood0_sieie.png Graphic file (type png)
-
-<use figures/Select3/PhotonGood0_sieie.png>
-Package pdftex.def Info: figures/Select3/PhotonGood0_sieie.png used on input li
-ne 402.
-(pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
- [10 <./figures/Select3/PhotonGood0_pt.png> <./figures/Select3/PhotonGood0_phi.
-png> <./figures/Select3/PhotonGood0_eta.png> <./figures/Select3/PhotonGood0_hoe
-.png>]
-<figures/Select3/ltight0GammadPhi.png, id=70, 497.86pt x 473.77pt>
+<figures/Select3/ltight0GammadPhi.png, id=236, 497.86pt x 473.77pt>
 File: figures/Select3/ltight0GammadPhi.png Graphic file (type png)
 
 <use figures/Select3/ltight0GammadPhi.png>
 Package pdftex.def Info: figures/Select3/ltight0GammadPhi.png used on input lin
-e 412.
+e 406.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Select3/ltight0GammadR.png, id=71, 497.86pt x 473.77pt>
-File: figures/Select3/ltight0GammadR.png Graphic file (type png)
-
-<use figures/Select3/ltight0GammadR.png>
-Package pdftex.def Info: figures/Select3/ltight0GammadR.png used on input line 
-418.
-(pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
-
-<figures/Select3/photonJetdR.png, id=72, 497.86pt x 473.77pt>
+<figures/Select3/photonJetdR.png, id=237, 497.86pt x 473.77pt>
 File: figures/Select3/photonJetdR.png Graphic file (type png)
 
 <use figures/Select3/photonJetdR.png>
-Package pdftex.def Info: figures/Select3/photonJetdR.png used on input line 428
+Package pdftex.def Info: figures/Select3/photonJetdR.png used on input line 416
 .
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Select3/photonLepdR.png, id=73, 497.86pt x 473.77pt>
+<figures/Select3/photonLepdR.png, id=238, 497.86pt x 473.77pt>
 File: figures/Select3/photonLepdR.png Graphic file (type png)
 
 <use figures/Select3/photonLepdR.png>
-Package pdftex.def Info: figures/Select3/photonLepdR.png used on input line 434
+Package pdftex.def Info: figures/Select3/photonLepdR.png used on input line 422
 .
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
-
-<figures/Select3/PhotonGood0_pfRelIso03_all.png, id=74, 497.86pt x 473.77pt>
-File: figures/Select3/PhotonGood0_pfRelIso03_all.png Graphic file (type png)
-
-<use figures/Select3/PhotonGood0_pfRelIso03_all.png>
-Package pdftex.def Info: figures/Select3/PhotonGood0_pfRelIso03_all.png used on
- input line 442.
-(pdftex.def)             Requested size: 158.93915pt x 151.24803pt.
- [11 <./figures/Select3/PhotonGood0_r9.png> <./figures/Select3/PhotonGood0_siei
-e.png> <./figures/Select3/ltight0GammadPhi.png> <./figures/Select3/ltight0Gamma
-dR.png> <./figures/Select3/photonJetdR.png> <./figures/Select3/photonLepdR.png>
-]
-<figures/BDT.png, id=78, 963.6pt x 542.025pt>
+ [11 <./figures/Select3/PhotonGood0_pt.png> <./figures/Select3/PhotonGood0_phi.
+png> <./figures/Select3/PhotonGood0_eta.png> <./figures/Select3/ltight0GammadPh
+i.png>]
+<figures/BDT.png, id=248, 963.6pt x 542.025pt>
 File: figures/BDT.png Graphic file (type png)
  <use figures/BDT.png>
-Package pdftex.def Info: figures/BDT.png used on input line 458.
+Package pdftex.def Info: figures/BDT.png used on input line 437.
 (pdftex.def)             Requested size: 418.25555pt x 235.26619pt.
- [12 <./figures/Select3/PhotonGood0_pfRelIso03_all.png>]
-<figures/log-sigmoid.png, id=82, 801.99625pt x 592.2125pt>
+ [12 <./figures/Select3/photonJetdR.png> <./figures/Select3/photonLepdR.png>]
+<figures/log-sigmoid.png, id=256, 801.99625pt x 592.2125pt>
 File: figures/log-sigmoid.png Graphic file (type png)
 
 <use figures/log-sigmoid.png>
-Package pdftex.def Info: figures/log-sigmoid.png used on input line 470.
+Package pdftex.def Info: figures/log-sigmoid.png used on input line 449.
 (pdftex.def)             Requested size: 156.84583pt x 115.81982pt.
- [13 <./figures/BDT.png> <./figures/log-sigmoid.png>] <figures/MLP.png, id=90, 
-963.6pt x 542.025pt>
+ [13 <./figures/BDT.png> <./figures/log-sigmoid.png>] <figures/MLP.png, id=270,
+ 963.6pt x 542.025pt>
 File: figures/MLP.png Graphic file (type png)
  <use figures/MLP.png>
-Package pdftex.def Info: figures/MLP.png used on input line 491.
+Package pdftex.def Info: figures/MLP.png used on input line 470.
 (pdftex.def)             Requested size: 418.25555pt x 235.26619pt.
 
-[14 <./figures/MLP.png>]
-Overfull \hbox (10.009pt too wide) in paragraph at lines 538--546
-[][] 
- []
-
-[15] <figures/ROC_curve.png, id=97, 339.669pt x 344.0052pt>
+[14 <./figures/MLP.png>] [15]
+<figures/ROC_curve.png, id=288, 339.669pt x 344.0052pt>
 File: figures/ROC_curve.png Graphic file (type png)
 
 <use figures/ROC_curve.png>
-Package pdftex.def Info: figures/ROC_curve.png used on input line 560.
+Package pdftex.def Info: figures/ROC_curve.png used on input line 542.
 (pdftex.def)             Requested size: 209.12778pt x 211.80077pt.
 
-<figures/MVA/select1/config1/discriminator_bdt.png, id=98, 497.86pt x 473.77pt>
+<figures/MVA/select1/config1/discriminator_bdt.png, id=295, 497.86pt x 473.77pt
+>
 File: figures/MVA/select1/config1/discriminator_bdt.png Graphic file (type png)
 
-<use figures/MVA/select1/config1/discriminator_bdt.png>
+ <use figures/MVA/select1/config1/discriminator_bdt.png>
 Package pdftex.def Info: figures/MVA/select1/config1/discriminator_bdt.png used
- on input line 579.
+ on input line 561.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/MVA/select1/config1/discriminator_mlp.png, id=99, 497.86pt x 473.77pt>
+<figures/MVA/select1/config1/discriminator_mlp.png, id=296, 497.86pt x 473.77pt
+>
 File: figures/MVA/select1/config1/discriminator_mlp.png Graphic file (type png)
 
-<use figures/MVA/select1/config1/discriminator_mlp.png>
+ <use figures/MVA/select1/config1/discriminator_mlp.png>
 Package pdftex.def Info: figures/MVA/select1/config1/discriminator_mlp.png used
- on input line 585.
+ on input line 567.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/MVA/select1/config1/FOM_selection1_nL5_nT400_mD1_nC10.png, id=100, 598
+<figures/MVA/select1/config1/FOM_selection1_nL5_nT400_mD1_nC10.png, id=297, 598
 .235pt x 574.145pt>
 File: figures/MVA/select1/config1/FOM_selection1_nL5_nT400_mD1_nC10.png Graphic
  file (type png)
 
 <use figures/MVA/select1/config1/FOM_selection1_nL5_nT400_mD1_nC10.png>
 Package pdftex.def Info: figures/MVA/select1/config1/FOM_selection1_nL5_nT400_m
-D1_nC10.png used on input line 590.
+D1_nC10.png used on input line 572.
 (pdftex.def)             Requested size: 209.12778pt x 200.70845pt.
 
 [16 <./figures/ROC_curve.png>]
-<figures/MVA/select1/config2/discriminator_bdt.png, id=105, 497.86pt x 473.77pt
+<figures/MVA/select1/config2/discriminator_bdt.png, id=310, 497.86pt x 473.77pt
 >
 File: figures/MVA/select1/config2/discriminator_bdt.png Graphic file (type png)
 
  <use figures/MVA/select1/config2/discriminator_bdt.png>
 Package pdftex.def Info: figures/MVA/select1/config2/discriminator_bdt.png used
- on input line 599.
+ on input line 581.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/MVA/select1/config2/discriminator_mlp.png, id=106, 497.86pt x 473.77pt
+<figures/MVA/select1/config2/discriminator_mlp.png, id=311, 497.86pt x 473.77pt
 >
 File: figures/MVA/select1/config2/discriminator_mlp.png Graphic file (type png)
 
  <use figures/MVA/select1/config2/discriminator_mlp.png>
 Package pdftex.def Info: figures/MVA/select1/config2/discriminator_mlp.png used
- on input line 605.
+ on input line 587.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/MVA/select1/config2/FOM_selection1_nL7_nT800_mD3_nC20.png, id=107, 598
+<figures/MVA/select1/config2/FOM_selection1_nL7_nT800_mD3_nC20.png, id=312, 598
 .235pt x 574.145pt>
 File: figures/MVA/select1/config2/FOM_selection1_nL7_nT800_mD3_nC20.png Graphic
  file (type png)
 
 <use figures/MVA/select1/config2/FOM_selection1_nL7_nT800_mD3_nC20.png>
 Package pdftex.def Info: figures/MVA/select1/config2/FOM_selection1_nL7_nT800_m
-D3_nC20.png used on input line 610.
+D3_nC20.png used on input line 592.
 (pdftex.def)             Requested size: 209.12778pt x 200.70845pt.
 
 [17 <./figures/MVA/select1/config1/discriminator_bdt.png> <./figures/MVA/select
 1/config1/discriminator_mlp.png> <./figures/MVA/select1/config1/FOM_selection1_
 nL5_nT400_mD1_nC10.png>]
-<figures/MVA/select1/config3/discriminator_bdt.png, id=112, 497.86pt x 473.77pt
+<figures/MVA/select1/config3/discriminator_bdt.png, id=318, 497.86pt x 473.77pt
 >
 File: figures/MVA/select1/config3/discriminator_bdt.png Graphic file (type png)
 
  <use figures/MVA/select1/config3/discriminator_bdt.png>
 Package pdftex.def Info: figures/MVA/select1/config3/discriminator_bdt.png used
- on input line 619.
+ on input line 601.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/MVA/select1/config3/discriminator_mlp.png, id=113, 497.86pt x 473.77pt
+<figures/MVA/select1/config3/discriminator_mlp.png, id=319, 497.86pt x 473.77pt
 >
 File: figures/MVA/select1/config3/discriminator_mlp.png Graphic file (type png)
 
  <use figures/MVA/select1/config3/discriminator_mlp.png>
 Package pdftex.def Info: figures/MVA/select1/config3/discriminator_mlp.png used
- on input line 625.
+ on input line 607.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/MVA/select1/config3/FOM_selection1_nL10_nT1000_mD5_nC50.png, id=114, 5
+<figures/MVA/select1/config3/FOM_selection1_nL10_nT1000_mD5_nC50.png, id=320, 5
 98.235pt x 574.145pt>
 File: figures/MVA/select1/config3/FOM_selection1_nL10_nT1000_mD5_nC50.png Graph
 ic file (type png)
 
 <use figures/MVA/select1/config3/FOM_selection1_nL10_nT1000_mD5_nC50.png>
 Package pdftex.def Info: figures/MVA/select1/config3/FOM_selection1_nL10_nT1000
-_mD5_nC50.png used on input line 630.
+_mD5_nC50.png used on input line 612.
 (pdftex.def)             Requested size: 209.12778pt x 200.70845pt.
 
 [18 <./figures/MVA/select1/config2/discriminator_bdt.png> <./figures/MVA/select
 1/config2/discriminator_mlp.png> <./figures/MVA/select1/config2/FOM_selection1_
 nL7_nT800_mD3_nC20.png>]
-<figures/MVA/select2/config1/discriminator_bdt.png, id=118, 497.86pt x 473.77pt
+<figures/MVA/select2/config1/discriminator_bdt.png, id=328, 497.86pt x 473.77pt
 >
 File: figures/MVA/select2/config1/discriminator_bdt.png Graphic file (type png)
 
  <use figures/MVA/select2/config1/discriminator_bdt.png>
 Package pdftex.def Info: figures/MVA/select2/config1/discriminator_bdt.png used
- on input line 640.
+ on input line 622.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/MVA/select2/config1/discriminator_mlp.png, id=119, 497.86pt x 473.77pt
+<figures/MVA/select2/config1/discriminator_mlp.png, id=329, 497.86pt x 473.77pt
 >
 File: figures/MVA/select2/config1/discriminator_mlp.png Graphic file (type png)
 
  <use figures/MVA/select2/config1/discriminator_mlp.png>
 Package pdftex.def Info: figures/MVA/select2/config1/discriminator_mlp.png used
- on input line 646.
+ on input line 628.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/MVA/select2/config1/FOM_selection2_nL5_nT400_mD1_nC10.png, id=120, 598
+<figures/MVA/select2/config1/FOM_selection2_nL5_nT400_mD1_nC10.png, id=330, 598
 .235pt x 574.145pt>
 File: figures/MVA/select2/config1/FOM_selection2_nL5_nT400_mD1_nC10.png Graphic
  file (type png)
 
 <use figures/MVA/select2/config1/FOM_selection2_nL5_nT400_mD1_nC10.png>
 Package pdftex.def Info: figures/MVA/select2/config1/FOM_selection2_nL5_nT400_m
-D1_nC10.png used on input line 651.
+D1_nC10.png used on input line 633.
 (pdftex.def)             Requested size: 209.12778pt x 200.70845pt.
 
 [19 <./figures/MVA/select1/config3/discriminator_bdt.png> <./figures/MVA/select
 1/config3/discriminator_mlp.png> <./figures/MVA/select1/config3/FOM_selection1_
 nL10_nT1000_mD5_nC50.png>]
-<figures/MVA/select2/config2/discriminator_bdt.png, id=125, 497.86pt x 473.77pt
+<figures/MVA/select2/config2/discriminator_bdt.png, id=337, 497.86pt x 473.77pt
 >
 File: figures/MVA/select2/config2/discriminator_bdt.png Graphic file (type png)
 
  <use figures/MVA/select2/config2/discriminator_bdt.png>
 Package pdftex.def Info: figures/MVA/select2/config2/discriminator_bdt.png used
- on input line 660.
+ on input line 642.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/MVA/select2/config2/discriminator_mlp.png, id=126, 497.86pt x 473.77pt
+<figures/MVA/select2/config2/discriminator_mlp.png, id=338, 497.86pt x 473.77pt
 >
 File: figures/MVA/select2/config2/discriminator_mlp.png Graphic file (type png)
 
  <use figures/MVA/select2/config2/discriminator_mlp.png>
 Package pdftex.def Info: figures/MVA/select2/config2/discriminator_mlp.png used
- on input line 666.
+ on input line 648.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/MVA/select2/config2/FOM_selection2_nL7_nT800_mD3_nC20.png, id=127, 598
+<figures/MVA/select2/config2/FOM_selection2_nL7_nT800_mD3_nC20.png, id=339, 598
 .235pt x 574.145pt>
 File: figures/MVA/select2/config2/FOM_selection2_nL7_nT800_mD3_nC20.png Graphic
  file (type png)
 
 <use figures/MVA/select2/config2/FOM_selection2_nL7_nT800_mD3_nC20.png>
 Package pdftex.def Info: figures/MVA/select2/config2/FOM_selection2_nL7_nT800_m
-D3_nC20.png used on input line 671.
+D3_nC20.png used on input line 653.
 (pdftex.def)             Requested size: 209.12778pt x 200.70845pt.
 
 [20 <./figures/MVA/select2/config1/discriminator_bdt.png> <./figures/MVA/select
 2/config1/discriminator_mlp.png> <./figures/MVA/select2/config1/FOM_selection2_
 nL5_nT400_mD1_nC10.png>]
-<figures/MVA/select2/config3/discriminator_bdt.png, id=131, 497.86pt x 473.77pt
+<figures/MVA/select2/config3/discriminator_bdt.png, id=345, 497.86pt x 473.77pt
 >
 File: figures/MVA/select2/config3/discriminator_bdt.png Graphic file (type png)
 
  <use figures/MVA/select2/config3/discriminator_bdt.png>
 Package pdftex.def Info: figures/MVA/select2/config3/discriminator_bdt.png used
- on input line 680.
+ on input line 662.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/MVA/select2/config3/discriminator_mlp.png, id=132, 497.86pt x 473.77pt
+<figures/MVA/select2/config3/discriminator_mlp.png, id=346, 497.86pt x 473.77pt
 >
 File: figures/MVA/select2/config3/discriminator_mlp.png Graphic file (type png)
 
  <use figures/MVA/select2/config3/discriminator_mlp.png>
 Package pdftex.def Info: figures/MVA/select2/config3/discriminator_mlp.png used
- on input line 686.
+ on input line 668.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/MVA/select2/config3/FOM_selection2_nL10_nT1000_mD5_nC50.png, id=133, 5
+<figures/MVA/select2/config3/FOM_selection2_nL10_nT1000_mD5_nC50.png, id=347, 5
 98.235pt x 574.145pt>
 File: figures/MVA/select2/config3/FOM_selection2_nL10_nT1000_mD5_nC50.png Graph
 ic file (type png)
 
 <use figures/MVA/select2/config3/FOM_selection2_nL10_nT1000_mD5_nC50.png>
 Package pdftex.def Info: figures/MVA/select2/config3/FOM_selection2_nL10_nT1000
-_mD5_nC50.png used on input line 691.
+_mD5_nC50.png used on input line 673.
 (pdftex.def)             Requested size: 209.12778pt x 200.70845pt.
 
 [21 <./figures/MVA/select2/config2/discriminator_bdt.png> <./figures/MVA/select
 2/config2/discriminator_mlp.png> <./figures/MVA/select2/config2/FOM_selection2_
 nL7_nT800_mD3_nC20.png>]
-<figures/MVA/select3/config1/discriminator_bdt.png, id=137, 497.86pt x 473.77pt
+<figures/MVA/select3/config1/discriminator_bdt.png, id=354, 497.86pt x 473.77pt
 >
 File: figures/MVA/select3/config1/discriminator_bdt.png Graphic file (type png)
 
  <use figures/MVA/select3/config1/discriminator_bdt.png>
 Package pdftex.def Info: figures/MVA/select3/config1/discriminator_bdt.png used
- on input line 701.
+ on input line 683.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/MVA/select3/config1/discriminator_mlp.png, id=138, 497.86pt x 473.77pt
+<figures/MVA/select3/config1/discriminator_mlp.png, id=355, 497.86pt x 473.77pt
 >
 File: figures/MVA/select3/config1/discriminator_mlp.png Graphic file (type png)
 
  <use figures/MVA/select3/config1/discriminator_mlp.png>
 Package pdftex.def Info: figures/MVA/select3/config1/discriminator_mlp.png used
- on input line 707.
+ on input line 689.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/MVA/select3/config1/FOM_selection3_nL5_nT400_mD1_nC10.png, id=139, 598
+<figures/MVA/select3/config1/FOM_selection3_nL5_nT400_mD1_nC10.png, id=356, 598
 .235pt x 574.145pt>
 File: figures/MVA/select3/config1/FOM_selection3_nL5_nT400_mD1_nC10.png Graphic
  file (type png)
 
 <use figures/MVA/select3/config1/FOM_selection3_nL5_nT400_mD1_nC10.png>
 Package pdftex.def Info: figures/MVA/select3/config1/FOM_selection3_nL5_nT400_m
-D1_nC10.png used on input line 712.
+D1_nC10.png used on input line 694.
 (pdftex.def)             Requested size: 209.12778pt x 200.70845pt.
 
 [22 <./figures/MVA/select2/config3/discriminator_bdt.png> <./figures/MVA/select
 2/config3/discriminator_mlp.png> <./figures/MVA/select2/config3/FOM_selection2_
 nL10_nT1000_mD5_nC50.png>]
-<figures/MVA/select3/config2/discriminator_bdt.png, id=143, 497.86pt x 473.77pt
+<figures/MVA/select3/config2/discriminator_bdt.png, id=362, 497.86pt x 473.77pt
 >
 File: figures/MVA/select3/config2/discriminator_bdt.png Graphic file (type png)
 
  <use figures/MVA/select3/config2/discriminator_bdt.png>
 Package pdftex.def Info: figures/MVA/select3/config2/discriminator_bdt.png used
- on input line 721.
+ on input line 703.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/MVA/select3/config2/discriminator_mlp.png, id=144, 497.86pt x 473.77pt
+<figures/MVA/select3/config2/discriminator_mlp.png, id=363, 497.86pt x 473.77pt
 >
 File: figures/MVA/select3/config2/discriminator_mlp.png Graphic file (type png)
 
  <use figures/MVA/select3/config2/discriminator_mlp.png>
 Package pdftex.def Info: figures/MVA/select3/config2/discriminator_mlp.png used
- on input line 727.
+ on input line 709.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/MVA/select3/config2/FOM_selection3_nL7_nT800_mD3_nC20.png, id=145, 598
+<figures/MVA/select3/config2/FOM_selection3_nL7_nT800_mD3_nC20.png, id=364, 598
 .235pt x 574.145pt>
 File: figures/MVA/select3/config2/FOM_selection3_nL7_nT800_mD3_nC20.png Graphic
  file (type png)
 
 <use figures/MVA/select3/config2/FOM_selection3_nL7_nT800_mD3_nC20.png>
 Package pdftex.def Info: figures/MVA/select3/config2/FOM_selection3_nL7_nT800_m
-D3_nC20.png used on input line 732.
+D3_nC20.png used on input line 714.
 (pdftex.def)             Requested size: 209.12778pt x 200.70845pt.
 
 [23 <./figures/MVA/select3/config1/discriminator_bdt.png> <./figures/MVA/select
 3/config1/discriminator_mlp.png> <./figures/MVA/select3/config1/FOM_selection3_
 nL5_nT400_mD1_nC10.png>]
-<figures/MVA/select3/config3/discriminator_bdt.png, id=149, 497.86pt x 473.77pt
+<figures/MVA/select3/config3/discriminator_bdt.png, id=370, 497.86pt x 473.77pt
 >
 File: figures/MVA/select3/config3/discriminator_bdt.png Graphic file (type png)
 
  <use figures/MVA/select3/config3/discriminator_bdt.png>
 Package pdftex.def Info: figures/MVA/select3/config3/discriminator_bdt.png used
- on input line 741.
+ on input line 723.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/MVA/select3/config3/discriminator_mlp.png, id=150, 497.86pt x 473.77pt
+<figures/MVA/select3/config3/discriminator_mlp.png, id=371, 497.86pt x 473.77pt
 >
 File: figures/MVA/select3/config3/discriminator_mlp.png Graphic file (type png)
 
  <use figures/MVA/select3/config3/discriminator_mlp.png>
 Package pdftex.def Info: figures/MVA/select3/config3/discriminator_mlp.png used
- on input line 747.
+ on input line 729.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/MVA/select3/config3/FOM_selection3_nL10_nT1000_mD5_nC50.png, id=151, 5
+<figures/MVA/select3/config3/FOM_selection3_nL10_nT1000_mD5_nC50.png, id=372, 5
 98.235pt x 574.145pt>
 File: figures/MVA/select3/config3/FOM_selection3_nL10_nT1000_mD5_nC50.png Graph
 ic file (type png)
 
 <use figures/MVA/select3/config3/FOM_selection3_nL10_nT1000_mD5_nC50.png>
 Package pdftex.def Info: figures/MVA/select3/config3/FOM_selection3_nL10_nT1000
-_mD5_nC50.png used on input line 752.
+_mD5_nC50.png used on input line 734.
 (pdftex.def)             Requested size: 209.12778pt x 200.70845pt.
 
 [24 <./figures/MVA/select3/config2/discriminator_bdt.png> <./figures/MVA/select
@@ -1000,44 +1129,44 @@ _mD5_nC50.png used on input line 752.
 nL7_nT800_mD3_nC20.png>]
 File: figures/Notused/Bj0_eta.png Graphic file (type png)
  <use figures/Notused/Bj0_eta.png>
-Package pdftex.def Info: figures/Notused/Bj0_eta.png used on input line 771.
+Package pdftex.def Info: figures/Notused/Bj0_eta.png used on input line 750.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/Bj0_phi.png, id=155, 497.86pt x 473.77pt>
+<figures/Notused/Bj0_phi.png, id=379, 497.86pt x 473.77pt>
 File: figures/Notused/Bj0_phi.png Graphic file (type png)
 
 <use figures/Notused/Bj0_phi.png>
-Package pdftex.def Info: figures/Notused/Bj0_phi.png used on input line 776.
+Package pdftex.def Info: figures/Notused/Bj0_phi.png used on input line 755.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
  [25 <./figures/MVA/select3/config3/discriminator_bdt.png> <./figures/MVA/selec
 t3/config3/discriminator_mlp.png> <./figures/MVA/select3/config3/FOM_selection3
 _nL10_nT1000_mD5_nC50.png>]
-<figures/Notused/Bj0_pt.png, id=160, 497.86pt x 473.77pt>
+<figures/Notused/Bj0_pt.png, id=386, 497.86pt x 473.77pt>
 File: figures/Notused/Bj0_pt.png Graphic file (type png)
 
 <use figures/Notused/Bj0_pt.png>
-Package pdftex.def Info: figures/Notused/Bj0_pt.png used on input line 785.
+Package pdftex.def Info: figures/Notused/Bj0_pt.png used on input line 764.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/Bj1_eta.png, id=161, 497.86pt x 473.77pt>
+<figures/Notused/Bj1_eta.png, id=387, 497.86pt x 473.77pt>
 File: figures/Notused/Bj1_eta.png Graphic file (type png)
 
 <use figures/Notused/Bj1_eta.png>
-Package pdftex.def Info: figures/Notused/Bj1_eta.png used on input line 790.
+Package pdftex.def Info: figures/Notused/Bj1_eta.png used on input line 769.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/Bj1_phi.png, id=162, 497.86pt x 473.77pt>
+<figures/Notused/Bj1_phi.png, id=388, 497.86pt x 473.77pt>
 File: figures/Notused/Bj1_phi.png Graphic file (type png)
 
 <use figures/Notused/Bj1_phi.png>
-Package pdftex.def Info: figures/Notused/Bj1_phi.png used on input line 799.
+Package pdftex.def Info: figures/Notused/Bj1_phi.png used on input line 778.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/Bj1_pt.png, id=163, 497.86pt x 473.77pt>
+<figures/Notused/Bj1_pt.png, id=389, 497.86pt x 473.77pt>
 File: figures/Notused/Bj1_pt.png Graphic file (type png)
 
 <use figures/Notused/Bj1_pt.png>
-Package pdftex.def Info: figures/Notused/Bj1_pt.png used on input line 804.
+Package pdftex.def Info: figures/Notused/Bj1_pt.png used on input line 783.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
  [26 <./figures/Notused/Bj0_phi.png> <./figures/Notused/Bj0_pt.png> <./figures/
 Notused/Bj1_eta.png>]
@@ -1045,211 +1174,312 @@ File: figures/Notused/JetGood0_btagDeepB.png Graphic file (type png)
 
 <use figures/Notused/JetGood0_btagDeepB.png>
 Package pdftex.def Info: figures/Notused/JetGood0_btagDeepB.png used on input l
-ine 813.
+ine 792.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/JetGood0_chEmEF.png, id=167, 497.86pt x 473.77pt>
+<figures/Notused/JetGood0_chEmEF.png, id=396, 497.86pt x 473.77pt>
 File: figures/Notused/JetGood0_chEmEF.png Graphic file (type png)
 
 <use figures/Notused/JetGood0_chEmEF.png>
 Package pdftex.def Info: figures/Notused/JetGood0_chEmEF.png used on input line
- 818.
+ 797.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/JetGood0_chHEF.png, id=168, 497.86pt x 473.77pt>
+<figures/Notused/JetGood0_chHEF.png, id=397, 497.86pt x 473.77pt>
 File: figures/Notused/JetGood0_chHEF.png Graphic file (type png)
 
 <use figures/Notused/JetGood0_chHEF.png>
 Package pdftex.def Info: figures/Notused/JetGood0_chHEF.png used on input line 
-827.
+806.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/JetGood0_neEmEF.png, id=169, 497.86pt x 473.77pt>
+<figures/Notused/JetGood0_neEmEF.png, id=398, 497.86pt x 473.77pt>
 File: figures/Notused/JetGood0_neEmEF.png Graphic file (type png)
 
 <use figures/Notused/JetGood0_neEmEF.png>
 Package pdftex.def Info: figures/Notused/JetGood0_neEmEF.png used on input line
- 832.
+ 811.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/JetGood0_neHEF.png, id=170, 497.86pt x 473.77pt>
+<figures/Notused/JetGood0_neHEF.png, id=399, 497.86pt x 473.77pt>
 File: figures/Notused/JetGood0_neHEF.png Graphic file (type png)
 
 <use figures/Notused/JetGood0_neHEF.png>
 Package pdftex.def Info: figures/Notused/JetGood0_neHEF.png used on input line 
-841.
+820.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/JetGood1_btagDeepB.png, id=171, 497.86pt x 473.77pt>
+<figures/Notused/JetGood1_btagDeepB.png, id=400, 497.86pt x 473.77pt>
 File: figures/Notused/JetGood1_btagDeepB.png Graphic file (type png)
 
 <use figures/Notused/JetGood1_btagDeepB.png>
 Package pdftex.def Info: figures/Notused/JetGood1_btagDeepB.png used on input l
-ine 846.
+ine 825.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
  [27 <./figures/Notused/Bj1_phi.png> <./figures/Notused/Bj1_pt.png> <./figures/
 Notused/JetGood0_chEmEF.png> <./figures/Notused/JetGood0_chHEF.png> <./figures/
 Notused/JetGood0_neEmEF.png>]
-<figures/Notused/JetGood1_eta.png, id=175, 497.86pt x 473.77pt>
+<figures/Notused/JetGood1_eta.png, id=408, 497.86pt x 473.77pt>
 File: figures/Notused/JetGood1_eta.png Graphic file (type png)
 
 <use figures/Notused/JetGood1_eta.png>
-Package pdftex.def Info: figures/Notused/JetGood1_eta.png used on input line 85
-5.
+Package pdftex.def Info: figures/Notused/JetGood1_eta.png used on input line 83
+4.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/JetGood1_phi.png, id=176, 497.86pt x 473.77pt>
+<figures/Notused/JetGood1_phi.png, id=409, 497.86pt x 473.77pt>
 File: figures/Notused/JetGood1_phi.png Graphic file (type png)
 
 <use figures/Notused/JetGood1_phi.png>
-Package pdftex.def Info: figures/Notused/JetGood1_phi.png used on input line 86
-0.
+Package pdftex.def Info: figures/Notused/JetGood1_phi.png used on input line 83
+9.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/JetGood1_pt.png, id=177, 497.86pt x 473.77pt>
+<figures/Notused/JetGood1_pt.png, id=410, 497.86pt x 473.77pt>
 File: figures/Notused/JetGood1_pt.png Graphic file (type png)
 
 <use figures/Notused/JetGood1_pt.png>
-Package pdftex.def Info: figures/Notused/JetGood1_pt.png used on input line 869
+Package pdftex.def Info: figures/Notused/JetGood1_pt.png used on input line 848
 .
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/LeptonTight0__phi.png, id=178, 497.86pt x 473.77pt>
+<figures/Notused/LeptonTight0__phi.png, id=411, 497.86pt x 473.77pt>
 File: figures/Notused/LeptonTight0__phi.png Graphic file (type png)
 
 <use figures/Notused/LeptonTight0__phi.png>
 Package pdftex.def Info: figures/Notused/LeptonTight0__phi.png used on input li
-ne 874.
+ne 853.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 File: figures/Notused/LeptonTight0_eta.png Graphic file (type png)
 
 <use figures/Notused/LeptonTight0_eta.png>
 Package pdftex.def Info: figures/Notused/LeptonTight0_eta.png used on input lin
-e 883.
+e 862.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/LeptonTight0_pfRelIso03_all.png, id=179, 497.86pt x 473.77pt>
+<figures/Notused/LeptonTight0_pfRelIso03_all.png, id=412, 497.86pt x 473.77pt>
 File: figures/Notused/LeptonTight0_pfRelIso03_all.png Graphic file (type png)
 
 <use figures/Notused/LeptonTight0_pfRelIso03_all.png>
 Package pdftex.def Info: figures/Notused/LeptonTight0_pfRelIso03_all.png used o
-n input line 888.
+n input line 867.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
  [28 <./figures/Notused/JetGood0_neHEF.png> <./figures/Notused/JetGood1_btagDee
 pB.png> <./figures/Notused/JetGood1_eta.png> <./figures/Notused/JetGood1_phi.pn
 g> <./figures/Notused/JetGood1_pt.png> <./figures/Notused/LeptonTight0__phi.png
 >]
-<figures/Notused/LeptonTight0_pfRelIso03_chg.png, id=183, 497.86pt x 473.77pt>
+<figures/Notused/LeptonTight0_pfRelIso03_chg.png, id=420, 497.86pt x 473.77pt>
 File: figures/Notused/LeptonTight0_pfRelIso03_chg.png Graphic file (type png)
 
 <use figures/Notused/LeptonTight0_pfRelIso03_chg.png>
 Package pdftex.def Info: figures/Notused/LeptonTight0_pfRelIso03_chg.png used o
-n input line 897.
+n input line 876.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/LeptonTight0_pfRelIso03_ne.png, id=184, 497.86pt x 473.77pt>
+<figures/Notused/LeptonTight0_pfRelIso03_ne.png, id=421, 497.86pt x 473.77pt>
 File: figures/Notused/LeptonTight0_pfRelIso03_ne.png Graphic file (type png)
 
 <use figures/Notused/LeptonTight0_pfRelIso03_ne.png>
 Package pdftex.def Info: figures/Notused/LeptonTight0_pfRelIso03_ne.png used on
- input line 902.
+ input line 881.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 File: figures/Notused/LeptonTight0_pt.png Graphic file (type png)
 
 <use figures/Notused/LeptonTight0_pt.png>
 Package pdftex.def Info: figures/Notused/LeptonTight0_pt.png used on input line
- 911.
+ 890.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/nElectronTight.png, id=185, 497.86pt x 473.77pt>
+<figures/Notused/nElectronTight.png, id=422, 497.86pt x 473.77pt>
 File: figures/Notused/nElectronTight.png Graphic file (type png)
 
 <use figures/Notused/nElectronTight.png>
 Package pdftex.def Info: figures/Notused/nElectronTight.png used on input line 
-916.
+895.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/nHighPTPhotons.png, id=186, 497.86pt x 473.77pt>
+<figures/Notused/nHighPTPhotons.png, id=423, 497.86pt x 473.77pt>
 File: figures/Notused/nHighPTPhotons.png Graphic file (type png)
 
 <use figures/Notused/nHighPTPhotons.png>
 Package pdftex.def Info: figures/Notused/nHighPTPhotons.png used on input line 
-925.
+904.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/nJet.png, id=187, 497.86pt x 473.77pt>
+<figures/Notused/nJet.png, id=424, 497.86pt x 473.77pt>
 File: figures/Notused/nJet.png Graphic file (type png)
 
 <use figures/Notused/nJet.png>
-Package pdftex.def Info: figures/Notused/nJet.png used on input line 930.
+Package pdftex.def Info: figures/Notused/nJet.png used on input line 909.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
  [29 <./figures/Notused/LeptonTight0_pfRelIso03_all.png> <./figures/Notused/Lep
 tonTight0_pfRelIso03_chg.png> <./figures/Notused/LeptonTight0_pfRelIso03_ne.png
 > <./figures/Notused/nElectronTight.png>]
-<figures/Notused/nLeptonTight.png, id=191, 497.86pt x 473.77pt>
+<figures/Notused/nLeptonTight.png, id=432, 497.86pt x 473.77pt>
 File: figures/Notused/nLeptonTight.png Graphic file (type png)
 
 <use figures/Notused/nLeptonTight.png>
-Package pdftex.def Info: figures/Notused/nLeptonTight.png used on input line 93
-9.
+Package pdftex.def Info: figures/Notused/nLeptonTight.png used on input line 91
+8.
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/nMuonTight.png, id=192, 497.86pt x 473.77pt>
+<figures/Notused/nMuonTight.png, id=433, 497.86pt x 473.77pt>
 File: figures/Notused/nMuonTight.png Graphic file (type png)
 
 <use figures/Notused/nMuonTight.png>
-Package pdftex.def Info: figures/Notused/nMuonTight.png used on input line 944.
+Package pdftex.def Info: figures/Notused/nMuonTight.png used on input line 923.
 
 (pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/nPhotonGood.png, id=193, 497.86pt x 473.77pt>
+<figures/Notused/nPhotonGood.png, id=434, 497.86pt x 473.77pt>
 File: figures/Notused/nPhotonGood.png Graphic file (type png)
 
 <use figures/Notused/nPhotonGood.png>
-Package pdftex.def Info: figures/Notused/nPhotonGood.png used on input line 951
+Package pdftex.def Info: figures/Notused/nPhotonGood.png used on input line 930
 .
 (pdftex.def)             Requested size: 158.93915pt x 151.24803pt.
 
-<figures/Notused/PhotonGood0_pfRelIso03_chg.png, id=194, 497.86pt x 473.77pt>
-File: figures/Notused/PhotonGood0_pfRelIso03_chg.png Graphic file (type png)
+Underfull \hbox (badness 1472) in paragraph at lines 956--956
+\T1/cmr/m/n/10.95 when-ever bag-ging is used (i.e. Use-
+ []
 
-<use figures/Notused/PhotonGood0_pfRelIso03_chg.png>
-Package pdftex.def Info: figures/Notused/PhotonGood0_pfRelIso03_chg.png used on
- input line 962.
-(pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
 
-<figures/Notused/PhotonGood0_pfRelIso03_ne.png, id=195, 497.86pt x 473.77pt>
-File: figures/Notused/PhotonGood0_pfRelIso03_ne.png Graphic file (type png)
+Underfull \hbox (badness 10000) in paragraph at lines 958--958
+[]|\T1/cmr/m/n/10.95 InverseBoost-
+ []
 
-<use figures/Notused/PhotonGood0_pfRelIso03_ne.png>
-Package pdftex.def Info: figures/Notused/PhotonGood0_pfRelIso03_ne.png used on 
-input line 967.
-(pdftex.def)             Requested size: 156.84583pt x 149.26003pt.
- [30 <./figures/Notused/nHighPTPhotons.png> <./figures/Notused/nJet.png> <./fig
-ures/Notused/nLeptonTight.png> <./figures/Notused/nMuonTight.png> <./figures/No
-tused/nPhotonGood.png>]
-<figures/Notused/tightLeptonJetdR.png, id=199, 497.86pt x 473.77pt>
-File: figures/Notused/tightLeptonJetdR.png Graphic file (type png)
 
-<use figures/Notused/tightLeptonJetdR.png>
-Package pdftex.def Info: figures/Notused/tightLeptonJetdR.png used on input lin
-e 974.
-(pdftex.def)             Requested size: 158.93915pt x 151.24803pt.
- [31 <./figures/Notused/PhotonGood0_pfRelIso03_chg.png> <./figures/Notused/Phot
-onGood0_pfRelIso03_ne.png> <./figures/Notused/tightLeptonJetdR.png>] (./Inhalt.
-aux)
+Underfull \hbox (badness 3439) in paragraph at lines 958--958
+\T1/cmr/m/n/10.95 in the BDT train-ing (par-tic-u-lar the
+ []
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
+Underfull \hbox (badness 4303) in paragraph at lines 958--958
+\T1/cmr/m/n/10.95 boost-ing) : Ig-nor-eIn-Train-ing; Boost
+ []
+
+
+Underfull \hbox (badness 1748) in paragraph at lines 960--960
+[]|\T1/cmr/m/n/10.95 Separation cri-te-rion for node split-ting
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
+\T1/cmr/m/n/10.95 (CrossEn-tropy, Gini-In-dex, Gini-In-
+ []
+
+
+Underfull \hbox (badness 1874) in paragraph at lines 960--960
+\T1/cmr/m/n/10.95 dexWith-Laplace, Mis-Clas-si-fi-ca-tion-Error,
+ []
+
+
+Overfull \hbox (1.85663pt too wide) in alignment at lines 941--962
+ [] [] [] 
+ []
+
+[30 <./figures/Notused/nHighPTPhotons.png> <./figures/Notused/nJet.png> <./figu
+res/Notused/nLeptonTight.png> <./figures/Notused/nMuonTight.png> <./figures/Not
+used/nPhotonGood.png>]
+Underfull \vbox (badness 10000) detected at line 962
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 968--968
+[]|\T1/cmr/m/n/10.95 Note: for BDTs use small trees
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 968--968
+\T1/cmr/m/n/10.95 (e.g.MaxDepth=3) and No-Prun-ing;
+ []
+
+
+Underfull \hbox (badness 5316) in paragraph at lines 968--968
+\T1/cmr/m/n/10.95 Prun-ing: Method used for prun-ing
+ []
+
+
+Underfull \hbox (badness 6625) in paragraph at lines 968--968
+\T1/cmr/m/n/10.95 (re-moval) of sta-tis-ti-cally in-signif-i-cant
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 968--968
+\T1/cmr/m/n/10.95 branches (No-Prun-ing, Ex-pect-ed-Er-ror,
+ []
+
+
+Underfull \hbox (badness 1917) in paragraph at lines 973--973
+\T1/cmr/m/n/10.95 in-stead: Num-ber of ran-domly picked
+ []
+
+
+Overfull \hbox (1.85663pt too wide) in alignment at lines 962--977
+ [] [] [] 
+ []
+
+[31] [32] (/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+Underfull \hbox (badness 10000) in paragraph at lines 999--999
+[]|\T1/cmr/m/n/10.95 Only 'Sam-pling' (ran-domly se-lected)
+ []
+
+
+Overfull \hbox (1.85663pt too wide) in alignment at lines 984--1006
+ [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1006
+ []
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 1007--1007
+\T1/cmr/m/n/10.95 set if in Batch Mode, -1 for Batch-
+ []
+
+
+Overfull \hbox (1.85663pt too wide) in alignment at lines 1006--1017
+ [] [] [] 
+ []
+
+[33] [34] (./Inhalt.bbl
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 19.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+)) [35]
+(./Inhalt.lof [36])
+\tf@lof=\write5
+\openout5 = `Inhalt.lof'.
+
+ [37] (./Inhalt.lot)
+\tf@lot=\write6
+\openout6 = `Inhalt.lot'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1039.
+ [38]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1039.
+ (./Inhalt.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1039.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1039.
+
+Package rerunfilecheck Info: File `Inhalt.out' has not changed.
+(rerunfilecheck)             Checksum: 80047B74133386123A5C85921F8F006B;1535.
  ) 
 Here is how much of TeX's memory you used:
- 6987 strings out of 493089
- 118287 string characters out of 6134841
- 249556 words of memory out of 5000000
- 10273 multiletter control sequences out of 15000+600000
- 14476 words of font info for 44 fonts, out of 8000000 for 9000
+ 11995 strings out of 493089
+ 189544 string characters out of 6134841
+ 357467 words of memory out of 5000000
+ 15108 multiletter control sequences out of 15000+600000
+ 17616 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,8n,46p,891b,393s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,10n,47p,923b,621s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
@@ -1259,13 +1489,17 @@ local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb>
-Output written on Inhalt.pdf (31 pages, 1390699 bytes).
+xlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on Inhalt.pdf (38 pages, 1509104 bytes).
 PDF statistics:
- 242 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
- 0 named destinations out of 1000 (max. 500000)
- 441 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 646 PDF objects out of 1000 (max. 8388607)
+ 495 compressed objects within 5 object streams
+ 117 named destinations out of 1000 (max. 500000)
+ 593 words of extra memory for PDF output out of 10000 (max. 10000000)
 

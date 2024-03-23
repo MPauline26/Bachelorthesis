@@ -10,6 +10,10 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{float}
+\usepackage{longtable}
+\usepackage{fixltx2e}
+%\usepackage{aas_macros}
+\bibliographystyle{testrun}
  
 % itemize in coloumns 
 \usepackage{etoolbox,refcount}
@@ -41,35 +45,46 @@
 \unskip\computecountitems\ifnumcomp{\previtemizecount}{>}{3}{\end{multicols}}{}}
 
 
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={black!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
 
 \title{Bachelorthesis}
 \author{Meikee Pagsinohin}
 
 \begin{document}
 
+\tableofcontents
+\newpage
+
 \section{Introduction}
 
 	\subsection{Motivation}
-		Goal of this project is the improvement in the distinction process between $t\overline{t}\gamma$ and $t\overline{t}$ events in the signal region. Depending on the success, the results can be further used for other projects, which would improve the simulations and their predictions regarding the standard model (SM) and beyond standard model (BSM). 
+		Goal of this project is the improvement in the distinction process between $t\overline{t}\gamma$ and $t\overline{t}$ events in the signal region. Depending on the success, the results can be further used for other projects, which would improve the simulations and their predictions regarding the Standard Model (SM) and Beyond Standard Model (BSM). 
 
 	\subsection{Approach}
 	\label{sec:approach}
-		An attempt was perfomed through a multivariate analysis and by developing and training models. At the beginning different variables were analysed and compared and the most promising were used for training. Type of models, denoted MVA in the following, used are boosted decision tree (BDT) and mutilayer perceptron (MLP). The results of the MVAs for three different variable categories were created and in the course of this project analysed and presented.
+		An attempt was perfomed through a multivariate analysis by developing and training models. At the beginning different variables were analysed and compared and the most promising were used for training. The type of models, denoted MVA in the following, used for this project are boosted decision trees (BDT) and mutilayer perceptron (MLP). The results of the MVAs for three different variable categories were created and in the course of this project analysed and presented.
 
 \section{Background information}
 	\subsection{ATLAS detector and data}
-	The ATLAS detector is part of the Large Hadron Collider, a particle accelerator, which was built by the research organisation CERN in Genf, Siwtzerland. LHC has a circumference of 27km and is up to 175m deep. Besides ATLAS, there are other experiments as well, such as CMS, ALICE, LHCb. ATLAS can be described by three sub-detectors. All detectors surround the beam pipe, where the particles are accelerated and collided against eachother.
+	The ATLAS detector is part of the Large Hadron Collider, a particle accelerator, which was built by the research organisation CERN in Geneva, Switzerland. LHC has a circumference of 27km and is up to 175m deep. Besides ATLAS, there are other experiments as well, such as CMS, ALICE and LHCb. ATLAS has three sub-detectors, which all surround the beam pipe, where the particles are accelerated and collided against eachother.
 	
-	In Figure \ref{fig:detectorsystem}, a sketch of the detectorsystem can be seen. The inner detecor is a tracking chamber for charged partices. It is surrounded by a superconducting solenoid with a magnetic field of 2T used to divert the particle trajectory to measure the momentum. The calorimeter is made up of alternating layers. One is a dense absorber material, which is used to prompt electromagnetic and hadronic showers (ECAL, HCAL). The other layer is of active material used for energy measurement. The muon spectrometer (MS) is positioned in the outermost layer since muons may pass inner layers as well as the calorimeters. It is surrounded by a magnetic field and the diversion is measured by a multiple layer of high precision tracking chambers. 
+	In Figure \ref{fig:detectorsystem}, a sketch of the detector system can be seen. The inner detecor is a tracking chamber for charged partices. It is surrounded by a superconducting solenoid with a magnetic field of 2T used to divert the particle trajectory to measure the momentum. The calorimeter is made up of alternating layers. One is a dense absorber material, which is used to prompt electromagnetic and hadronic showers (ECAL, HCAL). The other layer is of active material used for energy measurement. The muon spectrometer (MS) is positioned in the outermost layer since muons may pass inner layers as well as the calorimeters. It is surrounded by a magnetic field and the diversion is measured by a multiple layer of high precision tracking chambers~\cite{ATLAS, TTG}. 
 	
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/detector_system.png}
-	\caption{detector system draft}
+	\caption{Detector system of ATLAS}
 	\label{fig:detectorsystem}
 	\end{figure}
 	
-	The data are filtered by a two-step triggersystem. The hardware-based system (L1) is triggered when muons, electrons, photons and jets are detected. This reduced the data amount from 40MHz to 100kHz. The software-based system (L2) is triggered by the different energies, type and numbers of particles:
+	The data is filtered by a two-step triggersystem. The hardware-based system (L1) is triggered when muons, electrons, photons and jets are detected. This reduced the data amount from 40MHz to 100kHz. The software-based system (L2) is triggered by the different energies, type and numbers of particles:
 	
 \begin{itemize}
   \item lepton has 30/35 GeV
@@ -78,51 +93,56 @@
   \item exactly one photon
 \end{itemize}
 
-This reduced the data amount from 100kHz auf 1kHz. The data used during this project was recorded in 2016 at a centre-of mass energy of 13TeV. The signal and background processes were modelled using Monte Carlo generators and passed through a detector simulation (DOUBLE CHECK). 
+This reduced the data amount from 100kHz auf 1kHz. The data used during this project was recorded in 2016 at a centre-of mass energy of 13TeV. The signal and background processes were modelled using Monte Carlo generators and passed through a detector simulation~\cite{ATLAS}. 
 
 	\subsection{Proton-Proton-collision and $t\overline{t}\gamma$}
-	The protons are accelerated in bunches, each containing 10$^{11}$ particles, through different beam pipes in opposite directions and then collided with each other. The $t\overline{t}\gamma$ events were analysed, meaning top quark pair events with additional photons.
+	The protons are accelerated in bunches, each containing 10$^{11}$ particles, through different beam pipes in opposite directions and then collided with each other. During the pp-process a top quark pair is produced. The top quark then decays to a W-boson and a b-quark. The W-boson disintegrates into a charged lepton and a corresponding neutrino or a pair of up-type quark and down-type antiquark. The remaining quarks decomposes into jets. This process can be seen in Figure \ref{fig:PPprocess}.
 	
-	The top quark is the heaviest quark in the known elementary particles and is the only quark so far whose properties can be analysed, since the lifetime is very short and it forms no bound state before it decays. By that the electromagnetic coupling, therefore the number of radiated photons after interaction with other charged particles, can be measured. This is a test of the standard model, since it is a direct measurment of the charge of the top quark and shows possible anomalous structure of its electromagnetic interaction.
-	
-	During the pp-process a top quark pair is produced. The top quark then decays in a W-boson and a b-quark. The W-boson disintegrates into a charged lepton and a corresponding neutrino or a pair of up-type quark and down-type antiquark. The remaining quarks decomposes into jets. This process can be seen in Figure \ref{fig:PPprocess}.
+	The $t\overline{t}\gamma$ events were selected - top quark pair events with additional photons. The top quark is the heaviest quark in the known elementary particles and is the only quark so far whose properties can be analysed since their lifetime is very short and it forms no bound state before it decays. By that the electromagnetic coupling, therefore the number of radiated photons after interaction with other charged particles, can be measured~\cite{TTG}. By analysing the top quark, the results can be used to test the Standard Model and its possible extensions~\cite{ATLAS}.
 	
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/PP_process.png}
-	\caption{PP process draft}
+	\caption{Proton Proton collision process}
  	\label{fig:PPprocess}
 	\end{figure}
 	
 \section{Challenge in categorisation}
 
-In Figure \ref{fig:PhotonPT}, the transverse momentum of the photon is visible. The background makes up nearly 50\% of the signal region. These are made up by particles, which were misconstructed or not detected due to the limited detector's acceptence. Other reasons are photons not being radiated from the $t\overline{t}$ process, but rather from an initial charged patron, an intermediate top quark or any charged final state particles or decay products. Further sources could be hadrons misreconstructed as electrons or hadrons and electrons misidentified as photons. 
+In Figure \ref{fig:PhotonPT}, the transverse momentum of the photon is visible. The background makes up nearly 50\% of the signal region. The possible sources are~\cite{ATLAS, TTG}:
+\begin{itemize}
+  \item hadron or electron misidentified as photon
+  \item misconstructed photon
+  \item photon radiated from different process
+  \item additional particles not detected due to limited detector's acceptence
+  \item hadron misconstructed as electron
+\end{itemize}
 
 \begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=1\linewidth]{figures/PhotonGood0_pt_lin.png}
-  \captionof{figure}{Distribution of Pt Photon}
+  \captionof{figure}{Distribution of P\textsubscript{T} Photon}
   \label{fig:PhotonPT}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=1\linewidth]{figures/PhotonGood0_pt_log.png}
-  \captionof{figure}{Distribution of Pt Photon (log)}
+  \captionof{figure}{Distribution of P\textsubscript{T} Photon (log)}
   \label{fig:PhotonPTlog}
 \end{minipage}
 \end{figure}
 
 	\subsection{Current status}
 	
-	First a neural network was developed to seperate the hadronic-fake photons, which are hadrons misidentified as photons and made up the majority of the background signal. The result was then used as an input for the neural network created to split the $t\overline{t}\gamma$ signal and the background further. What still needs to be further investigated is the possibility of improvement in the discrimination between $t\overline{t}\gamma$ and $t\overline{t}$ events in the signal region through MVAs.
+	First a neural network was developed to seperate the hadronic-fake photons, which are hadrons misidentified as photons and made up the majority of the background signal. The result was then used as an input for the neural network created to split the $t\overline{t}\gamma$ signal and the background further~\cite{ATLAS}. What still needs to be investigated is the possibility of improvement in the discrimination between $t\overline{t}\gamma$ and $t\overline{t}$ events in the signal region through MVAs.
 
 \section{Analysis process}
 
 	\subsection{List of variables}
 	
-The analysed variables are listed below and they are categorized by the type of particles. 
+The analysed variables are listed below and they are categorized by their type of particles. 
 
 \begin{itemize}
   \item B-jet: variables of jets containing b-hadrons (b-tag)
@@ -165,9 +185,7 @@ The analysed variables are listed below and they are categorized by the type of 
   \item Combination: variables of two particle types 
   	\begin{AutoMultiColItemize}
 		\item leptonJetdR
-		\item tightLeptonJetdR
 		\item ltight0GammadPhi
-		\item ltight0GammadR
 		\item PhotonLepdR
 		\item PhotonJetdR
 		\item JetGood0\_btagDeepB
@@ -175,18 +193,11 @@ The analysed variables are listed below and they are categorized by the type of 
 	\end{AutoMultiColItemize}
   \item Photon:
   	\begin{AutoMultiColItemize}
-  		\item nHighPTPhotons
 		\item nPhotonGood
 		\item PhotonGood0\_eta
 		\item PhotonGood0\_mvaID
 		\item PhotonGood0\_phi
 		\item PhotonGood0\_pt
-		\item PhotonGood0\_sieie
-		\item PhotonGood0\_hoe
-		\item PhotonGood0\_r9
-		\item PhotonGood0\_pfRelIso03\_all
-		\item PhotonGood0\_pfRelIso03\_chg
-		\item PhotonGood0\_pfRelIso03\_ne
    	\end{AutoMultiColItemize}
   \item Others: 
 	\begin{AutoMultiColItemize}
@@ -198,12 +209,12 @@ The analysed variables are listed below and they are categorized by the type of 
  	\end{AutoMultiColItemize}
 \end{itemize}
 
-The pre- or suffix of the name reveal, what information is saved. The description of variables, which don't follow this logic, are listed at the end. 
+The pre- or suffix of the name reveal what information is saved. The description of variables, which don't follow this logic, are listed at the end. 
 
 Prefix and suffix:
 \begin{itemize}
 	  \item \_eta: pseudorapidity ($\eta = -ln(tan(\frac{\vartheta}{2}))$; wheras $\vartheta$ is the polar angle)
-	  \item \_phi: azithmuthal opening angle, around z-axis ($\Delta\phi$)
+	  \item \_phi: azithmuthal opening angle around z-axis ($\Delta\phi$)
 	  \item \_pt: transverse momentum of variable
 	  \item dR: distance between two objects ($\Delta$R)
 	  \item n: number of particles
@@ -215,13 +226,22 @@ Other:
   \item m3
   \item mT
   \item PhotonGood0: number of photons
-  \item MVA\_ID: currently used as a parameter to differentiate between good and bad photon (??)
+  \item PhotonGood0\_mvaID: currently used variable to differentiate between signal and background events
   \item MET: Missing transverse momentum
+   		\item JetGood0\_neEmEF
+		\item JetGood0\_chEmEF
+		\item JetGood0\_neHEF
+		\item JetGood0\_chHEF
+  		\item LeptonTight0\_pfRelIso03\_all
+		\item LeptonTight0\_pfRelIso03\_chg
+		\item LeptonTight0\_pfRelIso03\_ne
+		\item JetGood0\_btagDeepB
+		\item JetGood1\_btagDeepB		
 \end{itemize}
 
 	\subsection{Analysis of variables}
 	
-The variables were analysed by comparing the distribution of events with an uniform scaling. A uniform scaling was needed to have a better view of relative differences between signal and background. If the variable shows a different behaviour for each type of signal, this could be an indication of discriminatory power. 
+The variables were analysed by comparing the distribution of events with an uniform scaling. An uniform scaling was needed to have a better view of relative differences between signal and background. If the variable shows a different behaviour for each type of signal, this could be an indication of discriminatory power. 
 
 Figure \ref{fig:Bj0eta} to \ref{fig:LeptonTight0eta} show some examples of variables, where the distributions are almost identical and were therefore not further analysed. A full list of these variables are listed in the Annex, chapter \ref{sec:annex-identical}. 
 
@@ -257,7 +277,7 @@ Figure \ref{fig:Bj0eta} to \ref{fig:LeptonTight0eta} show some examples of varia
 \end{minipage}
 \end{figure}
 
-In Figure \ref{fig:nBTagGood} to \ref{fig:ht} there are some differences visible in the signal region. These were candidates for the first set of selected variables. 
+Variables, where there are some differences visible in the signal region are in Figure \ref{fig:nBTagGood} to \ref{fig:ht}. These were candidates for the first set of selected variables. 
 
 	\begin{figure}[H]
 	\centering
@@ -346,7 +366,7 @@ In Figure \ref{fig:nBTagGood} to \ref{fig:ht} there are some differences visible
  	\label{fig:ht}
 	\end{figure}
 	
-The variable MVA\_ID, seen in figure \ref{fig:PhotonGood0mvaID}, shows quite a good distinction and is therefore used in the second selection.
+The variable PhotonGood0\_mvaID, seen in Figure \ref{fig:PhotonGood0mvaID}, shows quite a good distinction and is therefore added to the list (second selection).
 
 	\begin{figure}[H]
 	\centering
@@ -355,7 +375,7 @@ The variable MVA\_ID, seen in figure \ref{fig:PhotonGood0mvaID}, shows quite a g
  	\label{fig:PhotonGood0mvaID}
 	\end{figure}
 	
-Figure \ref{fig:PhotonGood0pt} to \ref{fig:PhotonGood0pfRelIso03all} show the photon variables. These show the most promising behaviour for discrimination between $t\overline{t}\gamma$ and $t\overline{t}$ events and were put into the third selection category.
+Figure \ref{fig:PhotonGood0pt} to \ref{fig:photonLepdR} show the photon variables. These show the most promising behaviour for discriminating between $t\overline{t}\gamma$ and $t\overline{t}$ events and were put additionally into the third selection category.
 
 	\begin{figure}[H]
 	\centering
@@ -383,41 +403,9 @@ Figure \ref{fig:PhotonGood0pt} to \ref{fig:PhotonGood0pfRelIso03all} show the ph
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select3/PhotonGood0_hoe.png}
-	  \captionof{figure}{PhotonGood0\_hoe}
-	  \label{fig:PhotonGood0hoe}
-	\end{minipage}
-	\end{figure}
-	
-	\begin{figure}[H]
-	\centering
-	\begin{minipage}{.5\textwidth}
-	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select3/PhotonGood0_r9.png}
-	  \captionof{figure}{PhotonGood0\_r9}
-	  \label{fig:PhotonGood0r9}
-	\end{minipage}%
-	\begin{minipage}{.5\textwidth}
-	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select3/PhotonGood0_sieie.png}
-	  \captionof{figure}{PhotonGood0\_sieie}
-	  \label{fig:PhotonGood0sieie}
-	\end{minipage}
-	\end{figure}
-	
-	\begin{figure}[H]
-	\centering
-	\begin{minipage}{.5\textwidth}
-	  \centering
 	  \includegraphics[width=0.75\linewidth]{figures/Select3/ltight0GammadPhi.png}
 	  \captionof{figure}{ltight0GammadPhi}
 	  \label{fig:ltight0GammadPhi}
-	\end{minipage}%
-	\begin{minipage}{.5\textwidth}
-	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select3/ltight0GammadR.png}
-	  \captionof{figure}{ltight0GammadR}
-	  \label{fig:ltight0GammadR}
 	\end{minipage}
 	\end{figure}
 	
@@ -437,31 +425,22 @@ Figure \ref{fig:PhotonGood0pt} to \ref{fig:PhotonGood0pfRelIso03all} show the ph
 	\end{minipage}
 	\end{figure}
 
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.38\textwidth]{figures/Select3/PhotonGood0_pfRelIso03_all.png}
-	\caption{PhotonGood0\_pfRelIso03\_all}
- 	\label{fig:PhotonGood0pfRelIso03all}
-	\end{figure}
-
-Variables, which were excluded because another related variable was used instead, are listed in the Annex, chapter \ref{sec:annex-excluded}. 
-
 \section{MVA}
 
-Trying to split signal and background through a variable with a cut-off value faces the problem, that this criteria doesn't apply for every event. If it works for one event, it doesn't mean that it works for the next one. Therefore mutliple variables need to be used to distinguish between those two categories, so called multivariate analysis (MVA). As already mentioned in chapter \ref{sec:approach}, the chosen MVA-types are boosted decision trees (BDT) and multilayer perceptron (MLP).
+Trying to split signal and background through a variable with a cut-off value faces the problem that this criteria doesn't apply for every event. If it works for one event, it doesn't mean that it works for the next one. Therefore mutliple variables need to be used to distinguish between those two categories, so called multivariate analysis (MVA). As already mentioned in chapter \ref{sec:approach}, the chosen MVA-types are boosted decision trees (BDT) and multilayer perceptron (MLP).
 
 	\subsection{BDT - Boosted Decision Trees}
-	The decision tree starts with the root node containing the whole sample For a binary tree, the node is then split into two branches using a variable and a corresponding cut-off value. The cut-off value should be a value, which seperates the signal from the background the best. This process will be repeated for each branch for all relevant variables, including already used variables, until an end criteria is met. The final branch is called a leaf and this will be assigned to one of the two categories. End criterias could be a minimum size of a leaf, perfect separation, insignificant improvement after split or maximal tree depth. Boosted decision trees are built out of additional trees, so called weak classifieres. They include variables with a low discriminatory power and will be used to improve the main decision tree to a more stable model with a lower error rate. 
+	The decision tree starts with the root node containing the whole sample. For a binary tree, the node is then split into two branches using a variable and a corresponding cut-off value. The cut-off value should be a value, which seperates the signal from the background the best. This process will be repeated for each branch for all relevant variables, including already used variables, until an end criteria is met. The final branch is called a leaf and this will be assigned to one of the two categories. End criterias could be a minimum size of a leaf, perfect separation, insignificant improvement after split or maximal tree depth. Boosted decision trees are built out of additional trees, so called weak classifieres. They include variables with a low discriminatory power and will be used to improve the main decision tree to a more stable model with a lower error rate~\cite{BDT}. 
 
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/BDT.png}
-	\caption{PP process draft}
+	\caption{Outline of Boosted Decision Trees}
 	\end{figure}
 	
 	\subsection{MLP - Multilayer Perceptron}
 	
-	The model is built out of multiple perceptrons, which are arranged in layers shown in Figure \ref{fig:MLP}. The value of one perceptron is the sum of all weighted inputs. This value is then transformed through an activation function and a treshhold. The activation funtion is a linear function for the input- and outputlayer, while for the hiddenlayers it is usually the log-sigmoid transfer function, seen in figure \ref{fig:log-sigmoid function}. All layers have a treshhold, except the inputlayer. 
+	The model is built out of multiple perceptrons, which are arranged in layers shown in Figure \ref{fig:MLP}. The value of one perceptron is the sum of all weighted inputs. This value is then transformed through an activation function and a treshhold. The activation funtion is a linear function for the input- and outputlayer, while for the hiddenlayers it is usually the log-sigmoid transfer function, seen in Figure \ref{fig:log-sigmoid function}. All layers have a treshhold, except the inputlayer. 
 	
 	\begin{figure}[H]
 	\centering
@@ -482,78 +461,81 @@ Trying to split signal and background through a variable with a cut-off value fa
 	\label{fig:log-sigmoid function}
 	\end{figure}
 	
-	In the MLP, every perceptron of a layer is connected to every perceptron of the previous and next layer. Each connection has an assigned weight, so called weight coefficient. All coefficients of one layer can be written as a weight matrix. The first and layer are called input- and outputlayer respectively, while the intermediate layers are the hiddenlayers. A MLP has a minimum of one hiddenlayer, therefore contains at least three layers.
+	In the MLP, every perceptron of a layer is connected to every perceptron of the previous and next layer. Each connection has an assigned weight, so called weight coefficient. All coefficients of one layer can be written as a weight matrix. The first and last layer are called input- and outputlayer respectively, while the intermediate layers are the hiddenlayers. A MLP has a minimum of one hiddenlayer, therefore contains at least three layers~\cite{MLP08}.
 	
-	If the signal is only transmitted in one direction, therefore the MLP doesn't have loops, it is described as feed forward. The learning process of the model is called backpropagation algorithm. It learns by minimizing the error between network output and expexted output. Initially all weights are assigned random values, then every event will go through the network and the weights are adapted. Either all events will be put through the network first and then the values are adapted or are adjusted after each event, but for the latter the order of the events might be important. After one epoch the end criteria will be tested. If it fails, the whole learning process will be carried out again. If it is met, the algorithm is finished.
+	If the signal is only transmitted in one direction, therefore the MLP doesn't have any loops, it is described as feed forward. The learning process of the model is called backpropagation algorithm. It learns by minimizing the error between network output and expexted output. Initially, all weights are assigned random values, then every event will go through the network and the weights are adapted. Either all events will be put through the network first and then the values are adapted or they are adjusted after each event, but for the latter the order of the events might be important. After one epoch the end criteria will be tested. If it fails, the whole learning process will be carried out again. If it is met, the algorithm is finished~\cite{MLP09}.
 	
 \begin{figure}[H]
 	\begin{center}
 	\includegraphics[width=1\textwidth]{figures/MLP.png}
-	\caption{MLP draft}
+	\caption{Outline of Multilayer Perceptron}
 	\label{fig:MLP}
 	\end{center}
 \end{figure}
 
 	\subsection{Training of MVA}
 	
-	The following table shows some of the default values used for the models.
+	The default values of the following configuration options were used for the models:
 	
 		\begin{itemize}
   			\item BDT
   					\begin{itemize}
-  					\item Minimum node size
-  					\item Separation type
+  					\item Minimum percentage required in a leaf node (MinNodeSize): 5\%
+  					\item Separation criterion for node splitting (SeparationType): GiniIndex
   					\end{itemize}
   		  	\item MLP
   					\begin{itemize}
-  					\item Number of cycles
-  					\item Learning Rate
-  					\item Decayrate
-  					\item Neurontype
-  					\item Estimatortype
-  					\item Neuroninputtype
-  					\item Trainingmethod
+  					\item Number of training cycles (NCycles): 500
+  					\item ANN learning rate parameter (LearningRate): 0.02
+  					\item Decay rate for learning parameter (DecayRate): 0.01
+  					\item Neuron input function type (NeuronInputType): sum
+  					\item Training Type (TrainingMethod): BP (Back-Propagation)
   					\end{itemize}		
 		\end{itemize}
 		
-	A full list of all parameters, configuration options as well as their default values are given in the annex, chapter xx.
+	A full list of all parameters, configuration options as well as their default values are given in the annex, chapter \ref{sec:annex-BDTdef} and \ref{sec:annex-MLPdef}~\cite{TMVA}.
 	
-	These parameters were adapted to improve the result:
+	These parameters were adapted to potentially improve the result:
 		\begin{itemize}
   			\item BDT
   					\begin{itemize}
-  					\item Maximum depth
-  					\item Number of trees
-  					\item Number of Cuts
+  					\item Maximum depth of decision trees allowed (MaxDepth)
+  					\item Number of trees in the forest (NTrees)
+  					\item Number of grid points used to find optimal cut (nCuts)
   					\end{itemize}
   		  	\item MLP
   					\begin{itemize}
-  					\item Number of layers
+  					\item Number of hidden layers (HiddenLayers)
   					\end{itemize}		
 		\end{itemize}
 		
-	The default values was used as basis. Additionally, the MVAs were trained with a lower and a higher configuration:
+	Their default values were used as a basis, listed in the second row in Table \ref{tab:config}. The MVAs were additionally trained with a lower and a higher configuration (row 2 and 3):
 	
 	\begin{table}[H]
+	\begin{center}
 	\begin{tabular}{|l|l|l|l|l|}
 	\hline
 	              & \multicolumn{3}{c|}{BDT}                         & \multicolumn{1}{c|}{MLP} \\ \hline
-	Configuration & maximum depth & number of trees & number of cuts & number of layers         \\ \hline
+	Configuration & MaxDepth & NTrees & nCuts & HiddenLayers         \\ \hline
 	1             & 1             & 400             & 10             & 5                        \\ \hline
 	2             & 3             & 800             & 25             & 7                        \\ \hline
 	3             & 5             & 1000            & 50             & 10                       \\ \hline
 	\end{tabular}
+		\caption{Configuration combinations used in MVAs}
+		\label{tab:config}
+	\end{center}
 	\end{table}
 
+	
 The distribution and ROC-curves for the BDT- and MLP-models are shown for each selection and configuration in the following chapter. To avoid overfitting, each MVA is trained on one part of the sample (training sample) and tested on the rest (testing sample). If the results differ significantly, then this would be a sign of overfitting - the model only differentiates correctly on this specific sample. The results of the train- and test-sample can be seen in the distribution plots.
 
-The ROC-curves show the background rejection versus signal efficiency. While discriminating between signal and background, the signal efficiency is the proportion of the correctly categorized signal events ($t\overline{t}\gamma$) and the background rejection is therefore the correctly assigned fraction of background events ($t\overline{t}$). There are two types of errors during the distinction process:
+The ROC-curves (receiver operating characteristic curve) show the background rejection versus signal efficiency. The AUC (area under the ROC-curve) is used as a parameter to demonstrate how well a model performs. While discriminating between signal and background, the signal efficiency is the proportion of the correctly categorized signal events ($t\overline{t}\gamma$) and the background rejection is the correctly assigned fraction of background events ($t\overline{t}$). There are two types of errors during the distinction process:
 		\begin{itemize}
   			\item a signal event is categorized as background, which is called false negative
-  			\item a background event is assigned to the signal category, calles false positive  			
+  			\item a background event is assigned to the signal category, called false positive  			
   		\end{itemize}			
   		
-Examples for different types of ROC-curves are displayed in figure \ref{fig:ROC_ex}. The green curve indicate a good discriminatory power. The orange curve show that the model assigns the events the wrong way around. If the ROC-curve follows closely the identity line, then the model doesn't have discriminatory power.
+Examples for different types of ROC-curves are displayed in Figure \ref{fig:ROC_ex}. The green curve indicate a good discriminatory power. The orange curve shows that the model assigns the events the wrong way around. If the ROC-curve follows the identity line, then the model doesn't have any discriminatory power.
 
 	\begin{figure}[H]
 	\centering
@@ -564,15 +546,15 @@ Examples for different types of ROC-curves are displayed in figure \ref{fig:ROC_
 	
 	\subsection{Results}
 	
-	The first selection category were put into the models and are seen in figure \ref{fig:ROC_s1_config1} - \ref{fig:ROC_s1_config3}. A slight improvement in the distinction between $t\overline{t}\gamma$- and $t\overline{t}$-events is visible. 
+	The first selection category were put into the models and are seen in Figure \ref{fig:ROC_s1_config1} - \ref{fig:ROC_s1_config3}. The ROC-curves indicate a slight improvement in the split between $t\overline{t}\gamma$- and $t\overline{t}$-events. 
 	
-		In the second selection category the variable PhotonGood0mvaID was added (figure \ref{fig:ROC_s2_config1} - \ref{fig:ROC_s2_config3}). The result improved significantly.
+		In the second selection category the variable PhotonGood0\_mvaID was added (Figure \ref{fig:ROC_s2_config1} - \ref{fig:ROC_s2_config3}). The result has improved, the AUC increased significantly.
 		
-		Now adding the photon variables for the third selection show a higher success in the distinguishing process. They can be seen in figure \ref{fig:ROC_s3_config1} - \ref{fig:ROC_s3_config3}. 
+		Now adding the photon variables for the third selection shows a better success in the distinction process. They can be seen in Figure \ref{fig:ROC_s3_config1} - \ref{fig:ROC_s3_config3}. 
 		
-		Between the three configuration combinations there is no significant difference. For all selection categories, the MLP model perfomed better than the BDT model. The third set of variables show the best result.
+		Between the three configuration combinations, there is only a slight difference for the MLP model, but for the BDT model there is a significant improvement in configuration 2 visible. Training- and testresults are nearly identical, so there are no signs of overfitting. The MLP model perfomed better than the BDT model for all selection categories. The third set of variables show the best result.
 				
-	\begin{figure}[H]
+	\begin{figure}[H]For all selection categories
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
@@ -757,10 +739,7 @@ Examples for different types of ROC-curves are displayed in figure \ref{fig:ROC_
 \section{Conclusion}
 It is very difficult to differentiate between $t\overline{t}\gamma$ and $t\overline{t}$ events because they show very similiar behaviour in the signal region. Nevertheless, a slight improvement was possible by training a MVA with relevant variables. Especially photon variables provide a bigger improvement. MLPs show a better performance than BDTs, which suggests the selection of this type of model.
 
-\section{Bibliography}
-
-\section{List of figures}
-
+\appendix
 \section{Appendix}
 	\subsection{Full list of variables with almost identical distributions}
 	\label{sec:annex-identical}
@@ -952,28 +931,109 @@ It is very difficult to differentiate between $t\overline{t}\gamma$ and $t\overl
 		\caption{nPhotonGood}
 		\end{center}
 	\end{figure}
-
-	\subsection{Excluded variables}
-	\label{sec:annex-excluded}
-	\begin{figure}[H]
-	\centering
-	\begin{minipage}{.5\textwidth}
-	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/PhotonGood0_pfRelIso03_chg.png}
-	  \captionof{figure}{PhotonGood0\_pfRelIso03\_chg}
-	\end{minipage}%
-	\begin{minipage}{.5\textwidth}
-	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/PhotonGood0_pfRelIso03_ne.png}
-	  \captionof{figure}{PhotonGood0\_pfRelIso03\_ne}
-	\end{minipage}
-	\end{figure}
 	
-	\begin{figure}[H]
-		\begin{center}
-		\includegraphics[width=0.38\textwidth]{figures/Notused/tightLeptonJetdR.png}
-		\caption{tightLeptonJetdR}
-		\end{center}
-	\end{figure}
+	\subsection{Configuration options for MVA method: BDT}
+	
+	Note: Table taken from~\cite{TMVA}, p. 116-118.
+	
+	\label{sec:annex-BDTdef}
+	
+\begin{longtable}[c]{|p{4cm}|p{2.5cm}|p{7cm}|}
+\hline
+Option               & Default                & Description                                                                                                                                                                                                                                                                                             \\ \hline
+NTrees               & 800                    & Number of trees in the forest                                                                                                                                                                                                                                                                           \\ \hline
+MaxDepth             & 3                      & Max depth of the decision tree allowed                                                                                                                                                                                                                                                                  \\ \hline
+MinNodeSize          & 5\%                    & Minimum percentage of training events required in a leaf node (default: Classification: 5\%, Regression: 0.2\%)                                                                                                                                                                                         \\ \hline
+nCuts                & 20                     & Number of grid points in variable range used in finding optimal cut in node splitting                                                                                                                                                                                                                   \\ \hline
+BoostType            & AdaBoost               & Boosting type for the trees in the forest (note: AdaCost is still experimental) (AdaBoost, RealAdaBoost, Bagging, AdaBoostR2, Grad)                                                                                                                                                                     \\ \hline
+AdaBoostR2Loss       & Quadratic              & Type of Loss function in AdaBoostR2 (Linear, Quadratic, Exponential)                                                                                                                                                                                                                                    \\ \hline
+UseBaggedGrad        & False                  & Use only a random subsample of all events for growing the trees in each iteration. (Only valid for GradBoost)                                                                                                                                                                                           \\ \hline
+Shrinkage            & 1                      & Learning rate for GradBoost algorithm                                                                                                                                                                                                                                                                   \\ \hline
+AdaBoostBeta         & 0.5                    & Learning rate for AdaBoost algorithm                                                                                                                                                                                                                                                                    \\ \hline
+UseRandomisedTrees   & False                  & Determine at each node splitting the cut variable only as the best out of a random subset of variables (like in RandomForests)                                                                                                                                                                          \\ \hline
+UseNvars             & 2                      & Size of the subset of variables used with RandomisedTree option                                                                                                                                                                                                                                         \\ \hline
+UsePoissonNvars      & True                   & Interpret UseNvars not as fixed number but as mean of a Possion distribution in each split with RandomisedTree option                                                                                                                                                                                   \\ \hline
+BaggedSampleFraction & 0.6                    & Relative size of bagged event sample to original size of the data sample (used whenever bagging is used (i.e. Use-BaggedGrad, Bagging, ..))                                                                                                                                                             \\ \hline
+UseYesNoLeaf         & True                   & Use Sig or Bkg categories, or the purity=S/(S+B) as classification of the leaf node -\textgreater Real-AdaBoost                                                                                                                                                                                         \\ \hline
+NegWeightTreatment   & InverseBoost-NegWeights & How to treat events with negative weights in the BDT training (particular the boosting) : IgnoreInTraining; Boost With inverse boostweight (InverseBoostNegWeights); Pair events with negative and positive weights in traning sample and *annihilate* them (PairNegWeightsGlobal, experimental!), Pray \\ \hline
+NodePurityLimit      & 0.5                    & In boosting/pruning, nodes with purity \textgreater NodePurityLimit are signal; background otherwise.                                                                                                                                                                                                   \\ \hline
+SeparationType       & GiniIndex              & Separation criterion for node splitting (CrossEntropy, GiniIndex, GiniIndexWithLaplace, MisClassificationError, SdivSqrtSPlusB, RegressionVariance)                                                                                                                                                     \\ \hline
+DoBoostMonitor       & False                  & Create control plot with ROC integral vs tree number                                                                                                                                                                                                                                                    \\ \hline
+UseFisherCuts        & False                  & Use multivariate splits using the Fisher criterion                                                                                                                                                                                                                                                      \\ \hline
+MinLinCorrForFisher  & 0.8                    & The minimum linear correlation between two variables demanded for use in Fisher criterion in node splitting                                                                                                                                                                                             \\ \hline
+UseExclusiveVars     & False                  & Variables already used in fisher criterion are not anymore analysed individually for node splitting                                                                                                                                                                                                     \\ \hline
+DoPreselection       & False                  & Apply automatic pre-selection for 100\% efficient signal (bkg) cuts prior to training                                                                                                                                                                                                                   \\ \hline
+RenormByClass        & False                  & Individually re-normalize each event class to the original size after boosting                                                                                                                                                                                                                          \\ \hline
+SigToBkgFraction     & 1                      & Sig to Bkg ratio used in Training (similar to NodePurityLimit, which cannot be used in real adaboost)                                                                                                                                                                                                   \\ \hline
+PruneMethod          & NoPruning              & Note: for BDTs use small trees (e.g.MaxDepth=3) and NoPruning; Pruning: Method used for pruning (removal) of statistically insignificant branches (NoPruning, ExpectedError, CostComplexity)                                                                                                            \\ \hline
+PruneStrength        & 0                      & Pruning strength                                                                                                                                                                                                                                                                                        \\ \hline
+PruningValFraction   & 0.5                    & Fraction of events to use for optimizing automatic pruning.                                                                                                                                                                                                                                             \\ \hline
+nEventsMin           & 0                      & deprecated: Use MinNodeSize (in \% of training events) instead                                                                                                                                                                                                                                          \\ \hline
+GradBaggingFraction  & 0.6                    & deprecated: Use *BaggedSampleFraction* instead: Defines the fraction of events to be used in each iteration, e.g. when UseBaggedGrad=kTRUE.                                                                                                                                                             \\ \hline
+UseNTrainEvents      & 0                      & deprecated: Use *BaggedSampleFraction* instead: Number of randomly picked training events used in randomised (and bagged) trees                                                                                                                                                                         \\ \hline
+NNodesMax            & 0                      & deprecated: Use MaxDepth instead to limit the tree size                                                                                                                                                                                                                                                 \\ \hline
+
+	\caption{Full list of configuration options and their default values (BDT)}
+\end{longtable}
+
+	\subsection{Configuration options for MVA method: MLP}
+	Note: Table taken from~\cite{TMVA}, p. 98-99.
+	
+	\label{sec:annex-MLPdef}
+	
+\begin{longtable}[c]{|p{4cm}|p{2.5cm}|p{7cm}|}
+
+\hline
+Option             & Default    & Description                                                                                                                                            \\ \hline
+NCycles            & 500        & Number of training cycles                                                                                                                              \\ \hline
+HiddenLayers       & N,N-1      & Specification of hidden layer architecture                                                                                                             \\ \hline
+NeuronType         & sigmoid    & Neuron activation function type                                                                                                                        \\ \hline
+RandomSeed         & 1          & Random seed for initial synapse weights (0 means unique seed for each run; default value ’1’)                                                          \\ \hline
+EstimatorType      & MSE        & MSE (Mean Square Estimator) for Gaussian Likelihood or CE (Cross- Entropy) for Bernoulli Likelihood, linear, sigmoid, tanh, radial                     \\ \hline
+NeuronInputType    & sum        & Neuron input function type (sum, sqsum, abssum)                                                                                                        \\ \hline
+TrainingMethod     & BP         & Train with Back-Propagation (BP), BFGS Algorithm (BFGS), or Genetic Algorithm (GA - slower and worse)                                                  \\ \hline
+LearningRate       & 0.02       & ANN learning rate parameter                                                                                                                            \\ \hline
+DecayRate          & 0.01       & Decay rate for learning parameter                                                                                                                      \\ \hline
+TestRate           & 10         & Test for overtraining performed at each \#th epochs                                                                                                    \\ \hline
+EpochMonitoring    & False      & Provide epoch-wise monitoring plots according to TestRate (caution: causes big ROOT output file!)                                                      \\ \hline
+Sampling           & 1          & Only ’Sampling’ (randomly selected) events are trained each epoch                                                                                      \\ \hline
+SamplingEpoch      & 1          & Sampling is used for the first ’SamplingEpoch’ epochs, afterwards, all events are taken for training                                                   \\ \hline
+SamplingImportance & 1          & The sampling weights of events in epochs which successful (worse estimator than before) are multiplied with SamplingImportance, else they are divided. \\ \hline
+SamplingTraining   & True       & The training sample is sampled                                                                                                                         \\ \hline
+SamplingTesting    & False      & The testing sample is sampled                                                                                                                          \\ \hline
+ResetStep          & 50         & How often BFGS should reset history                                                                                                                    \\ \hline
+Tau                & 3          & LineSearch size step                                                                                                                                   \\ \hline
+BPMode             & sequential & Back-propagation learning mode: sequential or batch                                                                                                    \\ \hline
+BatchSize          & -1         & Batch size: number of events/batch, only set if in Batch Mode, -1 for Batch- Size=number\_of\_events                                                   \\ \hline
+ConvergenceImprove & 1e-30      & Minimum improvement which counts as improvement (\textless{}0 means automatic convergence check is turned off)                                         \\ \hline
+ConvergenceTests   & -1         & Number of steps (without improvement) required for convergence (\textless{}0 means automatic convergence check is turned off)                          \\ \hline
+UseRegulator       & False      & Use regulator to avoid over-training                                                                                                                   \\ \hline
+UpdateLimit        & 10000      & Maximum times of regulator update                                                                                                                      \\ \hline
+CalculateErrors    & False      & Calculates inverse Hessian matrix at the end of the training to be able to calculate the uncertainties of an MVA value                                 \\ \hline
+WeightRange        & 1          & Take the events for the estimator calculations from small deviations from the desired value to large deviations only over the weight range             \\ \hline
+
+	%\label{tab:defMLP}
+	\caption{Full list of configuration options and their default values (MLP)}
+\end{longtable}
+
+\newpage
+\section{References}
+\begingroup
+\renewcommand{\section}[2]{}%
+\bibliography{bibfile/ref}
+\endgroup
+
+\newpage
+\section{List of Figures}
+\renewcommand{\listfigurename}{}
+\vspace{-24pt}
+\listoffigures
+
+
+\newpage
+\section{List of Tables}
+\renewcommand{\listtablename}{}
+\vspace{-24pt}
+\listoftables
 	
 \end{document}
