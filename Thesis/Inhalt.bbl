@@ -9,6 +9,26 @@
 \expandafter\ifx\csname burlalt\endcsname\relax
   \def\burlalt#1#2{\href{#2}{#1}}\fi
 
+\bibitem{TTG}
+J.~Erdmann.
+\newblock {\em Measurement of the inclusive ttgamma cross section at sqrt(s) =
+  7 TeV with the ATLAS detector}, 2012,
+  \burlalt{1206.5696}{http://arxiv.org/abs/1206.5696}.
+
+\bibitem{CMS21}
+CMS-Collaboration.
+\newblock {\em Measurement of the inclusive and differential
+  $\mathrm{t\overline{t}}\gamma$ cross sections in the single-lepton channel
+  and EFT interpretation at $\sqrt{s}$ = 13 TeV}, 2021,
+  \burlalt{2107.01508}{http://arxiv.org/abs/2107.01508}.
+
+\bibitem{CMS08}
+CMS-Collaboration, S.~Chatrchyan, G.~Hmayakyan, V.~Khachatryan, A.~M. Sirunyan,
+  W.~Adam, T.~Bauer, T.~Bergauer, H.~Bergauer, M.~Dragicevic, and et~al.
+\newblock {\em The {CMS} experiment at the {CERN} {LHC}}.
+\newblock Journal of Instrumentation, 3(08):S08004--S08004, 08 2008.
+\newblock \doi{10.1088/1748-0221/3/08/s08004}.
+
 \bibitem{ATLAS}
 M.~Aaboud, G.~Aad, B.~Abbott, D.~C. Abbott, O.~Abdinov, B.~Abeloos, D.~K.
   Abhayasinghe, S.~H. Abidi, O.~S. AbouZeid, and et~al.
@@ -24,30 +44,21 @@ Y.~Coadou.
 \newblock EPJ Web of Conferences, 55:02004--, 07 2013.
 \newblock \doi{10.1051/epjconf/20135502004}.
 
-\bibitem{TTG}
-J.~Erdmann.
-\newblock {\em Measurement of the inclusive ttgamma cross section at sqrt(s) =
-  7 TeV with the ATLAS detector}, 2012,
-  \burlalt{1206.5696}{http://arxiv.org/abs/1206.5696}.
-
-\bibitem{TMVA}
-A.~Hoecker, P.~Speckmayer, J.~Stelzer, J.~Therhaag, E.~von Toerne, H.~Voss,
-  M.~Backes, T.~Carli, O.~Cohen, A.~Christov, S.~Henrot-Versillé,
-  M.~Jachowski, K.~Kraszewski, Y.~Mahalalel, R.~Ospanov, X.~Prudent,
-  D.~Schouten, F.~Tegenfeldt, A.~Robert, A.~Voigt, K.~Voss, M.~Wolter, and
-  A.~Zemla.
-\newblock {\em TMVA - Toolkit for Multivariate Data Analysis}, 2009,
-  \burlalt{physics/0703039v5}{http://arxiv.org/abs/physics/0703039v5}.
+\bibitem{MLP08}
+J.~Nazzal, I.~El-Emary, and S.~Najim.
+\newblock {\em Multilayer Perceptron Neural Network (MLPs) For Analyzing the
+  Properties of Jordan Oil Shale}.
+\newblock World Applied Sciences Journal, 5, 01 2008.
 
 \bibitem{MLP09}
 P.~Marius, V.~Balas, L.~Perescu-Popescu, and N.~Mastorakis.
 \newblock {\em Multilayer perceptron and neural networks}.
 \newblock WSEAS Transactions on Circuits and Systems, 8, 07 2009.
 
-\bibitem{MLP08}
-J.~Nazzal, I.~El-Emary, and S.~Najim.
-\newblock {\em Multilayer Perceptron Neural Network (MLPs) For Analyzing the
-  Properties of Jordan Oil Shale}.
-\newblock World Applied Sciences Journal, 5, 01 2008.
+\bibitem{TMVA}
+A.~Hoecker, P.~Speckmayer, J.~Stelzer, J.~Therhaag, E.~von Toerne, H.~Voss,
+  M.~Backes, T.~Carli, O.~Cohen, and et~al.
+\newblock {\em TMVA - Toolkit for Multivariate Data Analysis}, 2009,
+  \burlalt{physics/0703039v5}{http://arxiv.org/abs/physics/0703039v5}.
 
 \end{thebibliography}

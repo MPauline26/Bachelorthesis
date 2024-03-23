@@ -12,6 +12,7 @@
 \usepackage{float}
 \usepackage{longtable}
 \usepackage{fixltx2e}
+\usepackage{textcomp}
 \bibliographystyle{habbrv}
  
 % itemize in coloumns 
@@ -71,19 +72,19 @@
 		An attempt was perfomed through a multivariate analysis by developing and training models. At the beginning, different variables were analysed and compared, and the most promising were then used for training. The type of models, denoted MVA in the following, used for this project are boosted decision trees (BDT) and mutilayer perceptrons (MLP). The results of the MVAs for three different variable categories were created, then analysed and presented in the course of this project.
 
 \section{Background information}
-	\subsection{ATLAS detector and data}
-	The ATLAS detector is a part of the Large Hadron Collider, a particle accelerator which was built by the research organisation CERN in Geneva, Switzerland. LHC has a circumference of 27km and is up to 175m deep. Besides ATLAS, there are other experiments as well, such as CMS, ALICE and LHCb. ATLAS has three sub-detectors, which all surround the beam pipe, where the particles are accelerated and collided against each other.
+	\subsection{CMS detector and data}
+	The CMS detector (compact muon solenoid) is part of the Large Hadron Collider, a particle accelerator, which was built by the research organisation CERN in Geneva, Switzerland. LHC has a circumference of 27km and is up to 175m deep. Besides CMS, there are other experiments as well, such as ATLAS, ALICE and LHCb. CMS has multiple sub-detectors, which all surround the location, where the particles are accelerated and collided against each other.
 	
-	In Figure \ref{fig:detectorsystem}, a sketch of the detector system can be seen. The inner detecor is a tracking chamber for charged partices. It is surrounded by a superconducting solenoid with a magnetic field of 2T used to divert the particle trajectory to measure the momentum. The calorimeter is made up of alternating layers. One is a dense absorber material, which is used to prompt electromagnetic and hadronic showers (ECAL, HCAL). The other layer is made of active material used for energy measurement. The muon spectrometer (MS) is positioned in the outermost layer since muons may pass all inner layers. It is surrounded by a magnetic field and the diversion is measured by a multiple layer of high precision tracking chambers~\cite{ATLAS, TTG}. 
+	In Figure \ref{fig:detectorsystem}, a sketch of the detector system can be seen. The inner tracking system is based on silicon detector technology (SI microstrip and pixel) and is used to track charged particles. It is enclosed by electromagnetic and hadron calorimeters (ECAL, HCAL) utilized to prompt showers. They have a barrel and an endcap part and additionally a forward calorimeter was installed to further extend the detector's coverage. The ECAL is built out of lead tungstate crystals and the HCAL is made out of brass and scintillator. Special for the CMS detector is the superconducting solenoid, which surrounds the inner detectors and calorimeters. It has a 6m diameter with a magnetic field of 3.8T used to divert the particle trajectory and to measure their momentum. The muon detectors are positioned in the outermost layer since muons may pass all inner layers \cite{TTG, CMS21, CMS08}.
 	
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/detector_system.png}
-	\caption{Detector system of ATLAS}
+	\caption{Detector system of CMS}
 	\label{fig:detectorsystem}
 	\end{figure}
 	
-	The data is filtered by a two-step trigger system. The hardware-based system (L1) is triggered when muons, electrons, photons and jets are detected. This reduced the data amount from 40MHz to 100kHz. The software-based system (L2) is triggered by the different energies, type and numbers of particles:
+	The data is filtered by a two-step trigger system. The hardware-based system (L1) is triggered when muons, electrons, photons and jets with specific characteristics are detected. This reduced the data amount from 40MHz to 100kHz. The software-based system (L2) is triggered by the different energies, type and numbers of particles:
 	
 \begin{itemize}
   \item lepton has 30/35 GeV
@@ -92,7 +93,7 @@
   \item exactly one photon
 \end{itemize}
 
-This reduced the data amount from 100kHz auf 1kHz. The data used during this project was recorded in 2016 at a centre-of mass energy of 13TeV. The signal and background processes were modelled using Monte Carlo generators and passed through a detector simulation~\cite{ATLAS}. 
+This reduced the data amount from 100kHz to 1kHz. The data used during this project was recorded in 2016 at a centre-of-mass energy of 13TeV. The signal and background processes were modelled using multiple Monte Carlo event generators~\cite{CMS21}. 
 
 	\subsection{Proton-Proton-collision and $t\overline{t}\gamma$}
 	 \label{sec:PPprocess}
@@ -102,14 +103,14 @@ This reduced the data amount from 100kHz auf 1kHz. The data used during this pro
 	
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{figures/PP_process.png}
+	\includegraphics[width=0.9\textwidth]{figures/PP_process.png}
 	\caption{Proton Proton collision process}
  	\label{fig:PPprocess}
 	\end{figure}
 	
 \section{Challenge in categorisation}
 
-In Figure \ref{fig:PhotonPT}, the transverse momentum of the photon is visible. The background makes up nearly 50\% of the signal region. The possible sources are~\cite{ATLAS, TTG}:
+In Figure \ref{fig:PhotonPT}, the transverse momentum of the photon is visible. The background makes up nearly 50\% of the signal region. The possible sources are~\cite{TTG, ATLAS}:
 \begin{itemize}
   \item hadron or electron misidentified as photon
   \item misconstructed photon
@@ -118,314 +119,254 @@ In Figure \ref{fig:PhotonPT}, the transverse momentum of the photon is visible. 
   \item hadron misconstructed as electron
 \end{itemize}
 
+A neural network was developed to differentiate between the correctly reconstructed and the misidentified photons. What still needs to be investigated is the possibility of improvement in the discrimination between $t\overline{t}\gamma$ and $t\overline{t}$ events in the signal region through MVAs.
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=1\linewidth]{figures/PhotonGood0_pt_lin.png}
-  \captionof{figure}{Distribution of P\textsubscript{T} Photon}
+  \captionof{figure}{Distribution of p\textsubscript{T} photon}
   \label{fig:PhotonPT}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=1\linewidth]{figures/PhotonGood0_pt_log.png}
-  \captionof{figure}{Distribution of P\textsubscript{T} Photon (log)}
+  \captionof{figure}{Distribution of p\textsubscript{T} photon (log)}
   \label{fig:PhotonPTlog}
 \end{minipage}
 \end{figure}
 
-	\subsection{Current status}
-	
-	First, a neural network was developed to seperate the hadronic-fake photons, which are hadrons misidentified as photons that made up the majority of the background signal. The result was then used as an input for the neural network created to split the $t\overline{t}\gamma$ signal and the background further~\cite{ATLAS}. What still needs to be investigated is the possibility of improvement in the discrimination between $t\overline{t}\gamma$ and $t\overline{t}$ events in the signal region through MVAs.
-
 \section{Analysis process}
 
-	\subsection{List of variables}
+	\subsection{Input parameters}
 	
-The analysed variables are listed below and they are categorized by their type of particles. 
-
+The amount of detected particles and the pseudorapidity ($\eta = -ln(tan(\frac{\vartheta}{2}))$, wheras $\vartheta$ is the polar angle) of leptons, photons, first and second jets and b-jets were analysed.  B-jets are jets with a b-tag and the first and second jet refer to the jet with the highest and second highest $p_T$ respectively. The azithmuthal opening angle around the z-axis ($\Delta\phi$) and transverse momentum (p\textsubscript{T}) of these particles were looked at as well. The distance ($\Delta$R = $\sqrt{(\Delta\eta)^2 +(\Delta\phi)^2}$) between lepton and jet, lepton and photon and photon and jet were also considered. 
+Additional variables are:
 \begin{itemize}
-  \item B-jet: variables of jets with b-tag
-	\begin{AutoMultiColItemize}
-  		\item Bj0\_eta
-  		\item Bj0\_phi
-  		\item Bj0\_pt
-  		\item Bj1\_eta
-  		\item Bj1\_phi
-  		\item Bj1\_pt
-  		\item nBTagGood
-	 \end{AutoMultiColItemize}
-  \item Jet: variables of all jets 
-  	\begin{AutoMultiColItemize}
-  		\item JetGood0\_eta
-  		\item JetGood0\_phi
-  		\item JetGood0\_pt
-  		\item JetGood1\_eta
-  		\item JetGood1\_phi
-  		\item JetGood1\_pt
-  		\item nJet
-  		\item nJetGood
-  		\item JetGood0\_neEmEF
-		\item JetGood0\_chEmEF
-		\item JetGood0\_neHEF
-		\item JetGood0\_chHEF
- 	\end{AutoMultiColItemize}
-  \item Lepton: variables of electron, muon
-    	\begin{AutoMultiColItemize}
-  		\item LeptonTight0\_eta
-  		\item LeptonTight0\_phi
-  		\item LeptonTight0\_pt
-  		\item nElectronTight
-  		\item nLeptonTight
-  		\item nMuonTight
-  		\item LeptonTight0\_pfRelIso03\_all
-		\item LeptonTight0\_pfRelIso03\_chg
-		\item LeptonTight0\_pfRelIso03\_ne
- 	\end{AutoMultiColItemize}
-  \item Combination: variables of two particle types 
-  	\begin{AutoMultiColItemize}
-		\item leptonJetdR
-		\item ltight0GammadPhi
-		\item PhotonLepdR
-		\item PhotonJetdR
-		\item JetGood0\_btagDeepB
-		\item JetGood1\_btagDeepB
-	\end{AutoMultiColItemize}
-  \item Photon:
-  	\begin{AutoMultiColItemize}
-		\item nPhotonGood
-		\item PhotonGood0\_eta
-		\item PhotonGood0\_mvaID
-		\item PhotonGood0\_phi
-		\item PhotonGood0\_pt
-   	\end{AutoMultiColItemize}
-  \item Others: 
-	\begin{AutoMultiColItemize}
-  		\item MET\_phi
-  		\item MET\_pt
-		\item ht
-		\item m3
-		\item mT
- 	\end{AutoMultiColItemize}
-\end{itemize}
-
-The pre- or suffix of the name reveal what information is saved. The description of variables, which don't follow this logic, are listed at the end. Additionally for jet variables, 0 refers to the jet with the highest $p_T$ and 1 to the second highest $p_T$.
-
-Prefix and suffix:
-\begin{itemize}
-	  \item \_eta: pseudorapidity of variable ($\eta = -ln(tan(\frac{\vartheta}{2}))$; wheras $\vartheta$ is the polar angle)
-	  \item \_phi: azithmuthal opening angle around z-axis ($\Delta\phi$)
-	  \item \_pt: transverse momentum of variable
-	  \item dR: distance between two objects ($\Delta$R)
-	  \item n: number of particles
-\end{itemize}
-
-Other:
-\begin{itemize}
-  \item ht: total transverse momentum of all jets; high ht means either a large number of jets or jets with high energies were detected
-  \item m3: maximum mass of three jets; during the decay process of a top quark to a b-quark and W-boson, which further decays to two quarks (see chapter \ref{sec:PPprocess}), the m3 variable would then have a peak at the top quark mass  
-  \item mT: transverse mass of an object depending on input variables; if a lepton and neutrino were used in the following formula, then the transverse mass of a W-boson is calculated:
+  \item total transverse momentum of all jets; higher amount means either a large number of jets or jets with high energies were detected
+  \item maximum mass of three jets; during the decay process of a top quark to a b-quark and W-boson, which further decays to two quarks (see chapter \ref{sec:PPprocess}), the variable would then have a peak at the top quark mass  
+  \item transverse mass of an object depending on input variables; if a lepton and neutrino were used in the following formula, then the transverse mass of a W-boson is calculated:
 	  \begin{align*}
 			m_T(W) = \sqrt{2p_T(\ell)p_T^{miss}[1 - cos(\Delta\phi(\ell, \vec{p}_T^{miss}))]}
 		\end{align*}
   
   %\item nPhotonGood0: number of photons
-  \item PhotonGood0\_mvaID: currently used variable to differentiate between signal and background events
-  \item MET: Missing transverse momentum
-   		\item JetGood0\_neEmEF: proportion of energy coming from neutral particles detected in ECAL (e.g. photon)
-		\item JetGood0\_chEmEF: proportion of energy coming from charged particles detected in ECAL (e.g. electron)
-		\item JetGood0\_neHEF: proportion of energy coming from neutral particles detected in HCAL (e.g. neutral meson, neutron)
-		\item JetGood0\_chHEF: proportion of energy coming from charged particles detected in HCAL (e.g. charged meson, proton)
-  		\item LeptonTight0\_pfRelIso03\_all: relative isolation of the lepton to all particles in a radius of dR = 0.3 %$\sum_{i} (\frac{p_{T_i}}{p_{T_i}^{LEPTON}})$
-		\item LeptonTight0\_pfRelIso03\_chg: relative isolation of the lepton to charged particles in a radius of dR = 0.3 %$\sum_{i} (\frac{p_{T_i}^{CHARGED}}{p_{T_i}^{LEPTON}})$
-		\item LeptonTight0\_pfRelIso03\_ne: relative isolation of the lepton to neutral particles in a radius of dR = 0.3 %$\sum_{i} (\frac{p_{T_i}^{NEUTRAL}}{p_{T_i}^{LEPTON}})$
-		\item JetGood0\_btagDeepB, JetGood1\_btagDeepB: result of neural network to identify jets coming from b-quark (b-tag)
+  		\item currently used variable to differentiate between signal and background events
+   		\item proportion of energy coming from neutral particles detected in ECAL (e.g. photon)
+		\item proportion of energy coming from charged particles detected in ECAL (e.g. electron)
+		\item proportion of energy coming from neutral particles detected in HCAL (e.g. neutral meson, neutron)
+		\item proportion of energy coming from charged particles detected in HCAL (e.g. charged meson, proton)
+  		\item relative isolation of the lepton to all particles in a radius of dR = 0.3 %$\sum_{i} (\frac{p_{T_i}}{p_{T_i}^{LEPTON}})$
+		\item relative isolation of the lepton to charged particles in a radius of dR = 0.3 %$\sum_{i} (\frac{p_{T_i}^{CHARGED}}{p_{T_i}^{LEPTON}})$
+		\item relative isolation of the lepton to neutral particles in a radius of dR = 0.3 %$\sum_{i} (\frac{p_{T_i}^{NEUTRAL}}{p_{T_i}^{LEPTON}})$
+		\item result of neural network to identify first and second jets coming from b-quark (b-tag)
+		\item $\Delta\phi$ between lepton and photon
+		\item $\Delta\phi$ of missing transverse momentum (MET)
+		\item transverse momentum of MET
 \end{itemize}
 
 	\subsection{Analysis of variables}
 	
-The variables were analysed by comparing the distribution of events with a uniform scaling. A uniform scaling was needed to have a better view of relative differences between signal and background. If the variable shows a different behaviour for each type of signal, it could be an indication of discriminatory power. 
+The variables were analysed by comparing the distribution of events with a uniform scaling. A uniform scaling was needed to have a better view of relative differences between signal ($t\overline{t}\gamma$) and background ($t\overline{t}$). If the variable shows a different behaviour for each type of event, it could be an indication of discriminatory power. 
 
-Figure \ref{fig:Bj0eta} to \ref{fig:LeptonTight0eta} show some examples of variables, where the distributions are almost identical and were therefore not analysed any further. A full list of these variables are listed in the Annex, chapter \ref{sec:annex-identical}. 
+Figure \ref{fig:Bj0eta} and \ref{fig:LeptonTight0eta} depict some examples of variables, where the distributions are almost identical and were therefore not analysed any further. A full list of these variables are listed in the Annex, chapter \ref{sec:annex-identical}. 
 
 \begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.75\linewidth]{figures/Notused/Bj0_eta.png}
-  \captionof{figure}{Bj0\_eta}
-  \label{fig:Bj0eta}
+  \includegraphics[width=0.70\linewidth]{figures/Notused/Bj0_eta.png}
+  %\captionof{figure}{Bj0_eta}
+  %\label{fig:Bj0eta}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.75\linewidth]{figures/Notused/JetGood0_btagDeepB.png}
-  \captionof{figure}{JetGood0\_btagDeepB}
-  \label{fig:JetGood0btagDeepB}
+  \includegraphics[width=0.70\linewidth]{figures/Notused/JetGood0_btagDeepB.png}
+  %\captionof{figure}{JetGood0\_btagDeepB}
+  %\label{fig:JetGood0btagDeepB}
 \end{minipage}
+\captionof{figure}{pseudorapidity of first b-jet and result of neural network to identify b-jets suggest no discriminatory power}
+\label{fig:Bj0eta}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.75\linewidth]{figures/Notused/LeptonTight0_pt.png}
-  \captionof{figure}{LeptonTight0\_pt}
-  \label{fig:LeptonTight0pt}
+  \includegraphics[width=0.70\linewidth]{figures/Notused/LeptonTight0_eta.png}
+  %\captionof{figure}{LeptonTight0\_eta}
+  %\label{fig:LeptonTight0eta}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.75\linewidth]{figures/Notused/LeptonTight0_eta.png}
-  \captionof{figure}{LeptonTight0\_eta}
-  \label{fig:LeptonTight0eta}
+  \includegraphics[width=0.70\linewidth]{figures/Notused/LeptonTight0_pt.png}
+  %\captionof{figure}{LeptonTight0\_pt}
+  %\label{fig:LeptonTight0pt}
 \end{minipage}
+\captionof{figure}{pseudorapidity and transverse momentum of lepton suggest no discriminatory power}
+\label{fig:LeptonTight0eta}
 \end{figure}
 
-Variables, where some differences were visible in the signal region, are shown in Figure \ref{fig:nBTagGood} to \ref{fig:ht}. These were candidates for the first set of selected variables. 
+Variables, where some differences were visible in the signal region, are seen in Figure \ref{fig:nBTagGood} to \ref{fig:ht}. These were candidates for the first set of selected variables. 
 
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select1/nBTagGood.png}
-	  \captionof{figure}{nBTagGood}
-	  \label{fig:nBTagGood}
+	  \includegraphics[width=0.70\linewidth]{figures/Select1/nBTagGood.png}
+	  %\captionof{figure}{nBTagGood}
+	  %\label{fig:nBTagGood}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select1/nJetGood.png}
-	  \captionof{figure}{nJetGood}
-	  \label{fig:nJetGood}
+	  \includegraphics[width=0.70\linewidth]{figures/Select1/nJetGood.png}
+	  %\captionof{figure}{nJetGood}
+	  %\label{fig:nJetGood}
 	\end{minipage}
+	\captionof{figure}{number of jets and b-jets show slightly different behaviour between signal and background}
+	\label{fig:nBTagGood}
 	\end{figure}
 	
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select1/JetGood0_eta.png}
-	  \captionof{figure}{JetGood0\_eta}
-	  \label{fig:JetGood0eta}
+	  \includegraphics[width=0.70\linewidth]{figures/Select1/JetGood0_eta.png}
+	  %\captionof{figure}{JetGood0\_eta}
+	  %\label{fig:JetGood0eta}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select1/JetGood0_phi.png}
-	  \captionof{figure}{JetGood0\_phi}
-	  \label{fig:JetGood0phi}
+	  \includegraphics[width=0.70\linewidth]{figures/Select1/JetGood0_phi.png}
+	  %\captionof{figure}{JetGood0\_phi}
+	  %\label{fig:JetGood0phi}
 	\end{minipage}
+	\captionof{figure}{pseudorapidity and $\Delta\phi$ of the first jet show slightly different behaviour between signal and background}
+	\label{fig:JetGood0phi}
 	\end{figure}
 	
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select1/JetGood0_pt.png}
-	  \captionof{figure}{JetGood0\_pt}
-	  \label{fig:JetGood0pt}
+	  \includegraphics[width=0.70\linewidth]{figures/Select1/JetGood0_pt.png}
+	  %\captionof{figure}{JetGood0\_pt}
+	  %\label{fig:JetGood0pt}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select1/leptonJetdR.png}
-	  \captionof{figure}{leptonJetdR}
-	  \label{fig:leptonJetdR}
+	  \includegraphics[width=0.70\linewidth]{figures/Select1/leptonJetdR.png}
+	  %\captionof{figure}{leptonJetdR}
+	  %\label{fig:leptonJetdR}
 	\end{minipage}
+	\captionof{figure}{transverse momentum of first jet and distance between lepton and jet show slightly different behaviour between signal and background}
 	\end{figure}
 	
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select1/MET_phi.png}
-	  \captionof{figure}{MET\_phi}
-	  \label{fig:METphi}
+	  \includegraphics[width=0.70\linewidth]{figures/Select1/MET_pt.png}
+	  %\captionof{figure}{MET\_pt}
+	  %\label{fig:METpt}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select1/MET_pt.png}
-	  \captionof{figure}{MET\_pt}
-	  \label{fig:METpt}
+	  \includegraphics[width=0.70\linewidth]{figures/Select1/MET_phi.png}
+	  %\captionof{figure}{MET\_phi}
+	  %\label{fig:METphi}
 	\end{minipage}
+	\captionof{figure}{transverse momentum and $\Delta\phi$ of missing transverse momentum show slightly different behaviour between signal and background}
 	\end{figure}
 	
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select1/mT.png}
-	  \captionof{figure}{mT}
-	  \label{fig:mT}
+	  \includegraphics[width=0.70\linewidth]{figures/Select1/mT.png}
+	  %\captionof{figure}{mT}
+	  %\label{fig:mT}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select1/m3.png}
-	  \captionof{figure}{m3}
-	  \label{fig:m3}
+	  \includegraphics[width=0.70\linewidth]{figures/Select1/m3.png}
+	  %\captionof{figure}{m3}
+	  %\label{fig:m3}
 	\end{minipage}
+	\captionof{figure}{transverse momentum of W-boson and maximum mass of three jets show slightly different behaviour between signal and background}
 	\end{figure}
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.38\textwidth]{figures/Select1/ht.png}
-	\caption{ht}
+	\includegraphics[width=0.35\textwidth]{figures/Select1/ht.png}
+	\caption{transverse momentum of all jets show slightly different behaviour between signal and background}
  	\label{fig:ht}
 	\end{figure}
 	
-The variable PhotonGood0\_mvaID, seen in Figure \ref{fig:PhotonGood0mvaID}, shows quite a good distinction and is therefore added to the list (second selection).
+\newpage
+The currently used variable to differentiate between $t\overline{t}\gamma$ and $t\overline{t}$, seen in Figure \ref{fig:PhotonGood0mvaID}, shows quite a good distinction and is therefore added to the list (second selection).
 
 	\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.38\textwidth]{figures/Select2/PhotonGood0_mvaID.png}
-	\caption{PhotonGood0\_mvaID}
+	\includegraphics[width=0.35\textwidth]{figures/Select2/PhotonGood0_mvaID.png}
+	\caption{currently used variable to differentiate between signal and background events suggests good distinction}
  	\label{fig:PhotonGood0mvaID}
 	\end{figure}
 	
-Figure \ref{fig:PhotonGood0pt} to \ref{fig:photonLepdR} show the photon variables. These show the most promising behaviour for discriminating between $t\overline{t}\gamma$ and $t\overline{t}$ events and were additionally put into the third selection category.
+Figure \ref{fig:PhotonGood0pt} to \ref{fig:photonLepdR} are the photon variables. These demonstrate the most promising behaviour for discriminating between $t\overline{t}\gamma$ and $t\overline{t}$ events and were additionally put into the third selection category.
 
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select3/PhotonGood0_pt.png}
-	  \captionof{figure}{PhotonGood0\_pt}
-	  \label{fig:PhotonGood0pt}
+	  \includegraphics[width=0.70\linewidth]{figures/Select3/PhotonGood0_pt.png}
+	  %\captionof{figure}{PhotonGood0\_pt}
+	  %\label{fig:PhotonGood0pt}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select3/PhotonGood0_phi.png}
-	  \captionof{figure}{PhotonGood0\_phi}
-	  \label{fig:PhotonGood0phi}
+	  \includegraphics[width=0.70\linewidth]{figures/Select3/PhotonGood0_phi.png}
+	  %\captionof{figure}{PhotonGood0\_phi}
+	  %\label{fig:PhotonGood0phi}
 	\end{minipage}
+	\caption{transverse momentum and $\Delta\phi$ of photon indicate good discriminatory power}
+	\label{fig:PhotonGood0pt}
 	\end{figure}
 	
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select3/PhotonGood0_eta.png}
-	  \captionof{figure}{PhotonGood0\_eta}
-	  \label{fig:PhotonGood0eta}
+	  \includegraphics[width=0.70\linewidth]{figures/Select3/PhotonGood0_eta.png}
+	  %\captionof{figure}{PhotonGood0\_eta}
+	  %\label{fig:PhotonGood0eta}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select3/ltight0GammadPhi.png}
-	  \captionof{figure}{ltight0GammadPhi}
-	  \label{fig:ltight0GammadPhi}
+	  \includegraphics[width=0.70\linewidth]{figures/Select3/ltight0GammadPhi.png}
+	  %\captionof{figure}{ltight0GammadPhi}
+	  %\label{fig:ltight0GammadPhi}
 	\end{minipage}
+	\caption{pseudorapidity of photon and $\Delta\phi$ between lepton and photon indicate good discriminatory power}
 	\end{figure}
 	
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select3/photonJetdR.png}
-	  \captionof{figure}{photonJetdR}
-	  \label{fig:photonJetdR}
+	  \includegraphics[width=0.70\linewidth]{figures/Select3/photonJetdR.png}
+	  %\captionof{figure}{photonJetdR}
+	  %\label{fig:photonJetdR}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Select3/photonLepdR.png}
-	  \captionof{figure}{photonLepdR}
-	  \label{fig:photonLepdR}
+	  \includegraphics[width=0.70\linewidth]{figures/Select3/photonLepdR.png}
+	  %\captionof{figure}{photonLepdR}
+	  %\label{fig:photonLepdR}
 	\end{minipage}
+	\caption{distance between photon and jet and between photon and lepton indicate good discriminatory power}
+	\label{fig:photonLepdR}
 	\end{figure}
 
 \section{MVA}
@@ -549,13 +490,13 @@ Examples for different types of ROC-curves are displayed in Figure \ref{fig:ROC_
 	
 	\subsection{Results}
 	
-	The first set of selected variables (non-photon) were put into the models and are seen in Figure \ref{fig:ROC_s1_config1} - \ref{fig:ROC_s1_config3}. The ROC-curves indicate a slight improvement in the split between $t\overline{t}\gamma$- and $t\overline{t}$-events. 
+	The first set of selected variables (non-photon) were put into the models and are seen in Figure \ref{fig:ROC_s1_config1} - \ref{fig:ROC_s1_config3}. The ROC-curves indicate a slight improvement in the split between $t\overline{t}\gamma$- and $t\overline{t}$-events (blue line represents the identity line). At a signal efficiency of 70\%, a background rejection of about 40\% for MLP and 35\% for BDT can be achieved.
 	
-		In the second selection category, the variable PhotonGood0\_mvaID was added (Figure \ref{fig:ROC_s2_config1} - \ref{fig:ROC_s2_config3}). The result has improved, the AUC increased significantly.
+		In the second selection category, the currently used variable to differentiate between signal and background events was added (Figure \ref{fig:ROC_s2_config1} - \ref{fig:ROC_s2_config3}). The result has improved, the AUC increased significantly. At a signal efficiency of 70\%, a background rejection of about 46\% for MLP and 37\% for BDT can be achieved.
 		
-		Now adding the photon variables for the third selection shows a better success in the distinction process. They can be seen in Figure \ref{fig:ROC_s3_config1} - \ref{fig:ROC_s3_config3}. 
+		Now adding the photon variables for the third selection shows a better success in the distinction process. They can be seen in Figure \ref{fig:ROC_s3_config1} - \ref{fig:ROC_s3_config3}. At a signal efficiency of 70\%, a background rejection of about 48\% for MLP and 38\% for BDT can be achieved.
 		
-		Between the three configuration combinations, there is only a slight difference for the MLP model, but for the BDT model there is a significant improvement in configuration 2 visible. Training- and testresults are nearly identical, so there are no signs of overfitting. The MLP model perfomed better than the BDT model for all selection categories. The third set of variables show the best result.
+		Between the three configuration combinations, there is only a slight difference for the MLP model, but for the BDT model there is an increase in the AUC for configuration 2 visible. Training- and testresults are nearly identical, so there are no signs of overfitting. The MLP model perfomed better than the BDT model for all selection categories. The third set of variables shows the best result.
 				
 	\begin{figure}[H]
 	\centering
@@ -740,7 +681,7 @@ Examples for different types of ROC-curves are displayed in Figure \ref{fig:ROC_
 	\end{figure}
 				
 \section{Conclusion}
-It is very difficult to differentiate between $t\overline{t}\gamma$ and $t\overline{t}$ events because they show very similiar behaviour in the signal region. Nevertheless, a slight improvement was possible by training a MVA with relevant variables. Especially photon variables provide a bigger improvement. MLPs show a better performance than BDTs, which suggests the selection of this type of model.
+It is very difficult to differentiate between $t\overline{t}\gamma$ and $t\overline{t}$ events because they show very similiar behaviour in the signal region. Nevertheless, a slight improvement was possible by training a MVA with relevant variables. At a signal efficiency of 70\%, a background rejection of up to 48\% for MLP and up to 38\% for BDT can be achieved. Especially photon variables provide a bigger improvement. MLPs show a better performance than BDTs with a 5-10\% difference observed in background rejection at 70\% signal efficiency, which suggests the selection of this type of model.
 
 \appendix
 \section{Appendix}
@@ -750,188 +691,201 @@ It is very difficult to differentiate between $t\overline{t}\gamma$ and $t\overl
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/Bj0_eta.png}
-	  \captionof{figure}{Bj0\_eta}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/Bj0_eta.png}
+	  %\captionof{figure}{Bj0\_eta}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/Bj0_phi.png}
-	  \captionof{figure}{Bj0\_phi}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/Bj0_phi.png}
+	  %\captionof{figure}{Bj0\_phi}
 	\end{minipage}
+	  \captionof{figure}{pseudorapidity and $\Delta\phi$ of first b-jet suggest no discriminatory power}	
 	\end{figure}
 	
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/Bj0_pt.png}
-	  \captionof{figure}{Bj0\_pt}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/Bj0_pt.png}
+	  %\captionof{figure}{Bj0\_pt}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/Bj1_eta.png}
-	  \captionof{figure}{Bj1\_eta}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/Bj1_eta.png}
+	  %\captionof{figure}{Bj1\_eta}
 	\end{minipage}
+	  \captionof{figure}{transverse momentum of first b-jet and pseudorapidity of second b-jet suggest no discriminatory power}	
 	\end{figure}
 	
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/Bj1_phi.png}
-	  \captionof{figure}{Bj1\_phi}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/Bj1_phi.png}
+	  %\captionof{figure}{Bj1\_phi}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/Bj1_pt.png}
-	  \captionof{figure}{Bj1\_pt}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/Bj1_pt.png}
+	  %\captionof{figure}{Bj1\_pt}
 	\end{minipage}
+	  \captionof{figure}{$\Delta\phi$ and transverse momentum of second b-jet suggest no discriminatory power}	
 	\end{figure}
 	
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/JetGood0_btagDeepB.png}
-	  \captionof{figure}{JetGood0\_btagDeepB}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/JetGood0_btagDeepB.png}
+	  %\captionof{figure}{JetGood0\_btagDeepB}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/JetGood0_chEmEF.png}
-	  \captionof{figure}{JetGood0\_chEmEF}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/JetGood1_btagDeepB.png}
+	  %\captionof{figure}{JetGood1\_btagDeepB}
 	\end{minipage}
+	  \captionof{figure}{results of neural network to identify first and second b-jet suggest no discriminatory power}	
 	\end{figure}
 	
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/JetGood0_chHEF.png}
-	  \captionof{figure}{JetGood0\_chHEF}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/JetGood0_chHEF.png}
+	  %\captionof{figure}{JetGood0\_chHEF}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/JetGood0_neEmEF.png}
-	  \captionof{figure}{JetGood0\_neEmEF}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/JetGood0_chEmEF.png}
+	  %\captionof{figure}{JetGood0\_chEmEF}
 	\end{minipage}
+	  \captionof{figure}{proportion of energy coming from charged particles detected in HCAL and detected in ECAL suggest no discriminatory power}			
 	\end{figure}
 	
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/JetGood0_neHEF.png}
-	  \captionof{figure}{JetGood0\_neHEF}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/JetGood0_neHEF.png}
+	  %\captionof{figure}{JetGood0\_neHEF}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/JetGood1_btagDeepB.png}
-	  \captionof{figure}{JetGood1\_btagDeepB}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/JetGood0_neEmEF.png}
+	  %\captionof{figure}{JetGood0\_neEmEF}
 	\end{minipage}
+	  \captionof{figure}{proportion of energy coming from neutral particles detected in HCAL and detected in ECAL suggest no discriminatory power}			
 	\end{figure}
 	
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/JetGood1_eta.png}
-	  \captionof{figure}{JetGood1\_eta}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/JetGood1_eta.png}
+	  %\captionof{figure}{JetGood1\_eta}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/JetGood1_phi.png}
-	  \captionof{figure}{JetGood1\_phi}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/JetGood1_phi.png}
+	  %\captionof{figure}{JetGood1\_phi}
 	\end{minipage}
+	  \captionof{figure}{pseudorapidity and $\Delta\phi$ of second jet suggest no discriminatory power}	
 	\end{figure}
 	
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/JetGood1_pt.png}
-	  \captionof{figure}{JetGood1\_pt}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/JetGood1_pt.png}
+	  %\captionof{figure}{JetGood1\_pt}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/LeptonTight0__phi.png}
-	  \captionof{figure}{LeptonTight0\_phi}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/LeptonTight0__phi.png}
+	  %\captionof{figure}{LeptonTight0\_phi}
 	\end{minipage}
+	  \captionof{figure}{transverse momentum of second jet and $\Delta\phi$ of lepton suggest no discriminatory power}	
 	\end{figure}
 	
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/LeptonTight0_eta.png}
-	  \captionof{figure}{LeptonTight0\_eta}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/LeptonTight0_eta.png}
+	  %\captionof{figure}{LeptonTight0\_eta}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/LeptonTight0_pfRelIso03_all.png}
-	  \captionof{figure}{LeptonTight0\_pfRelIso03\_all}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/LeptonTight0_pfRelIso03_all.png}
+	  %\captionof{figure}{LeptonTight0\_pfRelIso03\_all}
 	\end{minipage}
+	  \captionof{figure}{pseudorapidity of lepton and relative isolation of lepton to all particles suggest no discriminatory power}	
 	\end{figure}
 	
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/LeptonTight0_pfRelIso03_chg.png}
-	  \captionof{figure}{LeptonTight0\_pfRelIso03\_chg}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/LeptonTight0_pfRelIso03_chg.png}
+	  %\captionof{figure}{LeptonTight0\_pfRelIso03\_chg}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/LeptonTight0_pfRelIso03_ne.png}
-	  \captionof{figure}{LeptonTight0\_pfRelIso03\_ne}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/LeptonTight0_pfRelIso03_ne.png}
+	  %\captionof{figure}{LeptonTight0\_pfRelIso03\_ne}
 	\end{minipage}
+	  \captionof{figure}{relative isolation of lepton to charged and neutral particles suggest no discriminatory power}	
 	\end{figure}
 	
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/LeptonTight0_pt.png}
-	  \captionof{figure}{LeptonTight0\_pt}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/LeptonTight0_pt.png}
+	  %\captionof{figure}{LeptonTight0\_pt}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/nElectronTight.png}
-	  \captionof{figure}{nElectronTight}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/nElectronTight.png}
+	  %\captionof{figure}{nElectronTight}
 	\end{minipage}
+	  \captionof{figure}{transverse momentum of lepton and number of electrons suggest no discriminatory power}	
 	\end{figure}
 	
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/nHighPTPhotons.png}
-	  \captionof{figure}{nHighPTPhotons}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/nHighPTPhotons.png}
+	  %\captionof{figure}{nHighPTPhotons}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/nJet.png}
-	  \captionof{figure}{nJet}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/nJet.png}
+	  %\captionof{figure}{nJet}
 	\end{minipage}
+	  \captionof{figure}{number of photons with high p\textsubscript{T} and number of jets suggest no discriminatory power}	
 	\end{figure}
 	
 	\begin{figure}[H]
 	\centering
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/nLeptonTight.png}
-	  \captionof{figure}{nLeptonTight}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/nLeptonTight.png}
+	  %\captionof{figure}{nLeptonTight}
 	\end{minipage}%
 	\begin{minipage}{.5\textwidth}
 	  \centering
-	  \includegraphics[width=0.75\linewidth]{figures/Notused/nMuonTight.png}
-	  \captionof{figure}{nMuonTight}
+	  \includegraphics[width=0.7\linewidth]{figures/Notused/nMuonTight.png}
+	  %\captionof{figure}{nMuonTight}
 	\end{minipage}
+	  \captionof{figure}{number of leptons and muons suggest no discriminatory power}	
 	\end{figure}
 	
 	\begin{figure}[H]
 		\begin{center}
-		\includegraphics[width=0.38\textwidth]{figures/Notused/nPhotonGood.png}
-		\caption{nPhotonGood}
+		\includegraphics[width=0.35\textwidth]{figures/Notused/nPhotonGood.png}
+		\caption{number of photons suggests no discriminatory power}	
 		\end{center}
 	\end{figure}
 	

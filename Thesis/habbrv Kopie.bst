@@ -1142,6 +1142,10 @@ FUNCTION {presort}
   'sort.key$ :=
 }
 
+ITERATE {presort}
+
+SORT
+
 STRINGS { longest.label }
 
 INTEGERS { number.label longest.label.width }
