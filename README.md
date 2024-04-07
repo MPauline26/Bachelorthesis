@@ -4,10 +4,10 @@ This repository contains the Python code and LaTeX source code for my bachelor t
 
 ## Contents
 
-* Code/: Contains the Python code used to create a Boosted Decision Tree model and Multilayer Perceptron model for discriminating between signal and background using multiple variables.
-* Thesis/figures/: Contains all figures created during the model development process
-* Thesis/Inhalt.tex: LaTeX source code for my bachelor thesis.
-* Thesis/20211009_Bachelorarbeit_Pagsinohin.pdf: Final PDF version of my bachelor thesis.
+* `Code/`: Contains the Python code used to create a Boosted Decision Tree model and Multilayer Perceptron model for discriminating between signal and background using multiple variables.
+* `Thesis/figures/`: Contains all figures created during the model development process
+* `Thesis/Inhalt.tex`: LaTeX source code for my bachelor thesis.
+* `Thesis/20211009_Bachelorarbeit_Pagsinohin.pdf`: Final PDF version of my bachelor thesis.
 
 ## LaTeX Compilation
 
